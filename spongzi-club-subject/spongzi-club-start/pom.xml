@@ -11,5 +11,12 @@
 
     <artifactId>spongzi-club-start</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.4.2</version>
+        </dependency>
+    </dependencies>
 
 </project>
