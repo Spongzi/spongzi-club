@@ -30,3 +30,5 @@ spring:
         config.decrypt: true
         config.decrypt.key: ${publicKey}
 publicKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJllhOCtmbfQCz1FZwEBTFwt8KuKGV3PTogn5uyirVhorFkqdC8JkMdzy99pLn1zSGfkzrqlCv1z2XuEqoju/E0CAwEAAQ==
+logging:
+  config: classpath:log4j2-spring.xml
