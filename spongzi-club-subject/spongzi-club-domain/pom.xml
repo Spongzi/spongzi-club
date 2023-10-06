@@ -11,5 +11,12 @@
 
     <artifactId>spongzi-club-domain</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-club-infra</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
