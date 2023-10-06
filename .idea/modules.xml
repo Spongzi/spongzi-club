@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/spongzi-club.iml" filepath="$PROJECT_DIR$/spongzi-club.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/spongzi-club.iml" filepath="$PROJECT_DIR$/.idea/spongzi-club.iml" />
     </modules>
   </component>
 </project>

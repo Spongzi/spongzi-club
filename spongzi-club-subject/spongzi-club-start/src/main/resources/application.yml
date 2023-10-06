@@ -1,0 +1,34 @@
+server:
+  port: 3000
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.128.128:3306/spongzi-club?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: root
+    password: RZFsVQyPA/Lb/nDYZw5SUqB8DppJndK5d6JXz/lu3dd4O3IqKw4iNUrWxe1CpPIaKEMQkKKXP3v5Xq9TdFAhaw==
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 20
+      min-idle: 20
+      max-active: 100
+      max-wait: 6000
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: admin
+      filter:
+        stat:
+          enabled: true
+          slow-sql-millis: 2000
+          log-slow-sql: true
+        wall:
+          enabled: true
+        config:
+          enabled: true
+      connect-properties:
+        config.decrypt: true
+        config.decrypt.key: ${publicKey}
+publicKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJllhOCtmbfQCz1FZwEBTFwt8KuKGV3PTogn5uyirVhorFkqdC8JkMdzy99pLn1zSGfkzrqlCv1z2XuEqoju/E0CAwEAAQ==
+logging:
+  config: classpath:log4j2-spring.xml
