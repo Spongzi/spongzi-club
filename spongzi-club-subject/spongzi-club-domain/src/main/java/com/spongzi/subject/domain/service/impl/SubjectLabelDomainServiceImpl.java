@@ -42,4 +42,15 @@ public class SubjectLabelDomainServiceImpl implements SubjectLabelDomainService 
         int count = subjectLabelService.update(subjectLabel);
         return count > 0;
     }
+
+    @Override
+    public Boolean delete(SubjectLabelBO subjectLabelBO) {
+        if (log.isInfoEnabled()) {
+            log.info("SubjectLabelDomainServiceImpl.delete.bo: {}", JSON.toJSONString(subjectLabelBO));
+        }
+        SubjectLabel subjectLabel = SubjectLabelConvert.INSTANCE.convertBoToSubjectLabel(subjectLabelBO);
+        subjectLabel.setIsDeleted(IsDeletedEnum.DELETED.getCode());
+        int count = subjectLabelService.update(subjectLabel);
+        return count > 0;
+    }
 }

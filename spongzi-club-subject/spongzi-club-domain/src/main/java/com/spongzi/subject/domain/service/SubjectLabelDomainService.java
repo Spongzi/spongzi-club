@@ -18,4 +18,12 @@ public interface SubjectLabelDomainService {
      * @return {@link Boolean}
      */
     Boolean update(SubjectLabelBO subjectLabelBO);
+
+    /**
+     * 删除标签
+     *
+     * @param subjectLabelBO 主题标签BO
+     * @return {@link Boolean}
+     */
+    Boolean delete(SubjectLabelBO subjectLabelBO);
 }

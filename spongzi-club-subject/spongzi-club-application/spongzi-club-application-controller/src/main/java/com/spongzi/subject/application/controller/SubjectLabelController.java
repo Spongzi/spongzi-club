@@ -57,7 +57,7 @@ public class SubjectLabelController {
     public Result<Boolean> update(@RequestBody SubjectLabelDTO subjectLabelDTO) {
         try {
             if (log.isInfoEnabled()) {
-                log.info("SubjectLabelController.add.dto: {}", JSON.toJSONString(subjectLabelDTO));
+                log.info("SubjectLabelController.update.dto: {}", JSON.toJSONString(subjectLabelDTO));
             }
 
             Preconditions.checkNotNull(subjectLabelDTO.getId(), "当前修改标签id不能为空");
@@ -67,7 +67,26 @@ public class SubjectLabelController {
             Boolean update = subjectLabelDomainService.update(subjectLabelBO);
             return Result.ok(update);
         } catch (Exception e) {
-            log.error("SubjectCategoryController.add.error: {}", e.getMessage(), e);
+            log.error("SubjectCategoryController.update.error: {}", e.getMessage(), e);
+            return Result.fail(e.getMessage());
+        }
+    }
+
+    @PostMapping("/delete")
+    public Result<Boolean> delete(@RequestBody SubjectLabelDTO subjectLabelDTO) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("SubjectLabelController.delete.dto: {}", JSON.toJSONString(subjectLabelDTO));
+            }
+
+            Preconditions.checkNotNull(subjectLabelDTO.getId(), "当前要修改的标签id不能为空");
+
+            SubjectLabelBO subjectLabelBO = SubjectLabelConvert.INSTANCE
+                    .convertDtoToBo(subjectLabelDTO);
+            Boolean update = subjectLabelDomainService.delete(subjectLabelBO);
+            return Result.ok(update);
+        } catch (Exception e) {
+            log.error("SubjectCategoryController.delete.error: {}", e.getMessage(), e);
             return Result.fail(e.getMessage());
         }
     }
