@@ -22,22 +22,38 @@ public class SubjectMapping implements Serializable {
     /**
      * 题目id
      */
-    private Integer subjectId;
+    private Long subjectId;
 
     /**
      * 分类id
      */
-    private Integer categoryId;
+    private Long categoryId;
 
     /**
      * 标签id
      */
-    private Integer labelId;
+    private Long labelId;
 
     /**
      * 逻辑删除
      */
     private Integer isDeleted;
 
+    /**
+     * 创建人
+     */
+    private String createdBy;
+    /**
+     * 创建时间
+     */
+    private Date createdTime;
+    /**
+     * 更新人
+     */
+    private String updateBy;
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
 }
 
