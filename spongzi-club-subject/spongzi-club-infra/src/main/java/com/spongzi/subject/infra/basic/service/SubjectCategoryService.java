@@ -49,5 +49,5 @@ public interface SubjectCategoryService {
      *
      * @return {@link List}<{@link SubjectCategory}>
      */
-    List<SubjectCategory> queryPrimaryCategory(SubjectCategory subjectCategory);
+    List<SubjectCategory> queryCategory(SubjectCategory subjectCategory);
 }

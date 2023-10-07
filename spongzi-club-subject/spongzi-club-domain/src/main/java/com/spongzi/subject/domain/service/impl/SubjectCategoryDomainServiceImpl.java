@@ -36,15 +36,13 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
     }
 
     @Override
-    public List<SubjectCategoryBO> queryPrimaryCategory() {
-        SubjectCategory subjectCategory = new SubjectCategory();
-        subjectCategory.setParentId(0L);
-        subjectCategory.setIsDeleted(0);
-        List<SubjectCategory> subjectCategoryList = subjectCategoryService.queryPrimaryCategory(subjectCategory);
+    public List<SubjectCategoryBO> queryCategory(SubjectCategoryBO subjectCategoryBO) {
+        SubjectCategory subjectCategory = SubjectCategoryConvert.INSTANCE.convertBoToCategory(subjectCategoryBO);
+
+        List<SubjectCategory> subjectCategoryList = subjectCategoryService.queryCategory(subjectCategory);
         List<SubjectCategoryBO> subjectCategoryBOList = SubjectCategoryConvert.INSTANCE.convertCategoryToBo(subjectCategoryList);
         if (log.isInfoEnabled()) {
-            log.info("SubjectCategoryDomainServiceImpl.queryPrimaryCategory.subjectCategoryBOList: {}",
-                    JSON.toJSONString(subjectCategoryBOList));
+            log.info("SubjectCategoryDomainServiceImpl.queryPrimaryCategory.subjectCategoryBOList: {}", JSON.toJSONString(subjectCategoryBOList));
         }
         return subjectCategoryBOList;
     }

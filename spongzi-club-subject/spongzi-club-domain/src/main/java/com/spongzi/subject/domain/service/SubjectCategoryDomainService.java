@@ -20,10 +20,12 @@ public interface SubjectCategoryDomainService {
      */
     void add(SubjectCategoryBO subjectCategoryBO);
 
+
     /**
-     * 查询岗位分类
+     * 查询类别
      *
+     * @param subjectCategoryBO 主题类别bo
      * @return {@link List}<{@link SubjectCategoryBO}>
      */
-    List<SubjectCategoryBO> queryPrimaryCategory();
+    List<SubjectCategoryBO> queryCategory(SubjectCategoryBO subjectCategoryBO);
 }
