@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="修改增加参数校验">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectLabelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/convert/SubjectLabelConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/dto/SubjectLabelDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/convert/SubjectLabelConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/entity/SubjectLabelBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/SubjectLabelDomainService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectLabelDomainServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectLabel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectLabelDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectLabelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectLabelServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectLabelDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="开发添加标签模块，并完成测试">
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectLabelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectLabelServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +144,7 @@
       <workItem from="1696601017548" duration="600000" />
       <workItem from="1696644036423" duration="5863000" />
       <workItem from="1696674076608" duration="30000" />
-      <workItem from="1696674116797" duration="3451000" />
+      <workItem from="1696674116797" duration="3580000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -343,7 +330,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696649684779</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="开发标签模块，生成简单的代码">
+      <option name="closed" value="true" />
+      <created>1696680155216</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1696680155216</updated>
+    </task>
+    <task id="LOCAL-00025" summary="开发添加标签模块，并完成测试">
+      <option name="closed" value="true" />
+      <created>1696680168617</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1696680168617</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +374,9 @@
     <MESSAGE value="修复小bug" />
     <MESSAGE value="添加添加时的isDelete的默认值" />
     <MESSAGE value="修改增加参数校验" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改增加参数校验" />
+    <MESSAGE value="开发标签模块，生成简单的代码" />
+    <MESSAGE value="开发添加标签模块，并完成测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="开发添加标签模块，并完成测试" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
