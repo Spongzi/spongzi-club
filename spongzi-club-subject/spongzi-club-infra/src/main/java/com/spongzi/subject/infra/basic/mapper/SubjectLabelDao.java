@@ -85,6 +85,6 @@ public interface SubjectLabelDao {
      * @param labelIdList 标签ID列表
      * @return {@link List}<{@link SubjectLabel}>
      */
-    List<SubjectLabel> batchQueryById(List<Long> labelIdList);
+    List<SubjectLabel> batchQueryById(@Param("list") List<Long> labelIdList);
 }
 
