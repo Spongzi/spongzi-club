@@ -16,9 +16,9 @@ public enum ResultCodeEnum {
     SUCCESS(200, "成功"),
     FAIL(500, "失败");
 
-    private final int code;
+    private int code;
 
-    private final String desc;
+    private String desc;
 
     ResultCodeEnum(int code, String desc) {
         this.code = code;
