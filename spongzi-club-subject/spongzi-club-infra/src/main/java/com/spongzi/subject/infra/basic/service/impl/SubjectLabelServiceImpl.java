@@ -36,9 +36,8 @@ public class SubjectLabelServiceImpl implements SubjectLabelService {
      * @return 实例对象
      */
     @Override
-    public SubjectLabel insert(SubjectLabel subjectLabel) {
-        this.subjectLabelDao.insert(subjectLabel);
-        return subjectLabel;
+    public int insert(SubjectLabel subjectLabel) {
+        return this.subjectLabelDao.insert(subjectLabel);
     }
 
     /**
@@ -48,9 +47,8 @@ public class SubjectLabelServiceImpl implements SubjectLabelService {
      * @return 实例对象
      */
     @Override
-    public SubjectLabel update(SubjectLabel subjectLabel) {
-        this.subjectLabelDao.update(subjectLabel);
-        return this.queryById(subjectLabel.getId());
+    public int update(SubjectLabel subjectLabel) {
+        return this.subjectLabelDao.update(subjectLabel);
     }
 
     /**

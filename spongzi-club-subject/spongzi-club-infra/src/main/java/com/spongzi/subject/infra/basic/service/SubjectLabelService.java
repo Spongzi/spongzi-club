@@ -24,7 +24,7 @@ public interface SubjectLabelService {
      * @param subjectLabel 实例对象
      * @return 实例对象
      */
-    SubjectLabel insert(SubjectLabel subjectLabel);
+    int insert(SubjectLabel subjectLabel);
 
     /**
      * 修改数据
@@ -32,7 +32,7 @@ public interface SubjectLabelService {
      * @param subjectLabel 实例对象
      * @return 实例对象
      */
-    SubjectLabel update(SubjectLabel subjectLabel);
+    int update(SubjectLabel subjectLabel);
 
     /**
      * 通过主键删除数据

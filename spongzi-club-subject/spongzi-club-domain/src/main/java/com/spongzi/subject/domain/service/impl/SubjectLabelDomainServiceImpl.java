@@ -22,12 +22,13 @@ public class SubjectLabelDomainServiceImpl implements SubjectLabelDomainService 
     private SubjectLabelService subjectLabelService;
 
     @Override
-    public void add(SubjectLabelBO subjectLabelBO) {
+    public Boolean add(SubjectLabelBO subjectLabelBO) {
         if (log.isInfoEnabled()) {
             log.info("SubjectLabelDomainServiceImpl.add.bo: {}", JSON.toJSONString(subjectLabelBO));
         }
         SubjectLabel subjectLabel = SubjectLabelConvert.INSTANCE.convertBoToSubjectLabel(subjectLabelBO);
         subjectLabel.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
-        subjectLabelService.insert(subjectLabel);
+        int count = subjectLabelService.insert(subjectLabel);
+        return count > 0;
     }
 }

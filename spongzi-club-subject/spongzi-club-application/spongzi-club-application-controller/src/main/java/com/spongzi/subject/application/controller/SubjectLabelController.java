@@ -35,7 +35,7 @@ public class SubjectLabelController {
     private SubjectLabelDomainService subjectLabelDomainService;
 
     @PostMapping("/add")
-    public Result<String> add(@RequestBody SubjectLabelDTO subjectLabelDTO) {
+    public Result<Boolean> add(@RequestBody SubjectLabelDTO subjectLabelDTO) {
         try {
             if (log.isInfoEnabled()) {
                 log.info("SubjectLabelController.add.dto: {}", JSON.toJSONString(subjectLabelDTO));
@@ -45,8 +45,8 @@ public class SubjectLabelController {
 
             SubjectLabelBO subjectLabelBO = SubjectLabelConvert.INSTANCE
                     .convertDtoToBo(subjectLabelDTO);
-            subjectLabelDomainService.add(subjectLabelBO);
-            return Result.ok();
+            Boolean add = subjectLabelDomainService.add(subjectLabelBO);
+            return Result.ok(add);
         } catch (Exception e) {
             log.error("SubjectCategoryController.add.error: {}", e.getMessage(), e);
             return Result.fail(e.getMessage());
