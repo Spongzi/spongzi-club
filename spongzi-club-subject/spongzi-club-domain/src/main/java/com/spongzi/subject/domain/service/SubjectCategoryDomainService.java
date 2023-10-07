@@ -36,4 +36,12 @@ public interface SubjectCategoryDomainService {
      * @return {@link Boolean}
      */
     Boolean update(SubjectCategoryBO subjectCategoryBO);
+
+    /**
+     * 删除分类
+     *
+     * @param subjectCategoryBO 主题类别bo
+     * @return {@link Boolean}
+     */
+    Boolean delete(SubjectCategoryBO subjectCategoryBO);
 }

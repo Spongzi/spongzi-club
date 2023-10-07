@@ -88,7 +88,7 @@ public class SubjectCategoryController {
     }
 
     @PostMapping("/update")
-    public Result<Boolean> update(SubjectCategoryDTO subjectCategoryDTO) {
+    public Result<Boolean> update(@RequestBody SubjectCategoryDTO subjectCategoryDTO) {
         try {
             SubjectCategoryBO subjectCategoryBO = SubjectCategoryConvert.INSTANCE.convertDtoToBo(subjectCategoryDTO);
             if (log.isInfoEnabled()) {
@@ -99,6 +99,21 @@ public class SubjectCategoryController {
         } catch (Exception e) {
             log.error("SubjectCategoryController.update.error: {}", e.getMessage(), e);
             return Result.fail("更新分类失败");
+        }
+    }
+
+    @PostMapping("/delete")
+    public Result<Boolean> delete(SubjectCategoryDTO subjectCategoryDTO) {
+        try {
+            SubjectCategoryBO subjectCategoryBO = SubjectCategoryConvert.INSTANCE.convertDtoToBo(subjectCategoryDTO);
+            if (log.isInfoEnabled()) {
+                log.info("SubjectCategoryController.delete.dto: {}", JSON.toJSONString(subjectCategoryDTO));
+            }
+            Boolean result = subjectCategoryDomainService.delete(subjectCategoryBO);
+            return Result.ok(result);
+        } catch (Exception e) {
+            log.error("SubjectCategoryController.update.error: {}", e.getMessage(), e);
+            return Result.fail("删除分类失败");
         }
     }
 }
