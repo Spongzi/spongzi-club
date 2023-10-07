@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 刷题分类Controller
@@ -42,7 +43,7 @@ public class SubjectCategoryController {
             Preconditions.checkNotNull(subjectCategoryDTO.getParentId(), "分类父级id不能为空");
 
             SubjectCategoryBO subjectCategoryBO = SubjectCategoryConvert.INSTANCE
-                    .convertBoToCategory(subjectCategoryDTO);
+                    .convertDtoToBo(subjectCategoryDTO);
             subjectCategoryDomainService.add(subjectCategoryBO);
             return Result.ok();
         } catch (Exception e) {
@@ -51,4 +52,16 @@ public class SubjectCategoryController {
         }
     }
 
+
+    @PostMapping("/query-primary-category")
+    public Result<List<SubjectCategoryDTO>> queryPrimaryCategory() {
+        try {
+            List<SubjectCategoryBO> subjectCategoryBOList = subjectCategoryDomainService.queryPrimaryCategory();
+            List<SubjectCategoryDTO> subjectCategoryDTOList = SubjectCategoryConvert.INSTANCE.convertBoToDto(subjectCategoryBOList);
+            return Result.ok(subjectCategoryDTOList);
+        } catch (Exception e) {
+            log.error("SubjectCategoryController.queryPrimaryCategory.error: {}", e.getMessage(), e);
+            return Result.fail();
+        }
+    }
 }

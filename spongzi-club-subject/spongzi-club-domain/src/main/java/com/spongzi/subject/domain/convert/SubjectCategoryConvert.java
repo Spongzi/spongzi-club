@@ -5,6 +5,8 @@ import com.spongzi.subject.infra.basic.entity.SubjectCategory;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 /**
  * 主题类别转换
  *
@@ -16,4 +18,6 @@ public interface SubjectCategoryConvert {
     SubjectCategoryConvert INSTANCE = Mappers.getMapper(SubjectCategoryConvert.class);
 
     SubjectCategory convertBoToCategory(SubjectCategoryBO subjectCategoryBO);
+
+    List<SubjectCategoryBO> convertCategoryToBo(List<SubjectCategory> subjectCategoryList);
 }

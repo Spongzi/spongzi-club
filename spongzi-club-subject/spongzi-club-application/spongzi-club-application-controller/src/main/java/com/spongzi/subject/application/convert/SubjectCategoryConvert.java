@@ -5,9 +5,13 @@ import com.spongzi.subject.domain.entity.SubjectCategoryBO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 @Mapper
 public interface SubjectCategoryConvert {
     SubjectCategoryConvert INSTANCE = Mappers.getMapper(SubjectCategoryConvert.class);
 
-    SubjectCategoryBO convertBoToCategory(SubjectCategoryDTO subjectCategoryDTO);
+    SubjectCategoryBO convertDtoToBo(SubjectCategoryDTO subjectCategoryDTO);
+
+    List<SubjectCategoryDTO> convertBoToDto(List<SubjectCategoryBO> subjectCategoryBOList);
 }

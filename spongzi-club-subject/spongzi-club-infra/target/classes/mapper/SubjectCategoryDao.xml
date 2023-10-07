@@ -12,6 +12,7 @@
         <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
         <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="isDeleted" column="is_deleted" javaType="INTEGER" />
     </resultMap>
 
     <!--查询单个-->
@@ -135,6 +136,12 @@
                 and is_deleted = #{isDeleted}
             </if>
         </where>
+    </select>
+    <select id="queryPrimaryCategory" resultMap="SubjectCategoryMap">
+        select *
+        from subject_category
+        where parent_id = 0
+        and is_deleted = 0;
     </select>
 
     <!--新增所有列-->

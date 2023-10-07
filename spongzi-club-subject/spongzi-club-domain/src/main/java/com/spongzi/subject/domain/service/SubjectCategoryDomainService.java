@@ -3,6 +3,8 @@ package com.spongzi.subject.domain.service;
 import com.spongzi.subject.domain.entity.SubjectCategoryBO;
 import com.spongzi.subject.infra.basic.entity.SubjectCategory;
 
+import java.util.List;
+
 /**
  * 主题类域服务
  *
@@ -11,5 +13,17 @@ import com.spongzi.subject.infra.basic.entity.SubjectCategory;
  */
 public interface SubjectCategoryDomainService {
 
+    /**
+     * 新增分类
+     *
+     * @param subjectCategoryBO 主题类别bo
+     */
     void add(SubjectCategoryBO subjectCategoryBO);
+
+    /**
+     * 查询岗位分类
+     *
+     * @return {@link List}<{@link SubjectCategoryBO}>
+     */
+    List<SubjectCategoryBO> queryPrimaryCategory();
 }

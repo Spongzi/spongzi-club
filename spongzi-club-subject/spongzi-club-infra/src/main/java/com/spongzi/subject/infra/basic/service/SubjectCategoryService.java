@@ -2,6 +2,8 @@ package com.spongzi.subject.infra.basic.service;
 
 import com.spongzi.subject.infra.basic.entity.SubjectCategory;
 
+import java.util.List;
+
 /**
  * 题目分类(SubjectCategory)表服务接口
  *
@@ -42,4 +44,10 @@ public interface SubjectCategoryService {
      */
     boolean deleteById(Long id);
 
+    /**
+     * 查询主类别
+     *
+     * @return {@link List}<{@link SubjectCategory}>
+     */
+    List<SubjectCategory> queryPrimaryCategory(SubjectCategory subjectCategory);
 }
