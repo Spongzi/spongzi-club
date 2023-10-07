@@ -33,6 +33,7 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
             log.info("SubjectCategoryDomainServiceImpl.add.bo: {}", JSON.toJSONString(subjectCategoryBO));
         }
         SubjectCategory subjectCategory = SubjectCategoryConvert.INSTANCE.convertBoToCategory(subjectCategoryBO);
+        subjectCategory.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
         subjectCategoryService.insert(subjectCategory);
     }
 
