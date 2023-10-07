@@ -53,9 +53,13 @@ public class SubjectCategoryController {
     }
 
     @PostMapping("/query-primary-category")
-    public Result<List<SubjectCategoryDTO>> queryPrimaryCategory() {
+    public Result<List<SubjectCategoryDTO>> queryPrimaryCategory(@RequestBody SubjectCategoryDTO subjectCategoryDTO) {
         try {
-            SubjectCategoryBO subjectCategoryBO = new SubjectCategoryBO();
+            if (log.isInfoEnabled()) {
+                log.info("SubjectCategoryController.queryPrimaryCategory.dto: {}", JSON.toJSONString(subjectCategoryDTO));
+            }
+            SubjectCategoryBO subjectCategoryBO = SubjectCategoryConvert.INSTANCE
+                    .convertDtoToBo(subjectCategoryDTO);
             subjectCategoryBO.setParentId(0L);
             List<SubjectCategoryBO> subjectCategoryBOList = subjectCategoryDomainService.queryCategory(subjectCategoryBO);
             List<SubjectCategoryDTO> subjectCategoryDTOList = SubjectCategoryConvert.INSTANCE.convertBoToDto(subjectCategoryBOList);
