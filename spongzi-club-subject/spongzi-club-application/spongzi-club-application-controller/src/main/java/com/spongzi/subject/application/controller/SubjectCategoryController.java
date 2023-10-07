@@ -39,7 +39,7 @@ public class SubjectCategoryController {
             }
 
             Preconditions.checkNotNull(subjectCategoryDTO.getCategoryType(), "分类类型不能为空");
-            Preconditions.checkArgument(StringUtils.isEmpty(subjectCategoryDTO.getCategoryName()), "分类的名称不能为空");
+            Preconditions.checkArgument(!StringUtils.isBlank(subjectCategoryDTO.getCategoryName()), "分类的名称不能为空");
             Preconditions.checkNotNull(subjectCategoryDTO.getParentId(), "分类父级id不能为空");
 
             SubjectCategoryBO subjectCategoryBO = SubjectCategoryConvert.INSTANCE
