@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="添加添加时的isDelete的默认值">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-common/src/main/java/com/spongzi/subject/common/enums/CategoryTypeEnum.java" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="修改增加参数校验">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectLabelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/convert/SubjectLabelConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/dto/SubjectLabelDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/convert/SubjectLabelConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/entity/SubjectLabelBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/SubjectLabelDomainService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectLabelDomainServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectLabel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectLabelDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectLabelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectLabelServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectLabelDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -65,6 +75,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_opened_file_path": "D:/Code/Project/spongzi-club",
@@ -76,7 +87,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "File.Encoding",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -90,9 +101,10 @@
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-infra\src\main\resources\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.spongzi.subject.common.enums" />
-      <recent name="com.spongzi.subject.application.dto" />
+      <recent name="com.spongzi.subject.domain.convert" />
       <recent name="com.spongzi.subject.domain.entity" />
+      <recent name="com.spongzi.subject.application.dto" />
+      <recent name="com.spongzi.subject.common.enums" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SubjectApplication">
@@ -143,7 +155,9 @@
       <workItem from="1696590989123" duration="4956000" />
       <workItem from="1696595959220" duration="59000" />
       <workItem from="1696601017548" duration="600000" />
-      <workItem from="1696644036423" duration="5578000" />
+      <workItem from="1696644036423" duration="5863000" />
+      <workItem from="1696674076608" duration="30000" />
+      <workItem from="1696674116797" duration="3451000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -321,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696649369218</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="修改增加参数校验">
+      <option name="closed" value="true" />
+      <created>1696649684779</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1696649684779</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +370,8 @@
     <MESSAGE value="完成删除分类" />
     <MESSAGE value="修复小bug" />
     <MESSAGE value="添加添加时的isDelete的默认值" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加添加时的isDelete的默认值" />
+    <MESSAGE value="修改增加参数校验" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改增加参数校验" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
