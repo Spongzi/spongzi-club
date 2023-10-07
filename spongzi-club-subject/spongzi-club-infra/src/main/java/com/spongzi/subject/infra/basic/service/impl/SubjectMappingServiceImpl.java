@@ -4,9 +4,6 @@ import com.spongzi.subject.infra.basic.entity.SubjectMapping;
 import com.spongzi.subject.infra.basic.mapper.SubjectMappingDao;
 import com.spongzi.subject.infra.basic.service.SubjectMappingService;
 import org.springframework.stereotype.Service;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
 
@@ -28,7 +25,7 @@ public class SubjectMappingServiceImpl implements SubjectMappingService {
      * @return 实例对象
      */
     @Override
-    public SubjectMapping queryById(int id) {
+    public SubjectMapping queryById(Long id) {
         return this.subjectMappingDao.queryById(id);
     }
 
@@ -40,9 +37,8 @@ public class SubjectMappingServiceImpl implements SubjectMappingService {
      * @return 实例对象
      */
     @Override
-    public SubjectMapping insert(SubjectMapping subjectMapping) {
-        this.subjectMappingDao.insert(subjectMapping);
-        return subjectMapping;
+    public int insert(SubjectMapping subjectMapping) {
+        return this.subjectMappingDao.insert(subjectMapping);
     }
 
     /**
@@ -52,19 +48,17 @@ public class SubjectMappingServiceImpl implements SubjectMappingService {
      * @return 实例对象
      */
     @Override
-    public SubjectMapping update(SubjectMapping subjectMapping) {
-        this.subjectMappingDao.update(subjectMapping);
-        return this.queryById(subjectMapping.get());
+    public int update(SubjectMapping subjectMapping) {
+        return this.subjectMappingDao.update(subjectMapping);
     }
 
     /**
      * 通过主键删除数据
      *
-     * @param 主键
      * @return 是否成功
      */
     @Override
-    public boolean deleteById() {
-        return this.subjectMappingDao.deleteById() > 0;
+    public boolean deleteById(Long id) {
+        return this.subjectMappingDao.deleteById(id) > 0;
     }
 }

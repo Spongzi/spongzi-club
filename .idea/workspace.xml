@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="开发标签删除接口">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectMappingDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectMappingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectMappingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectMappingDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="完成简单的调试bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectMappingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectMappingDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectMappingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectMappingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectMappingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectMappingServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +148,7 @@
       <workItem from="1696601017548" duration="600000" />
       <workItem from="1696644036423" duration="5863000" />
       <workItem from="1696674076608" duration="30000" />
-      <workItem from="1696674116797" duration="4979000" />
+      <workItem from="1696674116797" duration="5340000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -384,15 +382,29 @@
       <option name="project" value="LOCAL" />
       <updated>1696680977629</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="生成题目关系相关的基础代码">
+      <option name="closed" value="true" />
+      <created>1696681621449</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1696681621449</updated>
+    </task>
+    <task id="LOCAL-00031" summary="完成简单的调试bug">
+      <option name="closed" value="true" />
+      <created>1696681796213</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1696681796213</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="集成SpringMVC" />
-    <MESSAGE value="修改gitignore配置" />
     <MESSAGE value="mysql, druid, mybatis plus整合，以及对配置文件的修改和简单的测试" />
     <MESSAGE value="对数据库密码进行加密" />
     <MESSAGE value="使用lombok" />
@@ -416,7 +428,9 @@
     <MESSAGE value="简单的优化代码" />
     <MESSAGE value="开发更新标签接口" />
     <MESSAGE value="开发标签删除接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="开发标签删除接口" />
+    <MESSAGE value="生成题目关系相关的基础代码" />
+    <MESSAGE value="完成简单的调试bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成简单的调试bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

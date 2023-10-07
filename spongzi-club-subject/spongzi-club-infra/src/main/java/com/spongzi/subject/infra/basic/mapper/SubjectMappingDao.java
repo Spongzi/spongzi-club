@@ -19,7 +19,7 @@ public interface SubjectMappingDao {
      * @param id 主键
      * @return 实例对象
      */
-    SubjectMapping queryById(int id);
+    SubjectMapping queryById(Long id);
 
     /**
      * 查询指定行数据
@@ -73,10 +73,10 @@ public interface SubjectMappingDao {
     /**
      * 通过主键删除数据
      *
-     * @param 主键
+     * @param id 主键
      * @return 影响行数
      */
-    int deleteById();
+    int deleteById(Long id);
 
 }
 
