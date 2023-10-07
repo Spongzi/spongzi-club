@@ -2,6 +2,8 @@ package com.spongzi.subject.infra.basic.service;
 
 import com.spongzi.subject.infra.basic.entity.SubjectMapping;
 
+import java.util.List;
+
 /**
  * 题目分类关系表(SubjectMapping)表服务接口
  *
@@ -41,4 +43,11 @@ public interface SubjectMappingService {
      */
     boolean deleteById(Long id);
 
+    /**
+     * 查询标签ID
+     *
+     * @param subjectMapping 主题映射
+     * @return {@link List}<{@link SubjectMapping}>
+     */
+    List<SubjectMapping> queryLabelId(SubjectMapping subjectMapping);
 }

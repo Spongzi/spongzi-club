@@ -2,6 +2,8 @@ package com.spongzi.subject.infra.basic.service;
 
 import com.spongzi.subject.infra.basic.entity.SubjectLabel;
 
+import java.util.List;
+
 /**
  * 题目标签表(SubjectLabel)表服务接口
  *
@@ -42,4 +44,11 @@ public interface SubjectLabelService {
      */
     boolean deleteById(Long id);
 
+    /**
+     * 按ID查询批次
+     *
+     * @param labelIdList 标签ID列表
+     * @return {@link List}<{@link SubjectLabel}>
+     */
+    List<SubjectLabel> batchQueryById(List<Long> labelIdList);
 }

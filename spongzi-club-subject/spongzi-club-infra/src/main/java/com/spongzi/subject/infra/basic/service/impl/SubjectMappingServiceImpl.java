@@ -6,6 +6,7 @@ import com.spongzi.subject.infra.basic.service.SubjectMappingService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 题目分类关系表(SubjectMapping)表服务实现类
@@ -60,5 +61,16 @@ public class SubjectMappingServiceImpl implements SubjectMappingService {
     @Override
     public boolean deleteById(Long id) {
         return this.subjectMappingDao.deleteById(id) > 0;
+    }
+
+    /**
+     * 查询标签ID
+     *
+     * @param subjectMapping 主题映射
+     * @return {@link List}<{@link SubjectMapping}>
+     */
+    @Override
+    public List<SubjectMapping> queryLabelId(SubjectMapping subjectMapping) {
+        return this.subjectMappingDao.queryDistinctLabelId(subjectMapping);
     }
 }

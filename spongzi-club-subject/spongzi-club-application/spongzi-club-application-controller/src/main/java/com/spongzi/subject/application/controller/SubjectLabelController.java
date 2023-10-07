@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 标签Controller
@@ -88,6 +89,28 @@ public class SubjectLabelController {
         } catch (Exception e) {
             log.error("SubjectCategoryController.delete.error: {}", e.getMessage(), e);
             return Result.fail(e.getMessage());
+        }
+    }
+
+    @PostMapping("/query-label-by-categoryId")
+    public Result<List<SubjectLabelDTO>> queryLabelByCategoryId(@RequestBody SubjectLabelDTO subjectLabelDTO) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("SubjectLabelController.queryLabelByCategoryId.dto: {}", JSON.toJSONString(subjectLabelDTO));
+            }
+
+            Preconditions.checkNotNull(subjectLabelDTO.getCategoryId(), "当前修改标签id不能为空");
+
+            SubjectLabelBO subjectLabelBO = SubjectLabelConvert.INSTANCE
+                    .convertDtoToBo(subjectLabelDTO);
+            List<SubjectLabelBO> subjectLabelBOList = subjectLabelDomainService.queryLabelByCategoryId(subjectLabelBO);
+
+            List<SubjectLabelDTO> subjectLabelDTOList = SubjectLabelConvert.INSTANCE.convertBoToDto(subjectLabelBOList);
+
+            return Result.ok(subjectLabelDTOList);
+        } catch (Exception e) {
+            log.error("SubjectCategoryController.update.error: {}", e.getMessage(), e);
+            return Result.fail("查询分类下标签失败");
         }
     }
 }

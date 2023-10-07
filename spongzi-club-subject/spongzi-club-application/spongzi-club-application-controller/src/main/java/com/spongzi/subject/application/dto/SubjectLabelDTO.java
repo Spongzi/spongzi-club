@@ -20,6 +20,11 @@ public class SubjectLabelDTO implements Serializable {
     private Long id;
 
     /**
+     * 分类的id
+     */
+    private Long categoryId;
+
+    /**
      * 标签分类
      */
     private String labelName;

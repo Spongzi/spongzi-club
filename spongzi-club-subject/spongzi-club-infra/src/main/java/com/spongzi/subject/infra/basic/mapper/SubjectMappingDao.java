@@ -78,5 +78,12 @@ public interface SubjectMappingDao {
      */
     int deleteById(Long id);
 
+    /**
+     * 查询不同标签ID
+     *
+     * @param subjectMapping 主题映射
+     * @return {@link List}<{@link SubjectMapping}>
+     */
+    List<SubjectMapping> queryDistinctLabelId(SubjectMapping subjectMapping);
 }
 
