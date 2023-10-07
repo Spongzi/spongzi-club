@@ -74,4 +74,18 @@ public class Result<T> {
         result.setData(data);
         return result;
     }
+
+    /**
+     * 失败 带错误信息
+     *
+     * @param message 错误信息
+     * @return {@link Result}<{@link T}>
+     */
+    public static <T> Result<T> fail(String message) {
+        Result<T> result = new Result<>();
+        result.setSuccess(false);
+        result.setCode(ResultCodeEnum.FAIL.getCode());
+        result.setMessage(message);
+        return result;
+    }
 }

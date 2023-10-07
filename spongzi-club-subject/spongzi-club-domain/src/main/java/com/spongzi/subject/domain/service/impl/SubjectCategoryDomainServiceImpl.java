@@ -46,4 +46,11 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
         }
         return subjectCategoryBOList;
     }
+
+    @Override
+    public Boolean update(SubjectCategoryBO subjectCategoryBO) {
+        SubjectCategory subjectCategory = SubjectCategoryConvert.INSTANCE.convertBoToCategory(subjectCategoryBO);
+        int count = subjectCategoryService.update(subjectCategory);
+        return count > 0;
+    }
 }

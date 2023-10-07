@@ -86,4 +86,19 @@ public class SubjectCategoryController {
             return Result.fail();
         }
     }
+
+    @PostMapping("/update")
+    public Result<Boolean> update(SubjectCategoryDTO subjectCategoryDTO) {
+        try {
+            SubjectCategoryBO subjectCategoryBO = SubjectCategoryConvert.INSTANCE.convertDtoToBo(subjectCategoryDTO);
+            if (log.isInfoEnabled()) {
+                log.info("SubjectCategoryController.update.dto: {}", JSON.toJSONString(subjectCategoryDTO));
+            }
+            Boolean result = subjectCategoryDomainService.update(subjectCategoryBO);
+            return Result.ok(result);
+        } catch (Exception e) {
+            log.error("SubjectCategoryController.update.error: {}", e.getMessage(), e);
+            return Result.fail("更新分类失败");
+        }
+    }
 }

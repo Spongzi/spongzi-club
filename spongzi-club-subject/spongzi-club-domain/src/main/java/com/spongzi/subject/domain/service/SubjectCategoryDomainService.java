@@ -28,4 +28,12 @@ public interface SubjectCategoryDomainService {
      * @return {@link List}<{@link SubjectCategoryBO}>
      */
     List<SubjectCategoryBO> queryCategory(SubjectCategoryBO subjectCategoryBO);
+
+    /**
+     * 更新分类
+     *
+     * @param subjectCategoryBO 主题类别bo
+     * @return {@link Boolean}
+     */
+    Boolean update(SubjectCategoryBO subjectCategoryBO);
 }
