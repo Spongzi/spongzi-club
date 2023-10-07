@@ -52,4 +52,23 @@ public class SubjectLabelController {
             return Result.fail(e.getMessage());
         }
     }
+
+    @PostMapping("/update")
+    public Result<Boolean> update(@RequestBody SubjectLabelDTO subjectLabelDTO) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("SubjectLabelController.add.dto: {}", JSON.toJSONString(subjectLabelDTO));
+            }
+
+            Preconditions.checkNotNull(subjectLabelDTO.getId(), "当前修改标签id不能为空");
+
+            SubjectLabelBO subjectLabelBO = SubjectLabelConvert.INSTANCE
+                    .convertDtoToBo(subjectLabelDTO);
+            Boolean update = subjectLabelDomainService.update(subjectLabelBO);
+            return Result.ok(update);
+        } catch (Exception e) {
+            log.error("SubjectCategoryController.add.error: {}", e.getMessage(), e);
+            return Result.fail(e.getMessage());
+        }
+    }
 }

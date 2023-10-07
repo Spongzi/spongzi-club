@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="删除无用的包引入">
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="简单的优化代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectLabelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectLabelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/SubjectLabelDomainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/SubjectLabelDomainService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectLabelDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectLabelDomainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectLabelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectLabelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectLabelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectLabelServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +147,7 @@
       <workItem from="1696601017548" duration="600000" />
       <workItem from="1696644036423" duration="5863000" />
       <workItem from="1696674076608" duration="30000" />
-      <workItem from="1696674116797" duration="3967000" />
+      <workItem from="1696674116797" duration="4147000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -359,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696680201214</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="简单的优化代码">
+      <option name="closed" value="true" />
+      <created>1696680581051</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1696680581051</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +396,8 @@
     <MESSAGE value="开发标签模块，生成简单的代码" />
     <MESSAGE value="开发添加标签模块，并完成测试" />
     <MESSAGE value="删除无用的包引入" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除无用的包引入" />
+    <MESSAGE value="简单的优化代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="简单的优化代码" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
