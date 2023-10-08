@@ -32,17 +32,17 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
         if (log.isInfoEnabled()) {
             log.info("SubjectCategoryDomainServiceImpl.add.bo: {}", JSON.toJSONString(subjectCategoryBO));
         }
-        SubjectCategory subjectCategory = SubjectCategoryConvert.INSTANCE.convertBoToCategory(subjectCategoryBO);
+        SubjectCategory subjectCategory = SubjectCategoryConvert.INSTANCE.convertBoToEntity(subjectCategoryBO);
         subjectCategory.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
         subjectCategoryService.insert(subjectCategory);
     }
 
     @Override
     public List<SubjectCategoryBO> queryCategory(SubjectCategoryBO subjectCategoryBO) {
-        SubjectCategory subjectCategory = SubjectCategoryConvert.INSTANCE.convertBoToCategory(subjectCategoryBO);
+        SubjectCategory subjectCategory = SubjectCategoryConvert.INSTANCE.convertBoToEntity(subjectCategoryBO);
         subjectCategory.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
         List<SubjectCategory> subjectCategoryList = subjectCategoryService.queryCategory(subjectCategory);
-        List<SubjectCategoryBO> subjectCategoryBOList = SubjectCategoryConvert.INSTANCE.convertCategoryToBo(subjectCategoryList);
+        List<SubjectCategoryBO> subjectCategoryBOList = SubjectCategoryConvert.INSTANCE.convertEntityListToBoList(subjectCategoryList);
         if (log.isInfoEnabled()) {
             log.info("SubjectCategoryDomainServiceImpl.queryPrimaryCategory.subjectCategoryBOList: {}", JSON.toJSONString(subjectCategoryBOList));
         }
@@ -51,14 +51,14 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
 
     @Override
     public Boolean update(SubjectCategoryBO subjectCategoryBO) {
-        SubjectCategory subjectCategory = SubjectCategoryConvert.INSTANCE.convertBoToCategory(subjectCategoryBO);
+        SubjectCategory subjectCategory = SubjectCategoryConvert.INSTANCE.convertBoToEntity(subjectCategoryBO);
         int count = subjectCategoryService.update(subjectCategory);
         return count > 0;
     }
 
     @Override
     public Boolean delete(SubjectCategoryBO subjectCategoryBO) {
-        SubjectCategory subjectCategory = SubjectCategoryConvert.INSTANCE.convertBoToCategory(subjectCategoryBO);
+        SubjectCategory subjectCategory = SubjectCategoryConvert.INSTANCE.convertBoToEntity(subjectCategoryBO);
         subjectCategory.setIsDeleted(IsDeletedEnum.DELETED.getCode());
         int count = subjectCategoryService.update(subjectCategory);
         return count > 0;

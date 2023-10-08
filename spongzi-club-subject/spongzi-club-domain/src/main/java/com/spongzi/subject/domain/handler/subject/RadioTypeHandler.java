@@ -37,7 +37,7 @@ public class RadioTypeHandler implements SubjectTypeHandler {
         List<SubjectAnswerBO> optionList = subjectInfoBO.getOptionList();
         // TODO 添加if判断，防止出现空指针
         for (SubjectAnswerBO option : optionList) {
-            SubjectRadio subjectRadio = SubjectRadioConvert.INSTANCE.convertAnswerBoToSubjectRadio(option);
+            SubjectRadio subjectRadio = SubjectRadioConvert.INSTANCE.convertBoToEntity(option);
             subjectRadio.setSubjectId(subjectInfoBO.getId());
             subjectRadio.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
             subjectRadioList.add(subjectRadio);

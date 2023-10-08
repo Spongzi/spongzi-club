@@ -1,8 +1,6 @@
 package com.spongzi.subject.domain.convert;
 
-import com.spongzi.subject.domain.entity.SubjectCategoryBO;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
-import com.spongzi.subject.infra.basic.entity.SubjectCategory;
 import com.spongzi.subject.infra.basic.entity.SubjectInfo;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
@@ -19,7 +17,7 @@ import java.util.List;
 public interface SubjectInfoConvert {
     SubjectInfoConvert INSTANCE = Mappers.getMapper(SubjectInfoConvert.class);
 
-    SubjectInfo convertBoToInfo(SubjectInfoBO subjectInfoBO);
+    SubjectInfo convertBoToEntity(SubjectInfoBO subjectInfoBO);
 
-    List<SubjectInfoBO> convertInfoToBo(List<SubjectInfo> subjectCategoryList);
+    List<SubjectInfoBO> convertEntityListToBoList(List<SubjectInfo> subjectCategoryList);
 }

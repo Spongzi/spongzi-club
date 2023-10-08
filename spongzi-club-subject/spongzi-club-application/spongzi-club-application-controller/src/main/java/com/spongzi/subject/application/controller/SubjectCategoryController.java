@@ -62,7 +62,7 @@ public class SubjectCategoryController {
                     .convertDtoToBo(subjectCategoryDTO);
             subjectCategoryBO.setParentId(0L);
             List<SubjectCategoryBO> subjectCategoryBOList = subjectCategoryDomainService.queryCategory(subjectCategoryBO);
-            List<SubjectCategoryDTO> subjectCategoryDTOList = SubjectCategoryConvert.INSTANCE.convertBoToDto(subjectCategoryBOList);
+            List<SubjectCategoryDTO> subjectCategoryDTOList = SubjectCategoryConvert.INSTANCE.convertBoListToDtoList(subjectCategoryBOList);
             return Result.ok(subjectCategoryDTOList);
         } catch (Exception e) {
             log.error("SubjectCategoryController.queryPrimaryCategory.error: {}", e.getMessage(), e);
@@ -83,7 +83,7 @@ public class SubjectCategoryController {
                     .convertDtoToBo(subjectCategoryDTO);
 
             List<SubjectCategoryBO> subjectCategoryBOList = subjectCategoryDomainService.queryCategory(subjectCategoryBO);
-            List<SubjectCategoryDTO> subjectCategoryDTOList = SubjectCategoryConvert.INSTANCE.convertBoToDto(subjectCategoryBOList);
+            List<SubjectCategoryDTO> subjectCategoryDTOList = SubjectCategoryConvert.INSTANCE.convertBoListToDtoList(subjectCategoryBOList);
             return Result.ok(subjectCategoryDTOList);
         } catch (Exception e) {
             log.error("SubjectCategoryController.queryPrimaryCategory.error: {}", e.getMessage(), e);

@@ -8,13 +8,13 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-10-08T21:15:51+0800",
+    date = "2023-10-08T21:25:21+0800",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 1.8.0_381 (Oracle Corporation)"
 )
 public class SubjectCategoryConvertImpl implements SubjectCategoryConvert {
 
     @Override
-    public SubjectCategory convertBoToCategory(SubjectCategoryBO subjectCategoryBO) {
+    public SubjectCategory convertBoToEntity(SubjectCategoryBO subjectCategoryBO) {
         if ( subjectCategoryBO == null ) {
             return null;
         }
@@ -31,7 +31,7 @@ public class SubjectCategoryConvertImpl implements SubjectCategoryConvert {
     }
 
     @Override
-    public List<SubjectCategoryBO> convertCategoryToBo(List<SubjectCategory> subjectCategoryList) {
+    public List<SubjectCategoryBO> convertEntityListToBoList(List<SubjectCategory> subjectCategoryList) {
         if ( subjectCategoryList == null ) {
             return null;
         }

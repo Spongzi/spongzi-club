@@ -2,17 +2,12 @@ package com.spongzi.subject.application.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.base.Preconditions;
-import com.spongzi.subject.application.convert.SubjectCategoryConvert;
 import com.spongzi.subject.application.convert.SubjectLabelConvert;
-import com.spongzi.subject.application.dto.SubjectCategoryDTO;
 import com.spongzi.subject.application.dto.SubjectLabelDTO;
 import com.spongzi.subject.common.entity.Result;
-import com.spongzi.subject.domain.entity.SubjectCategoryBO;
 import com.spongzi.subject.domain.entity.SubjectLabelBO;
 import com.spongzi.subject.domain.service.SubjectLabelDomainService;
-import com.spongzi.subject.infra.basic.service.SubjectLabelService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -105,7 +100,7 @@ public class SubjectLabelController {
                     .convertDtoToBo(subjectLabelDTO);
             List<SubjectLabelBO> subjectLabelBOList = subjectLabelDomainService.queryLabelByCategoryId(subjectLabelBO);
 
-            List<SubjectLabelDTO> subjectLabelDTOList = SubjectLabelConvert.INSTANCE.convertBoToDto(subjectLabelBOList);
+            List<SubjectLabelDTO> subjectLabelDTOList = SubjectLabelConvert.INSTANCE.convertBoListToDtoList(subjectLabelBOList);
 
             return Result.ok(subjectLabelDTOList);
         } catch (Exception e) {

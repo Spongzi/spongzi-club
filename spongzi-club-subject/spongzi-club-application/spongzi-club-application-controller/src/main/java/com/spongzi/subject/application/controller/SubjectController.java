@@ -3,18 +3,12 @@ package com.spongzi.subject.application.controller;
 import com.alibaba.fastjson.JSON;
 import com.google.common.base.Preconditions;
 import com.spongzi.subject.application.convert.SubjectAnswerConvert;
-import com.spongzi.subject.application.convert.SubjectCategoryConvert;
 import com.spongzi.subject.application.convert.SubjectInfoConvert;
-import com.spongzi.subject.application.dto.SubjectCategoryDTO;
 import com.spongzi.subject.application.dto.SubjectInfoDTO;
 import com.spongzi.subject.common.entity.Result;
 import com.spongzi.subject.domain.entity.SubjectAnswerBO;
-import com.spongzi.subject.domain.entity.SubjectCategoryBO;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
 import com.spongzi.subject.domain.service.SubjectInfoDomainService;
-import com.spongzi.subject.infra.basic.entity.SubjectCategory;
-import com.spongzi.subject.infra.basic.entity.SubjectInfo;
-import com.spongzi.subject.infra.basic.service.SubjectCategoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.util.CollectionUtils;
@@ -55,7 +49,7 @@ public class SubjectController {
             SubjectInfoBO subjectInfoBO = SubjectInfoConvert.INSTANCE
                     .convertDtoToBo(subjectInfoDTO);
             List<SubjectAnswerBO> subjectAnswerBOList = SubjectAnswerConvert.INSTANCE
-                    .convertDtoToBo(subjectInfoDTO.getOptionList());
+                    .convertDtoListToBoList(subjectInfoDTO.getOptionList());
             subjectInfoBO.setOptionList(subjectAnswerBOList);
             subjectInfoDomainService.add(subjectInfoBO);
             return Result.ok();

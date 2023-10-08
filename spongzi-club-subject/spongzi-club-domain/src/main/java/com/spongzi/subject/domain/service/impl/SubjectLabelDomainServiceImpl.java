@@ -2,11 +2,9 @@ package com.spongzi.subject.domain.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.spongzi.subject.common.enums.IsDeletedEnum;
-import com.spongzi.subject.domain.convert.SubjectCategoryConvert;
 import com.spongzi.subject.domain.convert.SubjectLabelConvert;
 import com.spongzi.subject.domain.entity.SubjectLabelBO;
 import com.spongzi.subject.domain.service.SubjectLabelDomainService;
-import com.spongzi.subject.infra.basic.entity.SubjectCategory;
 import com.spongzi.subject.infra.basic.entity.SubjectLabel;
 import com.spongzi.subject.infra.basic.entity.SubjectMapping;
 import com.spongzi.subject.infra.basic.service.SubjectLabelService;
@@ -36,7 +34,7 @@ public class SubjectLabelDomainServiceImpl implements SubjectLabelDomainService 
         if (log.isInfoEnabled()) {
             log.info("SubjectLabelDomainServiceImpl.add.bo: {}", JSON.toJSONString(subjectLabelBO));
         }
-        SubjectLabel subjectLabel = SubjectLabelConvert.INSTANCE.convertBoToSubjectLabel(subjectLabelBO);
+        SubjectLabel subjectLabel = SubjectLabelConvert.INSTANCE.convertBoToEntity(subjectLabelBO);
         subjectLabel.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
         int count = subjectLabelService.insert(subjectLabel);
         return count > 0;
@@ -47,7 +45,7 @@ public class SubjectLabelDomainServiceImpl implements SubjectLabelDomainService 
         if (log.isInfoEnabled()) {
             log.info("SubjectLabelDomainServiceImpl.update.bo: {}", JSON.toJSONString(subjectLabelBO));
         }
-        SubjectLabel subjectLabel = SubjectLabelConvert.INSTANCE.convertBoToSubjectLabel(subjectLabelBO);
+        SubjectLabel subjectLabel = SubjectLabelConvert.INSTANCE.convertBoToEntity(subjectLabelBO);
         subjectLabel.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
         int count = subjectLabelService.update(subjectLabel);
         return count > 0;
@@ -58,7 +56,7 @@ public class SubjectLabelDomainServiceImpl implements SubjectLabelDomainService 
         if (log.isInfoEnabled()) {
             log.info("SubjectLabelDomainServiceImpl.delete.bo: {}", JSON.toJSONString(subjectLabelBO));
         }
-        SubjectLabel subjectLabel = SubjectLabelConvert.INSTANCE.convertBoToSubjectLabel(subjectLabelBO);
+        SubjectLabel subjectLabel = SubjectLabelConvert.INSTANCE.convertBoToEntity(subjectLabelBO);
         subjectLabel.setIsDeleted(IsDeletedEnum.DELETED.getCode());
         int count = subjectLabelService.update(subjectLabel);
         return count > 0;
