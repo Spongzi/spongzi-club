@@ -4,11 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="完成根据分类查询标签接口的开发">
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="修改简单的bug问题">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectBrief.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectJudge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectMultiple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectRadio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectBriefDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectInfoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectJudgeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectMultipleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectRadioDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectBriefService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectJudgeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectMultipleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectRadioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectBriefServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectJudgeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectMultipleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectRadioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectBriefDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectInfoDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectJudgeDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectMultipleDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectRadioDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectLabelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectLabelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-start/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-start/target/classes/log4j2-spring.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +100,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "com.sjhy.plugin.ui.TemplateSettingForm",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -147,7 +170,9 @@
       <workItem from="1696601017548" duration="600000" />
       <workItem from="1696644036423" duration="5863000" />
       <workItem from="1696674076608" duration="30000" />
-      <workItem from="1696674116797" duration="7547000" />
+      <workItem from="1696674116797" duration="7773000" />
+      <workItem from="1696684388649" duration="28000" />
+      <workItem from="1696742140935" duration="1277000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -421,14 +446,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696683897569</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="修改简单的bug问题">
+      <option name="closed" value="true" />
+      <created>1696684331406</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1696684331406</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="使用lombok" />
     <MESSAGE value="添加统一返回结果类" />
     <MESSAGE value="开发新增分类模块-测试" />
     <MESSAGE value="引入日志，并且排除spring-boot-starter-web中的日志" />
@@ -453,7 +485,8 @@
     <MESSAGE value="完成简单的调试bug" />
     <MESSAGE value="修改数据类型" />
     <MESSAGE value="完成根据分类查询标签接口的开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成根据分类查询标签接口的开发" />
+    <MESSAGE value="修改简单的bug问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改简单的bug问题" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
