@@ -6,6 +6,7 @@ import com.spongzi.subject.infra.basic.service.SubjectBriefService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 简答题(SubjectBrief)表服务实现类

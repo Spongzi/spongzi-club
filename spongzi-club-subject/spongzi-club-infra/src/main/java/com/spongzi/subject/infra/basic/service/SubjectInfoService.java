@@ -23,7 +23,7 @@ public interface SubjectInfoService {
      * @param subjectInfo 实例对象
      * @return 实例对象
      */
-    SubjectInfo insert(SubjectInfo subjectInfo);
+    int insert(SubjectInfo subjectInfo);
 
     /**
      * 修改数据
@@ -31,7 +31,7 @@ public interface SubjectInfoService {
      * @param subjectInfo 实例对象
      * @return 实例对象
      */
-    SubjectInfo update(SubjectInfo subjectInfo);
+    int update(SubjectInfo subjectInfo);
 
     /**
      * 通过主键删除数据

@@ -36,9 +36,8 @@ public class SubjectInfoServiceImpl implements SubjectInfoService {
      * @return 实例对象
      */
     @Override
-    public SubjectInfo insert(SubjectInfo subjectInfo) {
-        this.subjectInfoDao.insert(subjectInfo);
-        return subjectInfo;
+    public int insert(SubjectInfo subjectInfo) {
+        return this.subjectInfoDao.insert(subjectInfo);
     }
 
     /**
@@ -48,9 +47,8 @@ public class SubjectInfoServiceImpl implements SubjectInfoService {
      * @return 实例对象
      */
     @Override
-    public SubjectInfo update(SubjectInfo subjectInfo) {
-        this.subjectInfoDao.update(subjectInfo);
-        return this.queryById(subjectInfo.getId());
+    public int update(SubjectInfo subjectInfo) {
+        return this.subjectInfoDao.update(subjectInfo);
     }
 
     /**

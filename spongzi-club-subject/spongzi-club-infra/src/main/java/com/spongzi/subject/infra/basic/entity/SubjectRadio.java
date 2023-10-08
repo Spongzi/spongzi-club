@@ -21,7 +21,7 @@ public class SubjectRadio implements Serializable {
     /**
      * 题目id
      */
-    private Integer subjectId;
+    private Long subjectId;
     /**
      * a,b,c,d
      */

@@ -21,7 +21,7 @@ public class SubjectMultiple implements Serializable {
     /**
      * 题目id
      */
-    private Integer subjectId;
+    private Long subjectId;
     /**
      * 选项类型
      */

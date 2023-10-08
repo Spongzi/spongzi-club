@@ -2,6 +2,8 @@ package com.spongzi.subject.infra.basic.service;
 
 import com.spongzi.subject.infra.basic.entity.SubjectBrief;
 
+import java.util.List;
+
 /**
  * 简答题(SubjectBrief)表服务接口
  *
@@ -41,5 +43,4 @@ public interface SubjectBriefService {
      * @return 是否成功
      */
     boolean deleteById(Long id);
-
 }
