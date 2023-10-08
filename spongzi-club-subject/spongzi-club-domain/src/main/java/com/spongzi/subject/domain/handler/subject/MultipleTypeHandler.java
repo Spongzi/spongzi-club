@@ -8,6 +8,7 @@ import com.spongzi.subject.domain.entity.SubjectAnswerBO;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
 import com.spongzi.subject.infra.basic.entity.SubjectMultiple;
 import com.spongzi.subject.infra.basic.service.SubjectMultipleService;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.LinkedList;
@@ -19,6 +20,7 @@ import java.util.List;
  * @author spong
  * @date 2023/10/08
  */
+@Component
 public class MultipleTypeHandler implements SubjectTypeHandler {
 
     @Resource

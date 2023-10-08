@@ -7,6 +7,7 @@ import com.spongzi.subject.domain.entity.SubjectAnswerBO;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
 import com.spongzi.subject.infra.basic.entity.SubjectRadio;
 import com.spongzi.subject.infra.basic.service.SubjectRadioService;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.LinkedList;
@@ -18,6 +19,7 @@ import java.util.List;
  * @author spong
  * @date 2023/10/08
  */
+@Component
 public class RadioTypeHandler implements SubjectTypeHandler {
 
     @Resource

@@ -6,6 +6,7 @@ import com.spongzi.subject.domain.entity.SubjectAnswerBO;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
 import com.spongzi.subject.infra.basic.entity.SubjectJudge;
 import com.spongzi.subject.infra.basic.service.SubjectJudgeService;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
@@ -15,6 +16,7 @@ import javax.annotation.Resource;
  * @author spong
  * @date 2023/10/08
  */
+@Component
 public class JudgeTypeHandler implements SubjectTypeHandler {
 
     @Resource
