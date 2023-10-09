@@ -1,6 +1,8 @@
 package com.spongzi.subject.domain.entity;
 
+import com.spongzi.subject.common.entity.PageInfo;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.util.List;
@@ -11,8 +13,9 @@ import java.util.List;
  * @author spongzi
  * @since 2023-10-08 13:30:03
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class SubjectInfoBO implements Serializable {
+public class SubjectInfoBO extends PageInfo implements Serializable {
     private static final long serialVersionUID = -96353715297443704L;
     /**
      * 主键
@@ -73,5 +76,15 @@ public class SubjectInfoBO implements Serializable {
      * 题目答案列表
      */
     private List<SubjectAnswerBO> optionList;
+
+    /**
+     * 分类ID
+     */
+    private Integer categoryId;
+
+    /**
+     * 标签ID
+     */
+    private Integer labelId;
 }
 

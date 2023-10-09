@@ -5,6 +5,7 @@ import com.google.common.base.Preconditions;
 import com.spongzi.subject.application.convert.SubjectAnswerConvert;
 import com.spongzi.subject.application.convert.SubjectInfoConvert;
 import com.spongzi.subject.application.dto.SubjectInfoDTO;
+import com.spongzi.subject.common.entity.PageResult;
 import com.spongzi.subject.common.entity.Result;
 import com.spongzi.subject.domain.entity.SubjectAnswerBO;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
@@ -52,6 +53,26 @@ public class SubjectController {
                     .convertDtoListToBoList(subjectInfoDTO.getOptionList());
             subjectInfoBO.setOptionList(subjectAnswerBOList);
             subjectInfoDomainService.add(subjectInfoBO);
+            return Result.ok();
+        } catch (Exception e) {
+            log.error("SubjectCategoryController.add.error: {}", e.getMessage(), e);
+            return Result.fail(e.getMessage());
+        }
+    }
+
+    @PostMapping("/get-subject-page")
+    public Result<PageResult<SubjectInfoDTO>> getSubjectPage(@RequestBody SubjectInfoDTO subjectInfoDTO) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("SubjectController.getSubjectPage.dto: {}", JSON.toJSONString(subjectInfoDTO));
+            }
+
+            Preconditions.checkNotNull(subjectInfoDTO.getCategoryId(), "分类id不能为空");
+            Preconditions.checkNotNull(subjectInfoDTO.getLabelId(), "标签id不能为空");
+
+            SubjectInfoBO subjectInfoBO = SubjectInfoConvert.INSTANCE
+                    .convertDtoToBo(subjectInfoDTO);
+            PageResult<SubjectInfoBO> boPageResult = subjectInfoDomainService.getSubjectPage(subjectInfoBO);
             return Result.ok();
         } catch (Exception e) {
             log.error("SubjectCategoryController.add.error: {}", e.getMessage(), e);

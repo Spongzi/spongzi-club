@@ -1,6 +1,7 @@
 package com.spongzi.subject.domain.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.spongzi.subject.common.entity.PageResult;
 import com.spongzi.subject.domain.convert.SubjectInfoConvert;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
 import com.spongzi.subject.domain.handler.subject.SubjectHandlerTypeFactory;
@@ -64,5 +65,25 @@ public class SubjectInfoDomainServiceImpl implements SubjectInfoDomainService {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    @Override
+    public PageResult<SubjectInfoBO> getSubjectPage(SubjectInfoBO subjectInfoBO) {
+        PageResult<SubjectInfoBO> pageResult = new PageResult<>();
+        pageResult.setPageNo(subjectInfoBO.getPageNo());
+        pageResult.setPageSize(subjectInfoBO.getPageSize());
+        SubjectInfo subjectInfo = SubjectInfoConvert.INSTANCE.convertBoToEntity(subjectInfoBO);
+        Integer categoryId = subjectInfoBO.getCategoryId();
+        Integer labelId = subjectInfoBO.getLabelId();
+        int start = (subjectInfoBO.getPageNo() - 1) * subjectInfoBO.getPageSize();
+        int count = subjectInfoService.countByCondition(subjectInfo, categoryId, labelId);
+        if (count == 0) {
+            return pageResult;
+        }
+        List<SubjectInfo> subjectInfoList = subjectInfoService.queryPage(subjectInfo, categoryId, labelId, start,
+                subjectInfoBO.getPageNo(), subjectInfoBO.getPageSize());
+        List<SubjectInfoBO> subjectInfoBOList = SubjectInfoConvert.INSTANCE.convertEntityListToBoList(subjectInfoList);
+        pageResult.setRecords(subjectInfoBOList);
+        return pageResult;
     }
 }

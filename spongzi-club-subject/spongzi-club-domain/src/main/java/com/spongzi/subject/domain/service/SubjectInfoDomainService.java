@@ -1,5 +1,6 @@
 package com.spongzi.subject.domain.service;
 
+import com.spongzi.subject.common.entity.PageResult;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
 
 /**
@@ -17,4 +18,12 @@ public interface SubjectInfoDomainService {
      * @return {@link Boolean}
      */
     Boolean add(SubjectInfoBO subjectInfoBO);
+
+    /**
+     * 分页查询
+     *
+     * @param subjectInfoBO 主题信息BO
+     * @return {@link PageResult}<{@link SubjectInfoBO}>
+     */
+    PageResult<SubjectInfoBO> getSubjectPage(SubjectInfoBO subjectInfoBO);
 }

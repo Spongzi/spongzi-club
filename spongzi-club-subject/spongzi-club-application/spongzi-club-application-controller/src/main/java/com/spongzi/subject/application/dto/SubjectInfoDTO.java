@@ -1,6 +1,8 @@
 package com.spongzi.subject.application.dto;
 
+import com.spongzi.subject.common.entity.PageInfo;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,8 +14,9 @@ import java.util.List;
  * @author spongzi
  * @since 2023-10-08 13:30:03
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class SubjectInfoDTO implements Serializable {
+public class SubjectInfoDTO extends PageInfo implements Serializable {
     private static final long serialVersionUID = -96353715297443704L;
     /**
      * 主键
@@ -74,5 +77,15 @@ public class SubjectInfoDTO implements Serializable {
      * 题目答案列表
      */
     private List<SubjectAnswerDTO> optionList;
+
+    /**
+     * 分类ID
+     */
+    private Integer categoryId;
+
+    /**
+     * 标签ID
+     */
+    private Integer labelId;
 }
 
