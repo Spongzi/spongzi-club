@@ -17,6 +17,7 @@ import com.spongzi.subject.infra.basic.service.SubjectLabelService;
 import com.spongzi.subject.infra.basic.service.SubjectMappingService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -47,6 +48,7 @@ public class SubjectInfoDomainServiceImpl implements SubjectInfoDomainService {
     private SubjectHandlerTypeFactory subjectHandlerTypeFactory;
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public Boolean add(SubjectInfoBO subjectInfoBO) {
         try {
             if (log.isInfoEnabled()) {
@@ -54,8 +56,10 @@ public class SubjectInfoDomainServiceImpl implements SubjectInfoDomainService {
             }
             // 使用工厂策略模式，根据传入的type来自动选择对应的映射处理
             SubjectInfo subjectInfo = SubjectInfoConvert.INSTANCE.convertBoToEntity(subjectInfoBO);
+            subjectInfo.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
             subjectInfoService.insert(subjectInfo);
             SubjectTypeHandler handler = subjectHandlerTypeFactory.getHandler(subjectInfo.getSubjectType());
+            subjectInfoBO.setId(subjectInfo.getId());
             handler.add(subjectInfoBO);
             List<SubjectMapping> mappingList = getSubjectMappings(subjectInfoBO, subjectInfo);
             subjectMappingService.insertBatch(mappingList);
@@ -75,6 +79,7 @@ public class SubjectInfoDomainServiceImpl implements SubjectInfoDomainService {
                 subjectMapping.setSubjectId(subjectInfo.getId());
                 subjectMapping.setCategoryId(categoryId);
                 subjectMapping.setLabelId(labelId);
+                subjectMapping.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
                 mappingList.add(subjectMapping);
             });
         });

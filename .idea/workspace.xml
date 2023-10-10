@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="查询题目信息接口开发，并且使用工厂模式">
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/dto/SubjectInfoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/dto/SubjectInfoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectInfoDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectInfoDomainServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectInfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectInfoDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +153,7 @@
       <workItem from="1696763071602" duration="6825000" />
       <workItem from="1696832628558" duration="3835000" />
       <workItem from="1696848771559" duration="15000" />
-      <workItem from="1696917839062" duration="2982000" />
+      <workItem from="1696917839062" duration="3550000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <option name="closed" value="true" />
@@ -505,7 +507,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696920910061</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="查询题目信息接口开发，并且使用工厂模式">
+      <option name="closed" value="true" />
+      <created>1696921006026</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1696921006026</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
