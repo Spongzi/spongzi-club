@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="解决jackson2序列化空值的问题">
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/config/GlobalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/config/GlobalConfig.java" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="设置not null">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectInfoDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectInfoDomainServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,15 +153,7 @@
       <workItem from="1696832628558" duration="3835000" />
       <workItem from="1696848771559" duration="15000" />
       <workItem from="1696917839062" duration="5736000" />
-      <workItem from="1696935913810" duration="3240000" />
-    </task>
-    <task id="LOCAL-00002" summary="Spring集成">
-      <option name="closed" value="true" />
-      <created>1696556626053</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1696556626053</updated>
+      <workItem from="1696935913810" duration="3625000" />
     </task>
     <task id="LOCAL-00003" summary="集成SpringMVC">
       <option name="closed" value="true" />
@@ -546,14 +539,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696942805395</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="设置not null">
+      <option name="closed" value="true" />
+      <created>1696942958112</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1696942958112</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成更新分类" />
     <MESSAGE value="完成删除分类" />
     <MESSAGE value="修复小bug" />
     <MESSAGE value="添加添加时的isDelete的默认值" />
@@ -578,7 +578,8 @@
     <MESSAGE value="查询题目信息接口开发，并且使用工厂模式" />
     <MESSAGE value="处理一些数据加载失败的bug" />
     <MESSAGE value="解决jackson2序列化空值的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决jackson2序列化空值的问题" />
+    <MESSAGE value="设置not null" />
+    <option name="LAST_COMMIT_MESSAGE" value="设置not null" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
