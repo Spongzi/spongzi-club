@@ -90,7 +90,7 @@ public class SubjectController {
                 log.info("SubjectController.getSubjectPage.dto: {}", JSON.toJSONString(subjectInfoDTO));
             }
 
-            Preconditions.checkNotNull(subjectInfoDTO.getLabelId(), "标签id不能为空");
+            Preconditions.checkNotNull(subjectInfoDTO.getId(), "题目id不能为空");
 
             SubjectInfoBO subjectInfoBO = SubjectInfoConvert.INSTANCE
                     .convertDtoToBo(subjectInfoDTO);
