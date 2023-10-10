@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="添加todo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectCategoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectCategoryDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectJudgeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectJudgeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectMultipleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectMultipleDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectRadioDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/resources/mapper/SubjectRadioDao.xml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="修改sql语句和参数判断">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/config/SqlStatementInterceptor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,23 +152,7 @@
       <workItem from="1696832628558" duration="3835000" />
       <workItem from="1696848771559" duration="15000" />
       <workItem from="1696917839062" duration="5736000" />
-      <workItem from="1696935913810" duration="4042000" />
-    </task>
-    <task id="LOCAL-00004" summary="修改gitignore配置">
-      <option name="closed" value="true" />
-      <created>1696582978937</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1696582978937</updated>
-    </task>
-    <task id="LOCAL-00005" summary="mysql, druid, mybatis plus整合，以及对配置文件的修改和简单的测试">
-      <option name="closed" value="true" />
-      <created>1696584125140</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1696584125140</updated>
+      <workItem from="1696935913810" duration="4360000" />
     </task>
     <task id="LOCAL-00006" summary="对数据库密码进行加密">
       <option name="closed" value="true" />
@@ -551,14 +530,29 @@
       <option name="project" value="LOCAL" />
       <updated>1696943340666</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="修改sql语句和参数判断">
+      <option name="closed" value="true" />
+      <created>1696943750199</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1696943750199</updated>
+    </task>
+    <task id="LOCAL-00054" summary="修改sql语句和参数判断">
+      <option name="closed" value="true" />
+      <created>1696944055376</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1696944055376</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修复小bug" />
     <MESSAGE value="添加添加时的isDelete的默认值" />
     <MESSAGE value="修改增加参数校验" />
     <MESSAGE value="开发标签模块，生成简单的代码" />
@@ -583,7 +577,8 @@
     <MESSAGE value="解决jackson2序列化空值的问题" />
     <MESSAGE value="设置not null" />
     <MESSAGE value="添加todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加todo" />
+    <MESSAGE value="修改sql语句和参数判断" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改sql语句和参数判断" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
