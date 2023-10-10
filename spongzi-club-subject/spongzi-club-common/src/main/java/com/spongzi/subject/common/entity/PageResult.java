@@ -1,5 +1,6 @@
 package com.spongzi.subject.common.entity;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 
@@ -9,7 +10,9 @@ import java.util.List;
  * @author spong
  * @date 2023/10/09
  */
-public class PageResult<T> {
+public class PageResult<T> implements Serializable {
+
+    private static final long serialVersionUID = 7466942669307468053L;
 
     private Integer pageNo = 1;
 
