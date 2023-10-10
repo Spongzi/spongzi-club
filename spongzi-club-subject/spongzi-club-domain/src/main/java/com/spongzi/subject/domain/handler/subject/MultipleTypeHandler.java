@@ -6,6 +6,7 @@ import com.spongzi.subject.domain.convert.SubjectBriefConvert;
 import com.spongzi.subject.domain.convert.SubjectMultipleConvert;
 import com.spongzi.subject.domain.entity.SubjectAnswerBO;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
+import com.spongzi.subject.domain.entity.SubjectOptionBO;
 import com.spongzi.subject.infra.basic.entity.SubjectMultiple;
 import com.spongzi.subject.infra.basic.service.SubjectMultipleService;
 import org.springframework.stereotype.Component;
@@ -42,5 +43,16 @@ public class MultipleTypeHandler implements SubjectTypeHandler {
             subjectMultipleList.add(subjectMultiple);
         });
         subjectMultipleService.insertBatch(subjectMultipleList);
+    }
+
+    @Override
+    public SubjectOptionBO query(Long subjectId) {
+        SubjectMultiple subjectMultiple = new SubjectMultiple();
+        subjectMultiple.setSubjectId(subjectId);
+        List<SubjectMultiple> result = subjectMultipleService.queryByCondition(subjectMultiple);
+        List<SubjectAnswerBO> subjectAnswerBOList = SubjectMultipleConvert.INSTANCE.convertEntityListToAnswerBoList(result);
+        SubjectOptionBO subjectOptionBO = new SubjectOptionBO();
+        subjectOptionBO.setOptionList(subjectAnswerBOList);
+        return subjectOptionBO;
     }
 }

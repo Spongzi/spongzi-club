@@ -50,4 +50,12 @@ public interface SubjectMultipleService {
      * @param subjectMultipleList 主题多列表
      */
     void insertBatch(List<SubjectMultiple> subjectMultipleList);
+
+    /**
+     * 按条件查询
+     *
+     * @param subjectMultiple 多个主题
+     * @return {@link List}<{@link SubjectMultiple}>
+     */
+    List<SubjectMultiple> queryByCondition(SubjectMultiple subjectMultiple);
 }

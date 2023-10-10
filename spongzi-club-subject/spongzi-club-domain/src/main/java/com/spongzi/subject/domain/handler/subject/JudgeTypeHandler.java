@@ -2,13 +2,16 @@ package com.spongzi.subject.domain.handler.subject;
 
 import com.spongzi.subject.common.enums.IsDeletedEnum;
 import com.spongzi.subject.common.enums.SubjectInfoTypeEnum;
+import com.spongzi.subject.domain.convert.SubjectJudgeConvert;
 import com.spongzi.subject.domain.entity.SubjectAnswerBO;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
+import com.spongzi.subject.domain.entity.SubjectOptionBO;
 import com.spongzi.subject.infra.basic.entity.SubjectJudge;
 import com.spongzi.subject.infra.basic.service.SubjectJudgeService;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 判断题目的策略类型
@@ -36,5 +39,16 @@ public class JudgeTypeHandler implements SubjectTypeHandler {
         subjectJudge.setIsCorrect(subjectAnswerBO.getIsCorrect());
         subjectJudge.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
         subjectJudgeService.insert(subjectJudge);
+    }
+
+    @Override
+    public SubjectOptionBO query(Long subjectId) {
+        SubjectJudge subjectJudge = new SubjectJudge();
+        subjectJudge.setSubjectId(subjectId);
+        List<SubjectJudge> result = subjectJudgeService.queryByCondition(subjectJudge);
+        List<SubjectAnswerBO> subjectAnswerBOList = SubjectJudgeConvert.INSTANCE.convertEntityListToAnswerBoList(result);
+        SubjectOptionBO subjectOptionBO = new SubjectOptionBO();
+        subjectOptionBO.setOptionList(subjectAnswerBOList);
+        return subjectOptionBO;
     }
 }

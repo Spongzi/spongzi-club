@@ -2,21 +2,27 @@ package com.spongzi.subject.domain.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.spongzi.subject.common.entity.PageResult;
+import com.spongzi.subject.common.enums.IsDeletedEnum;
 import com.spongzi.subject.domain.convert.SubjectInfoConvert;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
+import com.spongzi.subject.domain.entity.SubjectOptionBO;
 import com.spongzi.subject.domain.handler.subject.SubjectHandlerTypeFactory;
 import com.spongzi.subject.domain.handler.subject.SubjectTypeHandler;
 import com.spongzi.subject.domain.service.SubjectInfoDomainService;
 import com.spongzi.subject.infra.basic.entity.SubjectInfo;
+import com.spongzi.subject.infra.basic.entity.SubjectLabel;
 import com.spongzi.subject.infra.basic.entity.SubjectMapping;
 import com.spongzi.subject.infra.basic.service.SubjectInfoService;
+import com.spongzi.subject.infra.basic.service.SubjectLabelService;
 import com.spongzi.subject.infra.basic.service.SubjectMappingService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 题目信息服务
@@ -35,6 +41,9 @@ public class SubjectInfoDomainServiceImpl implements SubjectInfoDomainService {
     private SubjectMappingService subjectMappingService;
 
     @Resource
+    private SubjectLabelService subjectLabelService;
+
+    @Resource
     private SubjectHandlerTypeFactory subjectHandlerTypeFactory;
 
     @Override
@@ -48,23 +57,28 @@ public class SubjectInfoDomainServiceImpl implements SubjectInfoDomainService {
             subjectInfoService.insert(subjectInfo);
             SubjectTypeHandler handler = subjectHandlerTypeFactory.getHandler(subjectInfo.getSubjectType());
             handler.add(subjectInfoBO);
-            List<Long> categoryIds = subjectInfoBO.getCategoryIds();
-            List<Long> labelIds = subjectInfoBO.getLabelIds();
-            List<SubjectMapping> mappingList = new LinkedList<>();
-            categoryIds.forEach(categoryId -> {
-                labelIds.forEach(labelId -> {
-                    SubjectMapping subjectMapping = new SubjectMapping();
-                    subjectMapping.setSubjectId(subjectInfo.getId());
-                    subjectMapping.setCategoryId(categoryId);
-                    subjectMapping.setLabelId(labelId);
-                    mappingList.add(subjectMapping);
-                });
-            });
+            List<SubjectMapping> mappingList = getSubjectMappings(subjectInfoBO, subjectInfo);
             subjectMappingService.insertBatch(mappingList);
             return true;
         } catch (Exception e) {
             return false;
         }
+    }
+
+    private static List<SubjectMapping> getSubjectMappings(SubjectInfoBO subjectInfoBO, SubjectInfo subjectInfo) {
+        List<Long> categoryIds = subjectInfoBO.getCategoryIds();
+        List<Long> labelIds = subjectInfoBO.getLabelIds();
+        List<SubjectMapping> mappingList = new LinkedList<>();
+        categoryIds.forEach(categoryId -> {
+            labelIds.forEach(labelId -> {
+                SubjectMapping subjectMapping = new SubjectMapping();
+                subjectMapping.setSubjectId(subjectInfo.getId());
+                subjectMapping.setCategoryId(categoryId);
+                subjectMapping.setLabelId(labelId);
+                mappingList.add(subjectMapping);
+            });
+        });
+        return mappingList;
     }
 
     @Override
@@ -85,5 +99,23 @@ public class SubjectInfoDomainServiceImpl implements SubjectInfoDomainService {
         List<SubjectInfoBO> subjectInfoBOList = SubjectInfoConvert.INSTANCE.convertEntityListToBoList(subjectInfoList);
         pageResult.setRecords(subjectInfoBOList);
         return pageResult;
+    }
+
+    @Override
+    public SubjectInfoBO querySubjectInfo(SubjectInfoBO subjectInfoBO) {
+        SubjectInfo subjectInfo = subjectInfoService.queryById(subjectInfoBO.getId());
+        Integer subjectType = subjectInfo.getSubjectType();
+        SubjectTypeHandler handler = subjectHandlerTypeFactory.getHandler(subjectType);
+        SubjectOptionBO optionBO = handler.query(subjectInfo.getId());
+        SubjectInfoBO boResult = SubjectInfoConvert.INSTANCE.convertOptionAndEntityToBO(optionBO, subjectInfo);
+        SubjectMapping subjectMapping = new SubjectMapping();
+        subjectMapping.setSubjectId(subjectInfo.getId());
+        subjectMapping.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
+        List<SubjectMapping> subjectMappingList = subjectMappingService.queryLabelId(subjectMapping);
+        List<Long> labelIdList = subjectMappingList.stream().map(SubjectMapping::getLabelId).collect(Collectors.toList());
+        List<SubjectLabel> subjectLabelList = subjectLabelService.batchQueryById(labelIdList);
+        List<String> labelNameList = subjectLabelList.stream().map(SubjectLabel::getLabelName).collect(Collectors.toList());
+        boResult.setLabelNames(labelNameList);
+        return boResult;
     }
 }

@@ -73,7 +73,30 @@ public class SubjectController {
             SubjectInfoBO subjectInfoBO = SubjectInfoConvert.INSTANCE
                     .convertDtoToBo(subjectInfoDTO);
             PageResult<SubjectInfoBO> boPageResult = subjectInfoDomainService.getSubjectPage(subjectInfoBO);
-            return Result.ok();
+            PageResult<SubjectInfoDTO> dtoPageResult = SubjectInfoConvert.INSTANCE.convertDtoPageToBoPage(boPageResult);
+            return Result.ok(dtoPageResult);
+        } catch (Exception e) {
+            log.error("SubjectCategoryController.add.error: {}", e.getMessage(), e);
+            return Result.fail(e.getMessage());
+        }
+    }
+
+    @PostMapping("/query-subject-info")
+    public Result<SubjectInfoDTO> querySubjectInfo(@RequestBody SubjectInfoDTO subjectInfoDTO) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("SubjectController.getSubjectPage.dto: {}", JSON.toJSONString(subjectInfoDTO));
+            }
+
+            Preconditions.checkNotNull(subjectInfoDTO.getId(), "题目id不能为空");
+            Preconditions.checkNotNull(subjectInfoDTO.getCategoryId(), "分类id不能为空");
+            Preconditions.checkNotNull(subjectInfoDTO.getLabelId(), "标签id不能为空");
+
+            SubjectInfoBO subjectInfoBO = SubjectInfoConvert.INSTANCE
+                    .convertDtoToBo(subjectInfoDTO);
+            SubjectInfoBO boResult = subjectInfoDomainService.querySubjectInfo(subjectInfoBO);
+            SubjectInfoDTO dtoResult = SubjectInfoConvert.INSTANCE.convertBoToDto(boResult);
+            return Result.ok(dtoResult);
         } catch (Exception e) {
             log.error("SubjectCategoryController.add.error: {}", e.getMessage(), e);
             return Result.fail(e.getMessage());

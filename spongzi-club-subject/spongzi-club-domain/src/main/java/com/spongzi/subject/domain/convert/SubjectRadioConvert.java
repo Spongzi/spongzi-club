@@ -1,9 +1,12 @@
 package com.spongzi.subject.domain.convert;
 
 import com.spongzi.subject.domain.entity.SubjectAnswerBO;
+import com.spongzi.subject.infra.basic.entity.SubjectMultiple;
 import com.spongzi.subject.infra.basic.entity.SubjectRadio;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
+
+import java.util.List;
 
 /**
  * 单选题类别转换
@@ -17,4 +20,5 @@ public interface SubjectRadioConvert {
 
     SubjectRadio convertBoToEntity(SubjectAnswerBO subjectAnswerBO);
 
+    List<SubjectAnswerBO> convertEntityListToAnswerBoList(List<SubjectRadio> subjectRadioList);
 }

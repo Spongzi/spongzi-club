@@ -5,6 +5,7 @@ import com.spongzi.subject.common.enums.SubjectInfoTypeEnum;
 import com.spongzi.subject.domain.convert.SubjectRadioConvert;
 import com.spongzi.subject.domain.entity.SubjectAnswerBO;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
+import com.spongzi.subject.domain.entity.SubjectOptionBO;
 import com.spongzi.subject.infra.basic.entity.SubjectRadio;
 import com.spongzi.subject.infra.basic.service.SubjectRadioService;
 import org.springframework.stereotype.Component;
@@ -43,5 +44,16 @@ public class RadioTypeHandler implements SubjectTypeHandler {
             subjectRadioList.add(subjectRadio);
         }
         subjectRadioService.batchInsert(subjectRadioList);
+    }
+
+    @Override
+    public SubjectOptionBO query(Long subjectId) {
+        SubjectRadio subjectRadio = new SubjectRadio();
+        subjectRadio.setSubjectId(subjectId);
+        List<SubjectRadio> result = subjectRadioService.queryByCondition(subjectRadio);
+        List<SubjectAnswerBO> subjectAnswerBOList = SubjectRadioConvert.INSTANCE.convertEntityListToAnswerBoList(result);
+        SubjectOptionBO subjectOptionBO = new SubjectOptionBO();
+        subjectOptionBO.setOptionList(subjectAnswerBOList);
+        return subjectOptionBO;
     }
 }

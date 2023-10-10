@@ -2,6 +2,7 @@ package com.spongzi.subject.domain.handler.subject;
 
 import com.spongzi.subject.common.enums.SubjectInfoTypeEnum;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
+import com.spongzi.subject.domain.entity.SubjectOptionBO;
 
 /**
  * 主题类型处理程序
@@ -24,4 +25,11 @@ public interface SubjectTypeHandler {
      * @param subjectInfoBO 主题信息BO
      */
     void add(SubjectInfoBO subjectInfoBO);
+
+    /**
+     * 实际的题目查询
+     *
+     * @param subjectId 主题ID
+     */
+    SubjectOptionBO query(Long subjectId);
 }
