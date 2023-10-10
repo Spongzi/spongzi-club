@@ -39,13 +39,15 @@ public class SubjectController {
                 log.info("SubjectController.add.dto: {}", JSON.toJSONString(subjectInfoDTO));
             }
 
-            Preconditions.checkArgument(!StringUtils.isBlank(subjectInfoDTO.getSubjectName()), "题目名称不能为空");
+            Preconditions.checkArgument(!StringUtils.isBlank(subjectInfoDTO.getSubjectName()),
+                    "题目名称不能为空");
             Preconditions.checkNotNull(subjectInfoDTO.getSubjectDifficult(), "题目难度不能为空");
             Preconditions.checkNotNull(subjectInfoDTO.getSubjectType(), "题目类型不能为空");
             Preconditions.checkNotNull(subjectInfoDTO.getSubjectScore(), "题目分数不能为空");
-            Preconditions.checkNotNull(subjectInfoDTO.getSubjectAnswer(), "题目答案不能为空");
-            Preconditions.checkArgument(!CollectionUtils.isEmpty(subjectInfoDTO.getCategoryIds()), "分类id不能为空");
-            Preconditions.checkArgument(!CollectionUtils.isEmpty(subjectInfoDTO.getLabelIds()), "标签id不能为空");
+            Preconditions.checkArgument(!CollectionUtils.isEmpty(subjectInfoDTO.getCategoryIds())
+                    , "分类id不能为空");
+            Preconditions.checkArgument(!CollectionUtils.isEmpty(subjectInfoDTO.getLabelIds())
+                    , "标签id不能为空");
 
             SubjectInfoBO subjectInfoBO = SubjectInfoConvert.INSTANCE
                     .convertDtoToBo(subjectInfoDTO);
@@ -88,8 +90,6 @@ public class SubjectController {
                 log.info("SubjectController.getSubjectPage.dto: {}", JSON.toJSONString(subjectInfoDTO));
             }
 
-            Preconditions.checkNotNull(subjectInfoDTO.getId(), "题目id不能为空");
-            Preconditions.checkNotNull(subjectInfoDTO.getCategoryId(), "分类id不能为空");
             Preconditions.checkNotNull(subjectInfoDTO.getLabelId(), "标签id不能为空");
 
             SubjectInfoBO subjectInfoBO = SubjectInfoConvert.INSTANCE
