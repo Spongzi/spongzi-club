@@ -1,14 +1,10 @@
 package com.spongzi.subject.domain.handler.subject;
 
 import com.spongzi.subject.common.enums.SubjectInfoTypeEnum;
-import com.spongzi.subject.infra.basic.entity.SubjectInfo;
-import javafx.fxml.Initializable;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import javax.naming.spi.InitialContextFactory;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
