@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="修改bug">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-oss/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/OssApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_6_20_41_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2023_10_6_20_41__Changes_.xml" beforeDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="搭建基础的oss服务模块">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/config/MinioConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/controller/FileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/entity/FileInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/utils/MinioUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,38 +58,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Code/Project/spongzi-club/spongzi-club-oss/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/Project/spongzi-club/spongzi-club-oss/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-oss\src\main\resources" />
@@ -106,6 +105,13 @@
       <recent name="com.spongzi.subject.domain.handler.subject" />
       <recent name="com.spongzi.subject.common.enums" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.OssApplication">
     <configuration name="DruidEncryptUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -185,15 +191,8 @@
       <workItem from="1697110985443" duration="1011000" />
       <workItem from="1697184689846" duration="398000" />
       <workItem from="1697195838438" duration="8000" />
-      <workItem from="1697265204425" duration="581000" />
-    </task>
-    <task id="LOCAL-00009" summary="开发新增分类模块-测试">
-      <option name="closed" value="true" />
-      <created>1696594230817</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1696594230817</updated>
+      <workItem from="1697265204425" duration="1017000" />
+      <workItem from="1697266231115" duration="1637000" />
     </task>
     <task id="LOCAL-00010" summary="引入日志，并且排除spring-boot-starter-web中的日志">
       <option name="closed" value="true" />
@@ -579,14 +578,21 @@
       <option name="project" value="LOCAL" />
       <updated>1697081755108</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="搭建基础的oss服务模块">
+      <option name="closed" value="true" />
+      <created>1697265834543</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1697265834544</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="开发添加标签模块，并完成测试" />
     <MESSAGE value="删除无用的包引入" />
     <MESSAGE value="简单的优化代码" />
     <MESSAGE value="开发更新标签接口" />
@@ -611,7 +617,8 @@
     <MESSAGE value="sql拦截器自动翻译" />
     <MESSAGE value="添加java打包版本" />
     <MESSAGE value="修改bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改bug" />
+    <MESSAGE value="搭建基础的oss服务模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="搭建基础的oss服务模块" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

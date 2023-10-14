@@ -37,6 +37,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--minio相关的依赖-->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.2.0</version>
+        </dependency>
     </dependencies>
 
     <repositories>
