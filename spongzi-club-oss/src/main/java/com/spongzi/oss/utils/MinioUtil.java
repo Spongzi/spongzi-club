@@ -2,17 +2,12 @@ package com.spongzi.oss.utils;
 
 import com.spongzi.oss.entity.FileInfo;
 import io.minio.*;
-import io.minio.errors.*;
 import io.minio.messages.Bucket;
 import io.minio.messages.Item;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -49,7 +44,7 @@ public class MinioUtil {
      * @param objectName  对象名称
      * @throws Exception 例外情况
      */
-    public void uploadFile(FileInputStream inputStream, String bucket, String objectName) throws Exception {
+    public void uploadFile(InputStream inputStream, String bucket, String objectName) throws Exception {
         minioClient.putObject(PutObjectArgs.builder()
                 .bucket(bucket)
                 .object(objectName)
