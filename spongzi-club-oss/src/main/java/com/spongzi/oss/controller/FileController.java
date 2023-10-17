@@ -1,6 +1,7 @@
 package com.spongzi.oss.controller;
 
 import com.spongzi.oss.service.FileService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,9 @@ public class FileController {
     @Resource
     private FileService fileService;
 
+    @Value("${storage.service.type}")
+    private String storageType;
+
     @GetMapping("/test-get-all-buckets")
     public String testGetAllBuckets() {
         try {
@@ -25,5 +29,10 @@ public class FileController {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @GetMapping("/test-nacos")
+    public String testNacos() {
+        return storageType;
     }
 }
