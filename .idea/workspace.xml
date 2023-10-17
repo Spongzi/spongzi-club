@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="使用适配器模式实现不同的oss的操作实现">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/bootstrap.yml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="标签增加分类概念">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/config/StorageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/config/StorageConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectLabelDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectLabelDomainServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectLabelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectLabelDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectLabelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectLabelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectLabelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectLabelServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OssApplication">
+  <component name="RunManager" selected="Spring Boot.SubjectApplication">
     <configuration name="DruidEncryptUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.spongzi.subject.infra.basic.utils.DruidEncryptUtil" />
       <module name="spongzi-club-infra" />
@@ -157,8 +156,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.OssApplication" />
         <item itemvalue="Spring Boot.SubjectApplication" />
+        <item itemvalue="Spring Boot.OssApplication" />
         <item itemvalue="Application.DruidEncryptUtil" />
       </list>
     </recent_temporary>
@@ -202,23 +201,8 @@
       <workItem from="1697468575331" duration="232000" />
       <workItem from="1697468814670" duration="138000" />
       <workItem from="1697525460204" duration="1061000" />
-      <workItem from="1697526530799" duration="1978000" />
-    </task>
-    <task id="LOCAL-00013" summary="idea文件">
-      <option name="closed" value="true" />
-      <created>1696596955575</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1696596955575</updated>
-    </task>
-    <task id="LOCAL-00014" summary="实现查询岗位分类的代码编写，并且完成相应的简单测试">
-      <option name="closed" value="true" />
-      <created>1696646407024</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1696646407024</updated>
+      <workItem from="1697526530799" duration="3508000" />
+      <workItem from="1697530052847" duration="1251000" />
     </task>
     <task id="LOCAL-00015" summary="实现查询岗位分类的代码编写，并且完成相应的简单测试">
       <option name="closed" value="true" />
@@ -596,15 +580,29 @@
       <option name="project" value="LOCAL" />
       <updated>1697437141031</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="使用nacos成为配置中心，并且实现文件bean动态切换">
+      <option name="closed" value="true" />
+      <created>1697528775044</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1697528775044</updated>
+    </task>
+    <task id="LOCAL-00063" summary="标签增加分类概念">
+      <option name="closed" value="true" />
+      <created>1697530747429</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1697530747430</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="开发标签删除接口" />
-    <MESSAGE value="生成题目关系相关的基础代码" />
     <MESSAGE value="完成简单的调试bug" />
     <MESSAGE value="修改数据类型" />
     <MESSAGE value="完成根据分类查询标签接口的开发" />
@@ -628,7 +626,9 @@
     <MESSAGE value="实现一些基础功能" />
     <MESSAGE value="完成简单的测试连接" />
     <MESSAGE value="使用适配器模式实现不同的oss的操作实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用适配器模式实现不同的oss的操作实现" />
+    <MESSAGE value="使用nacos成为配置中心，并且实现文件bean动态切换" />
+    <MESSAGE value="标签增加分类概念" />
+    <option name="LAST_COMMIT_MESSAGE" value="标签增加分类概念" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

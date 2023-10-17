@@ -18,6 +18,9 @@ public class SubjectLabelBO implements Serializable {
      */
     private Long id;
 
+    /**
+     * 分类id
+     */
     private Long categoryId;
 
     /**

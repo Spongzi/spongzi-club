@@ -3,7 +3,6 @@ package com.spongzi.subject.infra.basic.mapper;
 import com.spongzi.subject.infra.basic.entity.SubjectLabel;
 import org.apache.ibatis.annotations.Param;
 
-import java.awt.print.Pageable;
 import java.util.List;
 
 /**
@@ -28,7 +27,7 @@ public interface SubjectLabelDao {
      * @param subjectLabel 查询条件
      * @return 对象列表
      */
-    List<SubjectLabel> queryAllByLimit(SubjectLabel subjectLabel);
+    List<SubjectLabel> queryByCondition(SubjectLabel subjectLabel);
 
     /**
      * 统计总行数
