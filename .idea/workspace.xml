@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="进行网关集成，路由转发的设置">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/auth/SaTokenConfigure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/auth/StpInterfaceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="添加网关权限校验">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/entity/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/enums/ResultCodeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/exception/GatewayExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/auth/SaTokenConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/auth/SaTokenConfigure.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,46 +60,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Code/Project/spongzi-club/spongzi-club-gateway/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/Code/Project/spongzi-club/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/exception",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;,
-      &quot;redis&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "redis"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Project\spongzi-club\spongzi-club-gateway\src\main\java\com\spongzi\club\gateway\exception" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-gateway\src\main\resources" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-auth\spongzi-club-auth-starter\src\main\resources" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-starter\src\main\resources" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-oss\src\main\resources" />
-      <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-infra\src\main\java\com\spongzi\subject\infra\basic\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-infra\src\main\resources\mapper" />
@@ -250,15 +247,7 @@
       <workItem from="1698718131015" duration="2441000" />
       <workItem from="1698720950127" duration="1713000" />
       <workItem from="1698722676022" duration="1269000" />
-      <workItem from="1698735513470" duration="579000" />
-    </task>
-    <task id="LOCAL-00022" summary="添加添加时的isDelete的默认值">
-      <option name="closed" value="true" />
-      <created>1696649369218</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1696649369218</updated>
+      <workItem from="1698735513470" duration="2031000" />
     </task>
     <task id="LOCAL-00023" summary="修改增加参数校验">
       <option name="closed" value="true" />
@@ -644,14 +633,21 @@
       <option name="project" value="LOCAL" />
       <updated>1698720272019</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="添加网关权限校验">
+      <option name="closed" value="true" />
+      <created>1698736310024</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1698736310024</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改无法导入List&lt;SubjectTypeHandler&gt; subjectTypeHandlerList;的bug" />
     <MESSAGE value="修改Convert的函数名为统一函数名" />
     <MESSAGE value="封装分页" />
     <MESSAGE value="完成题目列表的查询接口" />
@@ -676,7 +672,8 @@
     <MESSAGE value="简单的集成sa-token测试demo" />
     <MESSAGE value="将服务注册到nacos中" />
     <MESSAGE value="进行网关集成，路由转发的设置" />
-    <option name="LAST_COMMIT_MESSAGE" value="进行网关集成，路由转发的设置" />
+    <MESSAGE value="添加网关权限校验" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加网关权限校验" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
