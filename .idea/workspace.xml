@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="添加网关权限校验">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/entity/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/enums/ResultCodeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/exception/GatewayExceptionHandler.java" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="设置网关全局异常处理">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/redis/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/redis/RedisUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/auth/SaTokenConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/auth/SaTokenConfigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/auth/StpInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/auth/StpInterfaceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
@@ -83,7 +83,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -247,15 +247,7 @@
       <workItem from="1698718131015" duration="2441000" />
       <workItem from="1698720950127" duration="1713000" />
       <workItem from="1698722676022" duration="1269000" />
-      <workItem from="1698735513470" duration="2031000" />
-    </task>
-    <task id="LOCAL-00023" summary="修改增加参数校验">
-      <option name="closed" value="true" />
-      <created>1696649684779</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1696649684779</updated>
+      <workItem from="1698735513470" duration="4463000" />
     </task>
     <task id="LOCAL-00024" summary="开发标签模块，生成简单的代码">
       <option name="closed" value="true" />
@@ -641,14 +633,21 @@
       <option name="project" value="LOCAL" />
       <updated>1698736310024</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="设置网关全局异常处理">
+      <option name="closed" value="true" />
+      <created>1698737754194</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1698737754194</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改Convert的函数名为统一函数名" />
     <MESSAGE value="封装分页" />
     <MESSAGE value="完成题目列表的查询接口" />
     <MESSAGE value="查询题目信息接口开发，并且使用工厂模式" />
@@ -673,7 +672,8 @@
     <MESSAGE value="将服务注册到nacos中" />
     <MESSAGE value="进行网关集成，路由转发的设置" />
     <MESSAGE value="添加网关权限校验" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加网关权限校验" />
+    <MESSAGE value="设置网关全局异常处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="设置网关全局异常处理" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
