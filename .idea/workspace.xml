@@ -4,27 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="创建网关模块和鉴权模块">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-job/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-mq/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="搭建空白框架">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/java/com/spongzi/auth/AuthApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/log4j2-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/target/generated-sources/annotations/com/spongzi/subject/application/convert/SubjectCategoryConvertImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/target/generated-sources/annotations/com/spongzi/subject/application/convert/SubjectCategoryConvertImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/target/generated-sources/annotations/com/spongzi/subject/domain/convert/SubjectCategoryConvertImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/target/generated-sources/annotations/com/spongzi/subject/domain/convert/SubjectCategoryConvertImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-start/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-starter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-start/spongzi-club-start.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-starter/spongzi-club-starter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-start/src/main/java/com/spongzi/subject/SubjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-starter/src/main/java/com/spongzi/subject/SubjectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-start/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-starter/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-start/src/main/resources/log4j2-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-starter/src/main/resources/log4j2-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +76,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/spong/Downloads/Smart_Input-4.3.0-idea.zip",
+    "last_opened_file_path": "D:/Code/Project/spongzi-club/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,6 +96,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Project\spongzi-club\spongzi-club-auth\spongzi-club-auth-starter\src\main\resources" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-oss\src\main\resources" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-infra\src\main\java\com\spongzi\subject\infra\basic\config" />
     </key>
@@ -115,11 +104,11 @@
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-infra\src\main\resources\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.spongzi.auth" />
       <recent name="com.spongzi.oss.service.impl" />
       <recent name="com.spongzi.subject.infra.basic.config" />
       <recent name="com.spongzi.subject.domain.convert" />
       <recent name="com.spongzi.subject.domain.entity" />
-      <recent name="com.spongzi.subject.domain.handler.subject" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -129,13 +118,26 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SubjectApplication">
+  <component name="RunManager" selected="Spring Boot.AuthApplication">
     <configuration name="DruidEncryptUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.spongzi.subject.infra.basic.utils.DruidEncryptUtil" />
       <module name="spongzi-club-infra" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.spongzi.subject.infra.basic.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spongzi-club-auth-starter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.spongzi.auth.AuthApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spongzi.auth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -171,6 +173,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.AuthApplication" />
         <item itemvalue="Spring Boot.SubjectApplication" />
         <item itemvalue="Spring Boot.OssApplication" />
         <item itemvalue="Application.DruidEncryptUtil" />
@@ -225,14 +228,7 @@
       <workItem from="1697896636487" duration="35000" />
       <workItem from="1698713395733" duration="152000" />
       <workItem from="1698713576023" duration="1787000" />
-    </task>
-    <task id="LOCAL-00017" summary="实现查询大类下分类的代码编写，并且完成相应的简单测试">
-      <option name="closed" value="true" />
-      <created>1696647525038</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1696647525038</updated>
+      <workItem from="1698715373868" duration="429000" />
     </task>
     <task id="LOCAL-00018" summary="修改返回结果乱码的问题">
       <option name="closed" value="true" />
@@ -618,14 +614,21 @@
       <option name="project" value="LOCAL" />
       <updated>1698713450673</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="搭建空白框架">
+      <option name="closed" value="true" />
+      <created>1698715436324</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1698715436324</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改数据类型" />
     <MESSAGE value="完成根据分类查询标签接口的开发" />
     <MESSAGE value="修改简单的bug问题" />
     <MESSAGE value="生成基础代码" />
@@ -650,7 +653,8 @@
     <MESSAGE value="使用nacos成为配置中心，并且实现文件bean动态切换" />
     <MESSAGE value="标签增加分类概念" />
     <MESSAGE value="创建网关模块和鉴权模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建网关模块和鉴权模块" />
+    <MESSAGE value="搭建空白框架" />
+    <option name="LAST_COMMIT_MESSAGE" value="搭建空白框架" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
