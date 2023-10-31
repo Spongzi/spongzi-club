@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="鉴权基础骨架">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/UserController.java" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="简单的集成sa-token测试demo">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-starter/src/main/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-starter/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Code/Project/spongzi-club/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources",
+    "last_opened_file_path": "D:/Code/Project/spongzi-club/spongzi-club-subject/spongzi-club-starter/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,6 +94,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-starter\src\main\resources" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-auth\spongzi-club-auth-starter\src\main\resources" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-oss\src\main\resources" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-infra\src\main\java\com\spongzi\subject\infra\basic\config" />
@@ -225,15 +227,8 @@
       <workItem from="1697896636487" duration="35000" />
       <workItem from="1698713395733" duration="152000" />
       <workItem from="1698713576023" duration="1787000" />
-      <workItem from="1698715373868" duration="2144000" />
-    </task>
-    <task id="LOCAL-00019" summary="完成更新分类">
-      <option name="closed" value="true" />
-      <created>1696648491233</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1696648491233</updated>
+      <workItem from="1698715373868" duration="2742000" />
+      <workItem from="1698718131015" duration="564000" />
     </task>
     <task id="LOCAL-00020" summary="完成删除分类">
       <option name="closed" value="true" />
@@ -619,14 +614,21 @@
       <option name="project" value="LOCAL" />
       <updated>1698715999985</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="简单的集成sa-token测试demo">
+      <option name="closed" value="true" />
+      <created>1698717578270</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1698717578270</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改简单的bug问题" />
     <MESSAGE value="生成基础代码" />
     <MESSAGE value="完成题目的添加，并且使用工厂的策略" />
     <MESSAGE value="修改无法导入List&lt;SubjectTypeHandler&gt; subjectTypeHandlerList;的bug" />
@@ -651,7 +653,8 @@
     <MESSAGE value="创建网关模块和鉴权模块" />
     <MESSAGE value="搭建空白框架" />
     <MESSAGE value="鉴权基础骨架" />
-    <option name="LAST_COMMIT_MESSAGE" value="鉴权基础骨架" />
+    <MESSAGE value="简单的集成sa-token测试demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="简单的集成sa-token测试demo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

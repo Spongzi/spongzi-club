@@ -1,6 +1,6 @@
 spring:
   application:
-    name: spongzi-club-oss
+    name: spongzi-club-auth
   profiles:
     active: dev
   cloud:
