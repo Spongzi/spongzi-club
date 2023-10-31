@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/spongzi-club-subject/pom.xml" />
         <option value="$PROJECT_DIR$/spongzi-club-oss/pom.xml" />
+        <option value="$PROJECT_DIR$/spongzi-club-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/spongzi-club-gateway/pom.xml" />
       </list>
     </option>
   </component>

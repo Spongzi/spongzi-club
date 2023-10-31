@@ -14,6 +14,8 @@
         <module name="spongzi-club-start" />
         <module name="spongzi-club-application-controller" />
         <module name="spongzi-club-oss" />
+        <module name="spongzi-club-auth" />
+        <module name="spongzi-club-gateway" />
         <module name="spongzi-club-common" />
         <module name="spongzi-club-domain" />
         <module name="spongzi-club-application-mq" />
