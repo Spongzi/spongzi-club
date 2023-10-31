@@ -33,7 +33,7 @@
         </dependency>
         <dependency>
             <groupId>com.spongzi</groupId>
-            <artifactId>spongzi-club-application-controller</artifactId>
+            <artifactId>spongzi-club-auth-application-controller</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
