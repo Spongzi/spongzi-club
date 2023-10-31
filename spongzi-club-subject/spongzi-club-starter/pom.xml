@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spongzi-club-start</artifactId>
+    <artifactId>spongzi-club-starter</artifactId>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

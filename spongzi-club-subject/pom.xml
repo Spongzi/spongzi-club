@@ -15,7 +15,7 @@
         <module>spongzi-club-common</module>
         <module>spongzi-club-domain</module>
         <module>spongzi-club-infra</module>
-        <module>spongzi-club-start</module>
+        <module>spongzi-club-starter</module>
         <module>spongzi-club-application/spongzi-club-application-controller</module>
         <module>spongzi-club-application/spongzi-club-application-job</module>
         <module>spongzi-club-application/spongzi-club-application-mq</module>

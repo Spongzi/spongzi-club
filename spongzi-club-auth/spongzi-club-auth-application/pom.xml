@@ -3,19 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.spongzi</groupId>
+        <artifactId>spongzi-club-auth</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>com.spongzi</groupId>
-    <artifactId>spongzi-club-auth</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>spongzi-club-auth-application</artifactId>
     <packaging>pom</packaging>
-    <description>只管数据相关的持久化操作以及业务操作，提供出各种各样的权限相关的接口。</description>
     <modules>
-        <module>spongzi-club-auth-application</module>
-        <module>spongzi-club-auth-common</module>
-        <module>spongzi-club-auth-domain</module>
-        <module>spongzi-club-auth-infra</module>
-        <module>spongzi-club-auth-starter</module>
-        <module>spongzi-club-auth-api</module>
+        <module>spongzi-club-auth-application-controller</module>
+        <module>spongzi-club-auth-application-job</module>
+        <module>spongzi-club-auth-application-mq</module>
     </modules>
 
     <properties>
