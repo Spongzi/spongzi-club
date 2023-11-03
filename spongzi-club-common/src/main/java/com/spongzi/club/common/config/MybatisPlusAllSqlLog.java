@@ -1,4 +1,4 @@
-package com.spongzi.subject.infra.config;
+package com.spongzi.club.common.config;
 
 import com.baomidou.mybatisplus.extension.plugins.inner.InnerInterceptor;
 import org.apache.ibatis.executor.Executor;

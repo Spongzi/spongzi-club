@@ -1,7 +1,7 @@
 package com.spongzi.subject.application.convert;
 
+import com.spongzi.club.common.entity.PageResult;
 import com.spongzi.subject.application.dto.SubjectInfoDTO;
-import com.spongzi.subject.common.entity.PageResult;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

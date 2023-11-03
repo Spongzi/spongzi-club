@@ -1,11 +1,10 @@
 package com.spongzi.subject.application.dto;
 
-import com.spongzi.subject.common.entity.PageInfo;
+import com.spongzi.club.common.entity.PageInfo;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 /**

@@ -2,13 +2,13 @@ package com.spongzi.subject.application.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.base.Preconditions;
+import com.spongzi.club.common.entity.Result;
 import com.spongzi.subject.application.convert.SubjectCategoryConvert;
 import com.spongzi.subject.application.dto.SubjectCategoryDTO;
-import com.spongzi.subject.common.entity.Result;
 import com.spongzi.subject.domain.entity.SubjectCategoryBO;
 import com.spongzi.subject.domain.service.SubjectCategoryDomainService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

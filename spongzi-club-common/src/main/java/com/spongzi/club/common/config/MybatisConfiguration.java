@@ -1,4 +1,4 @@
-package com.spongzi.subject.infra.config;
+package com.spongzi.club.common.config;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import org.springframework.context.annotation.Bean;

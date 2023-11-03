@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * 题目分类关系表(SubjectMapping)实体类
  *
- * @author makejava
+ * @author spongzi
  * @since 2023-10-07 20:22:58
  */
 @Data

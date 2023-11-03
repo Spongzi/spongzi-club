@@ -1,6 +1,6 @@
 package com.spongzi.subject.domain.entity;
 
-import com.spongzi.subject.common.entity.PageInfo;
+import com.spongzi.club.common.entity.PageInfo;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

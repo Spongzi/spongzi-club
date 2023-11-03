@@ -1,8 +1,8 @@
 package com.spongzi.subject.domain.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.spongzi.subject.common.entity.PageResult;
-import com.spongzi.subject.common.enums.IsDeletedEnum;
+import com.spongzi.club.common.entity.PageResult;
+import com.spongzi.club.common.enums.IsDeletedEnum;
 import com.spongzi.subject.domain.convert.SubjectInfoConvert;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
 import com.spongzi.subject.domain.entity.SubjectOptionBO;
@@ -20,7 +20,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;

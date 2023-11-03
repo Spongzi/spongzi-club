@@ -1,4 +1,4 @@
-package com.spongzi.subject.infra.config;
+package com.spongzi.club.common.config;
 
 import org.apache.ibatis.cache.CacheKey;
 import org.apache.ibatis.executor.Executor;

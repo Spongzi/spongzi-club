@@ -15,6 +15,7 @@
         <module name="spongzi-club-application-controller" />
         <module name="spongzi-club-auth-application-mq" />
         <module name="spongzi-club-auth-starter" />
+        <module name="spongzi-club-subject-common" />
         <module name="spongzi-club-common" />
         <module name="spongzi-club-auth-common" />
         <module name="spongzi-club-auth-application-controller" />

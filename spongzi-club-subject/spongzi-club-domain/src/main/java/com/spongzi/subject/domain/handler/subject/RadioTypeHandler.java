@@ -1,6 +1,6 @@
 package com.spongzi.subject.domain.handler.subject;
 
-import com.spongzi.subject.common.enums.IsDeletedEnum;
+import com.spongzi.club.common.enums.IsDeletedEnum;
 import com.spongzi.subject.common.enums.SubjectInfoTypeEnum;
 import com.spongzi.subject.domain.convert.SubjectRadioConvert;
 import com.spongzi.subject.domain.entity.SubjectAnswerBO;

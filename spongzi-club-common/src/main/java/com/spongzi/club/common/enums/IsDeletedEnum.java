@@ -1,4 +1,4 @@
-package com.spongzi.subject.common.enums;
+package com.spongzi.club.common.enums;
 
 import lombok.Getter;
 

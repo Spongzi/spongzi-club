@@ -1,8 +1,6 @@
-package com.spongzi.subject.common.enums;
+package com.spongzi.club.common.enums;
 
-import lombok.Data;
 import lombok.Getter;
-import lombok.Setter;
 
 /**
  * 返回结果代码

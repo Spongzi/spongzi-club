@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 题目分类(SubjectCategory)表服务实现类
  *
- * @author makejava
+ * @author spongzi
  * @since 2023-10-06 16:57:55
  */
 @Service("subjectCategoryService")

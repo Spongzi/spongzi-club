@@ -1,4 +1,4 @@
-package com.spongzi.subject.common.entity;
+package com.spongzi.club.common.entity;
 
 import lombok.Data;
 

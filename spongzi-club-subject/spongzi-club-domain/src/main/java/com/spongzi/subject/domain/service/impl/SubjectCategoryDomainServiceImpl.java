@@ -1,7 +1,7 @@
 package com.spongzi.subject.domain.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.spongzi.subject.common.enums.IsDeletedEnum;
+import com.spongzi.club.common.enums.IsDeletedEnum;
 import com.spongzi.subject.domain.convert.SubjectCategoryConvert;
 import com.spongzi.subject.domain.entity.SubjectCategoryBO;
 import com.spongzi.subject.domain.service.SubjectCategoryDomainService;

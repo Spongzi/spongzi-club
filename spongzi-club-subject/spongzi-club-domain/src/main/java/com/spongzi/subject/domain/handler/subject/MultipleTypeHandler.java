@@ -1,8 +1,7 @@
 package com.spongzi.subject.domain.handler.subject;
 
-import com.spongzi.subject.common.enums.IsDeletedEnum;
+import com.spongzi.club.common.enums.IsDeletedEnum;
 import com.spongzi.subject.common.enums.SubjectInfoTypeEnum;
-import com.spongzi.subject.domain.convert.SubjectBriefConvert;
 import com.spongzi.subject.domain.convert.SubjectMultipleConvert;
 import com.spongzi.subject.domain.entity.SubjectAnswerBO;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;

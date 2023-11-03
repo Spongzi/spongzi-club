@@ -1,6 +1,6 @@
-package com.spongzi.subject.common.entity;
+package com.spongzi.club.common.entity;
 
-import com.spongzi.subject.common.enums.ResultCodeEnum;
+import com.spongzi.club.common.enums.ResultCodeEnum;
 import lombok.Data;
 
 /**

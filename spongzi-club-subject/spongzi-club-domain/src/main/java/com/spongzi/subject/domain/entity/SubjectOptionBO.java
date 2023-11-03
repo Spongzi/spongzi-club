@@ -1,8 +1,6 @@
 package com.spongzi.subject.domain.entity;
 
-import com.spongzi.subject.common.entity.PageInfo;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.util.List;

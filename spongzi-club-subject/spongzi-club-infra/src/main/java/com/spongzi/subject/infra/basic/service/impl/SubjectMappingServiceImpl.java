@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 题目分类关系表(SubjectMapping)表服务实现类
  *
- * @author makejava
+ * @author spongzi
  * @since 2023-10-07 20:22:58
  */
 @Service("subjectMappingService")

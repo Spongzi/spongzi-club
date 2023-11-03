@@ -1,6 +1,6 @@
 package com.spongzi.subject.domain.service;
 
-import com.spongzi.subject.common.entity.PageResult;
+import com.spongzi.club.common.entity.PageResult;
 import com.spongzi.subject.domain.entity.SubjectInfoBO;
 
 /**

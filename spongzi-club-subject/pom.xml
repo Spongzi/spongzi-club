@@ -12,7 +12,7 @@
     <modules>
         <module>spongzi-club-subject-api</module>
         <module>spongzi-club-application</module>
-        <module>spongzi-club-common</module>
+        <module>spongzi-club-subject-common</module>
         <module>spongzi-club-domain</module>
         <module>spongzi-club-infra</module>
         <module>spongzi-club-starter</module>
