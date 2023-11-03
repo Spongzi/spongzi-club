@@ -62,4 +62,9 @@ public class MinioStorageAdapter implements StorageAdapter {
     public void deleteObject(String bucket, String objectName) throws Exception {
         minioUtil.deleteObject(bucket, objectName);
     }
+
+    @Override
+    public String getUrl(String bucketName, String objectName) throws Exception {
+        return minioUtil.getPreviewFileUrl(bucketName, objectName);
+    }
 }

@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="完成用户的更新，删除，修改等操作">
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/adapter/MinioStorageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/adapter/MinioStorageAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/adapter/StorageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/adapter/StorageAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/service/FileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/utils/MinioUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/utils/MinioUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,15 +277,7 @@
       <workItem from="1698971878419" duration="2356000" />
       <workItem from="1698974246086" duration="1368000" />
       <workItem from="1698975628323" duration="271000" />
-      <workItem from="1698975908942" duration="2174000" />
-    </task>
-    <task id="LOCAL-00032" summary="完成简单的调试bug">
-      <option name="closed" value="true" />
-      <created>1696681965489</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1696681965489</updated>
+      <workItem from="1698975908942" duration="2411000" />
     </task>
     <task id="LOCAL-00033" summary="修改数据类型">
       <option name="closed" value="true" />
@@ -666,7 +663,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698977895145</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="完成用户的更新，删除，修改等操作">
+      <option name="closed" value="true" />
+      <created>1698978091968</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1698978091968</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

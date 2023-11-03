@@ -2,6 +2,7 @@ package com.spongzi.oss.utils;
 
 import com.spongzi.oss.entity.FileInfo;
 import io.minio.*;
+import io.minio.http.Method;
 import io.minio.messages.Bucket;
 import io.minio.messages.Item;
 import org.springframework.stereotype.Component;
@@ -119,5 +120,20 @@ public class MinioUtil {
                 .bucket(bucket)
                 .object(objectName)
                 .build());
+    }
+
+    /**
+     * 获取预览文件URL
+     *
+     * @param bucketName 存储桶名称
+     * @param objectName 对象名称
+     * @return {@link String}
+     * @throws Exception 例外情况
+     */
+    public String getPreviewFileUrl(String bucketName, String objectName) throws Exception{
+        GetPresignedObjectUrlArgs args = GetPresignedObjectUrlArgs.builder()
+                .method(Method.GET)
+                .bucket(bucketName).object(objectName).build();
+        return minioClient.getPresignedObjectUrl(args);
     }
 }

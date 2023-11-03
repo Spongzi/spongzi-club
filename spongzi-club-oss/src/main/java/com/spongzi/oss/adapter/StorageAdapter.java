@@ -72,4 +72,13 @@ public interface StorageAdapter {
      * @throws Exception 例外情况
      */
     void deleteObject(String bucket, String objectName) throws Exception;
+
+    /**
+     * 获取URL
+     *
+     * @param bucketName 存储桶名称
+     * @param objectName 对象名称
+     * @return {@link String}
+     */
+    String getUrl(String bucketName, String objectName) throws Exception;
 }

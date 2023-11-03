@@ -24,4 +24,8 @@ public class FileService {
     public List<String> getAllBuckets() {
         return storageAdapter.getAllBuckets();
     }
+
+    public String getUrl(String bucketName, String objectName) throws Exception {
+        return storageAdapter.getUrl(bucketName, objectName);
+    }
 }
