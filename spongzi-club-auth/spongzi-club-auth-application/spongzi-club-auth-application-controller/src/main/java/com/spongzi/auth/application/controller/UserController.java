@@ -12,6 +12,7 @@ import com.spongzi.auth.domain.service.AuthUserDomainService;
 import com.spongzi.club.common.entity.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,15 +33,13 @@ public class UserController {
      * @param authUserDTO 身份验证用户数据到
      * @return {@link Result}<{@link SaResult}>
      */
-    @RequestMapping("register")
+    @PostMapping("register")
     public Result<Boolean> register(@RequestBody AuthUserDTO authUserDTO) {
         try {
             if (log.isInfoEnabled()) {
                 log.info("UserController.register.dto: {}", JSON.toJSONString(authUserDTO));
             }
-            Preconditions.checkArgument(!StringUtils.isBlank(authUserDTO.getUserName()), "用户名不能为空");
-            Preconditions.checkArgument(!StringUtils.isBlank(authUserDTO.getEmail()), "用户邮箱不能为空");
-            Preconditions.checkArgument(!StringUtils.isBlank(authUserDTO.getPassword()), "用户密码不能为空");
+            checkUserInfo(authUserDTO);
 
             AuthUserBO authUserBO = AuthUserConvert.INSTANCE.convertDtoToBo(authUserDTO);
             return Result.ok(authUserDomainService.register(authUserBO));
@@ -48,6 +47,82 @@ public class UserController {
             log.error("UserController.register.error: {}", e.getMessage());
             return Result.fail("注册用户失败");
         }
+    }
+
+
+
+    /**
+     * 修改用户信息
+     *
+     * @param authUserDTO 身份验证用户数据到
+     * @return {@link Result}<{@link Boolean}>
+     */
+    @PostMapping("update")
+    public Result<Boolean> update(@RequestBody AuthUserDTO authUserDTO) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("UserController.update.dto:{}", JSON.toJSONString(authUserDTO));
+            }
+            checkUserInfo(authUserDTO);
+            AuthUserBO authUserBO = AuthUserConvert.INSTANCE.convertDtoToBo(authUserDTO);
+            return Result.ok(authUserDomainService.update(authUserBO));
+        } catch (Exception e) {
+            log.error("UserController.update.error:{}", e.getMessage(), e);
+            return Result.fail("更新用户信息失败");
+        }
+    }
+
+    /**
+     * 删除
+     *
+     * @param authUserDTO 身份验证用户数据到
+     * @return {@link Result}<{@link Boolean}>
+     */
+    @RequestMapping("delete")
+    public Result<Boolean> delete(@RequestBody AuthUserDTO authUserDTO) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("UserController.delete.dto:{}", JSON.toJSONString(authUserDTO));
+            }
+            AuthUserBO authUserBO = AuthUserConvert.INSTANCE.convertDtoToBo(authUserDTO);
+            return Result.ok(authUserDomainService.delete(authUserBO));
+        } catch (Exception e) {
+            log.error("UserController.update.error:{}", e.getMessage(), e);
+            return Result.fail("删除用户信息失败");
+        }
+    }
+
+    /**
+     * 用户的启用和禁用
+     *
+     * @param authUserDTO 身份验证用户数据到
+     * @return {@link Result}<{@link Boolean}>
+     */
+    @RequestMapping("changeStatus")
+    public Result<Boolean> changeStatus(@RequestBody AuthUserDTO authUserDTO) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("UserController.changeStatus.dto:{}", JSON.toJSONString(authUserDTO));
+            }
+            Preconditions.checkNotNull(authUserDTO.getStatus(), "用户状态不能为空");
+            AuthUserBO authUserBO = AuthUserConvert.INSTANCE.convertDtoToBo(authUserDTO);
+            return Result.ok(authUserDomainService.update(authUserBO));
+        } catch (Exception e) {
+            log.error("UserController.changeStatus.error:{}", e.getMessage(), e);
+            return Result.fail("启用/禁用用户信息失败");
+        }
+    }
+
+
+    /**
+     * 检查用户信息
+     *
+     * @param authUserDTO 身份验证用户数据到
+     */
+    private static void checkUserInfo(AuthUserDTO authUserDTO) {
+        Preconditions.checkArgument(!StringUtils.isBlank(authUserDTO.getUserName()), "用户名不能为空");
+        Preconditions.checkArgument(!StringUtils.isBlank(authUserDTO.getEmail()), "用户邮箱不能为空");
+        Preconditions.checkArgument(!StringUtils.isBlank(authUserDTO.getPassword()), "用户密码不能为空");
     }
 
     // 测试登录，浏览器访问： http://localhost:3011/user/doLogin?username=zhang&password=123456

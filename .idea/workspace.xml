@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="完善用户注册操作，添加一些用户枚举类">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="完成用户的更新，删除，修改等操作">
       <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -273,23 +272,7 @@
       <workItem from="1698971878419" duration="2356000" />
       <workItem from="1698974246086" duration="1368000" />
       <workItem from="1698975628323" duration="271000" />
-      <workItem from="1698975908942" duration="1262000" />
-    </task>
-    <task id="LOCAL-00030" summary="生成题目关系相关的基础代码">
-      <option name="closed" value="true" />
-      <created>1696681621449</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1696681621449</updated>
-    </task>
-    <task id="LOCAL-00031" summary="完成简单的调试bug">
-      <option name="closed" value="true" />
-      <created>1696681796213</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1696681796213</updated>
+      <workItem from="1698975908942" duration="2174000" />
     </task>
     <task id="LOCAL-00032" summary="完成简单的调试bug">
       <option name="closed" value="true" />
@@ -667,7 +650,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698977046060</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="完善用户注册操作，添加一些用户枚举类，添加一些TODO">
+      <option name="closed" value="true" />
+      <created>1698977176406</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1698977176406</updated>
+    </task>
+    <task id="LOCAL-00080" summary="完成用户的更新，删除，修改等操作">
+      <option name="closed" value="true" />
+      <created>1698977895145</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1698977895145</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,8 +684,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="设置not null" />
-    <MESSAGE value="添加todo" />
     <MESSAGE value="修改sql语句和参数判断" />
     <MESSAGE value="sql拦截器自动翻译" />
     <MESSAGE value="添加java打包版本" />
@@ -710,7 +707,9 @@
     <MESSAGE value="抽取出独立的common模块" />
     <MESSAGE value="更改Subject模块的命名规则" />
     <MESSAGE value="完善用户注册操作，添加一些用户枚举类" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善用户注册操作，添加一些用户枚举类" />
+    <MESSAGE value="完善用户注册操作，添加一些用户枚举类，添加一些TODO" />
+    <MESSAGE value="完成用户的更新，删除，修改等操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成用户的更新，删除，修改等操作" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
