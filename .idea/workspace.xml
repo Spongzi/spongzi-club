@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="添加minio获取文件地址的方法">
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="角色权限管理的开发">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/RoleController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,11 +113,11 @@
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-infra\src\main\resources\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.spongzi.auth.common.enums" />
       <recent name="com.spongzi.auth.domain.convert" />
-      <recent name="com.spongzi.auth.domain.entity" />
       <recent name="com.spongzi.auth.application.convert" />
       <recent name="com.spongzi.auth.application.dto" />
+      <recent name="com.spongzi.auth.domain.entity" />
+      <recent name="com.spongzi.auth.domain.service.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -273,23 +273,7 @@
       <workItem from="1698971878419" duration="2356000" />
       <workItem from="1698974246086" duration="1368000" />
       <workItem from="1698975628323" duration="271000" />
-      <workItem from="1698975908942" duration="4322000" />
-    </task>
-    <task id="LOCAL-00035" summary="修改简单的bug问题">
-      <option name="closed" value="true" />
-      <created>1696684331406</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1696684331406</updated>
-    </task>
-    <task id="LOCAL-00036" summary="生成基础代码">
-      <option name="closed" value="true" />
-      <created>1696743450603</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1696743450603</updated>
+      <workItem from="1698975908942" duration="4765000" />
     </task>
     <task id="LOCAL-00037" summary="生成基础代码">
       <option name="closed" value="true" />
@@ -667,7 +651,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698978372407</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="对密码进行加密">
+      <option name="closed" value="true" />
+      <created>1698980439161</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1698980439161</updated>
+    </task>
+    <task id="LOCAL-00085" summary="角色权限管理的开发">
+      <option name="closed" value="true" />
+      <created>1698980820871</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1698980820871</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,8 +685,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sql拦截器自动翻译" />
-    <MESSAGE value="添加java打包版本" />
     <MESSAGE value="修改bug" />
     <MESSAGE value="搭建基础的oss服务模块" />
     <MESSAGE value="实现一些基础功能" />
@@ -710,7 +708,9 @@
     <MESSAGE value="完善用户注册操作，添加一些用户枚举类，添加一些TODO" />
     <MESSAGE value="完成用户的更新，删除，修改等操作" />
     <MESSAGE value="添加minio获取文件地址的方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加minio获取文件地址的方法" />
+    <MESSAGE value="对密码进行加密" />
+    <MESSAGE value="角色权限管理的开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="角色权限管理的开发" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
