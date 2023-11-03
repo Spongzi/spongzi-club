@@ -4,55 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="实现用户注册操作">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="完善用户注册操作，添加一些用户枚举类">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectLabelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectLabelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/convert/SubjectInfoConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/convert/SubjectInfoConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/dto/SubjectInfoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/src/main/java/com/spongzi/subject/application/dto/SubjectInfoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/target/generated-sources/annotations/com/spongzi/subject/application/convert/SubjectCategoryConvertImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-application/spongzi-club-application-controller/target/generated-sources/annotations/com/spongzi/subject/application/convert/SubjectCategoryConvertImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-common/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-common/src/main/java/com/spongzi/subject/common/entity/PageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/entity/PageInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-common/src/main/java/com/spongzi/subject/common/entity/PageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/entity/PageResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-common/src/main/java/com/spongzi/subject/common/entity/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/entity/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-common/src/main/java/com/spongzi/subject/common/enums/CategoryTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-common/src/main/java/com/spongzi/subject/common/enums/CategoryTypeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-common/src/main/java/com/spongzi/subject/common/enums/IsDeletedEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/enums/IsDeletedEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-common/src/main/java/com/spongzi/subject/common/enums/ResultCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/enums/ResultCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-common/src/main/java/com/spongzi/subject/common/enums/SubjectInfoTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-common/src/main/java/com/spongzi/subject/common/enums/SubjectInfoTypeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/entity/SubjectInfoBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/entity/SubjectInfoBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/entity/SubjectOptionBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/entity/SubjectOptionBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/handler/subject/BriefTypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/handler/subject/BriefTypeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/handler/subject/JudgeTypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/handler/subject/JudgeTypeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/handler/subject/MultipleTypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/handler/subject/MultipleTypeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/handler/subject/RadioTypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/handler/subject/RadioTypeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/SubjectInfoDomainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/SubjectInfoDomainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectInfoDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectInfoDomainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectLabelDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectLabelDomainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/target/generated-sources/annotations/com/spongzi/subject/domain/convert/SubjectCategoryConvertImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-domain/target/generated-sources/annotations/com/spongzi/subject/domain/convert/SubjectCategoryConvertImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectCategoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectLabelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectLabelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectMappingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectMappingDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectCategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectLabelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectLabelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectMappingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/SubjectMappingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectCategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectLabelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectLabelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectMappingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/basic/service/impl/SubjectMappingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/config/MybatisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/config/MybatisConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/config/MybatisPlusAllSqlLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/config/MybatisPlusAllSqlLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-infra/src/main/java/com/spongzi/subject/infra/config/SqlStatementInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/config/SqlStatementInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,11 +113,11 @@
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-infra\src\main\resources\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.spongzi.auth.common.enums" />
       <recent name="com.spongzi.auth.domain.convert" />
       <recent name="com.spongzi.auth.domain.entity" />
       <recent name="com.spongzi.auth.application.convert" />
       <recent name="com.spongzi.auth.application.dto" />
-      <recent name="com.spongzi.auth.application.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -319,39 +273,7 @@
       <workItem from="1698971878419" duration="2356000" />
       <workItem from="1698974246086" duration="1368000" />
       <workItem from="1698975628323" duration="271000" />
-      <workItem from="1698975908942" duration="306000" />
-    </task>
-    <task id="LOCAL-00026" summary="删除无用的包引入">
-      <option name="closed" value="true" />
-      <created>1696680201214</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1696680201214</updated>
-    </task>
-    <task id="LOCAL-00027" summary="简单的优化代码">
-      <option name="closed" value="true" />
-      <created>1696680581051</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1696680581051</updated>
-    </task>
-    <task id="LOCAL-00028" summary="开发更新标签接口">
-      <option name="closed" value="true" />
-      <created>1696680791312</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1696680791312</updated>
-    </task>
-    <task id="LOCAL-00029" summary="开发标签删除接口">
-      <option name="closed" value="true" />
-      <created>1696680977629</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1696680977629</updated>
+      <workItem from="1698975908942" duration="1262000" />
     </task>
     <task id="LOCAL-00030" summary="生成题目关系相关的基础代码">
       <option name="closed" value="true" />
@@ -713,16 +635,56 @@
       <option name="project" value="LOCAL" />
       <updated>1698975683910</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="抽取出独立的common模块">
+      <option name="closed" value="true" />
+      <created>1698976287770</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1698976287770</updated>
+    </task>
+    <task id="LOCAL-00076" summary="更改Subject模块的命名规则">
+      <option name="closed" value="true" />
+      <created>1698976470647</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1698976470647</updated>
+    </task>
+    <task id="LOCAL-00077" summary="更改Subject模块的命名规则">
+      <option name="closed" value="true" />
+      <created>1698976493770</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1698976493770</updated>
+    </task>
+    <task id="LOCAL-00078" summary="完善用户注册操作，添加一些用户枚举类">
+      <option name="closed" value="true" />
+      <created>1698977046060</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1698977046060</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="查询题目信息接口开发，并且使用工厂模式" />
-    <MESSAGE value="处理一些数据加载失败的bug" />
-    <MESSAGE value="解决jackson2序列化空值的问题" />
     <MESSAGE value="设置not null" />
     <MESSAGE value="添加todo" />
     <MESSAGE value="修改sql语句和参数判断" />
@@ -745,7 +707,10 @@
     <MESSAGE value="设置网关全局异常处理" />
     <MESSAGE value="实现缓存读写权限" />
     <MESSAGE value="实现用户注册操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现用户注册操作" />
+    <MESSAGE value="抽取出独立的common模块" />
+    <MESSAGE value="更改Subject模块的命名规则" />
+    <MESSAGE value="完善用户注册操作，添加一些用户枚举类" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善用户注册操作，添加一些用户枚举类" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
