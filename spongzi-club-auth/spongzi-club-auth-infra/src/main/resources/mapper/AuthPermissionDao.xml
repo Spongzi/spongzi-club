@@ -22,7 +22,7 @@
     <!--查询单个-->
     <select id="queryById" resultMap="AuthPermissionMap">
         select
-          id, name, parent_id, type, menu_url, status, show, icon, permission_key, created_by, created_time, update_by, update_time, is_deleted
+          id, name, parent_id, type, menu_url, status, `show`, icon, permission_key, created_by, created_time, update_by, update_time, is_deleted
         from auth_permission
         where id = #{id}
     </select>
@@ -30,7 +30,7 @@
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="AuthPermissionMap">
         select
-          id, name, parent_id, type, menu_url, status, show, icon, permission_key, created_by, created_time, update_by, update_time, is_deleted
+          id, name, parent_id, type, menu_url, status, `show`, icon, permission_key, created_by, created_time, update_by, update_time, is_deleted
         from auth_permission
         <where>
             <if test="id != null">

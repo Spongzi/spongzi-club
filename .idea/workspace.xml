@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="角色权限管理的开发">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/constants/AuthConstant.java" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="添加权限与角色的关联，并且添加权限常量">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/PermissionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/convert/AuthPermissionConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/dto/AuthPermissionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/convert/AuthPermissionConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/entity/AuthPermissionBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/AuthPermissionDomainService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthPermissionDomainServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,10 +120,10 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.spongzi.auth.domain.convert" />
-      <recent name="com.spongzi.auth.application.convert" />
-      <recent name="com.spongzi.auth.application.dto" />
-      <recent name="com.spongzi.auth.domain.entity" />
       <recent name="com.spongzi.auth.domain.service.impl" />
+      <recent name="com.spongzi.auth.domain.service" />
+      <recent name="com.spongzi.auth.domain.entity" />
+      <recent name="com.spongzi.auth.application.convert" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -262,15 +267,7 @@
       <workItem from="1698974246086" duration="1368000" />
       <workItem from="1698975628323" duration="271000" />
       <workItem from="1698975908942" duration="6769000" />
-      <workItem from="1698990319254" duration="392000" />
-    </task>
-    <task id="LOCAL-00038" summary="完成题目的添加，并且使用工厂的策略">
-      <option name="closed" value="true" />
-      <created>1696769976866</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1696769976866</updated>
+      <workItem from="1698990319254" duration="758000" />
     </task>
     <task id="LOCAL-00039" summary="修改无法导入List&lt;SubjectTypeHandler&gt; subjectTypeHandlerList;的bug">
       <option name="closed" value="true" />
@@ -656,7 +653,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698980917508</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="添加权限与角色的关联，并且添加权限常量">
+      <option name="closed" value="true" />
+      <created>1698990754927</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1698990754928</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,7 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改bug" />
     <MESSAGE value="搭建基础的oss服务模块" />
     <MESSAGE value="实现一些基础功能" />
     <MESSAGE value="完成简单的测试连接" />
@@ -699,7 +703,8 @@
     <MESSAGE value="添加minio获取文件地址的方法" />
     <MESSAGE value="对密码进行加密" />
     <MESSAGE value="角色权限管理的开发" />
-    <option name="LAST_COMMIT_MESSAGE" value="角色权限管理的开发" />
+    <MESSAGE value="添加权限与角色的关联，并且添加权限常量" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加权限与角色的关联，并且添加权限常量" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
