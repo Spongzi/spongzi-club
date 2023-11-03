@@ -11,14 +11,14 @@
     <description>club-题目领域服务</description>
     <modules>
         <module>spongzi-club-subject-api</module>
-        <module>spongzi-club-application</module>
+        <module>spongzi-club-subject-application</module>
         <module>spongzi-club-subject-common</module>
-        <module>spongzi-club-domain</module>
-        <module>spongzi-club-infra</module>
-        <module>spongzi-club-starter</module>
-        <module>spongzi-club-application/spongzi-club-application-controller</module>
-        <module>spongzi-club-application/spongzi-club-application-job</module>
-        <module>spongzi-club-application/spongzi-club-application-mq</module>
+        <module>spongzi-club-subject-domain</module>
+        <module>spongzi-club-subject-infra</module>
+        <module>spongzi-club-subject-starter</module>
+        <module>spongzi-club-subject-application/spongzi-club-subject-application-controller</module>
+        <module>spongzi-club-subject-application/spongzi-club-subject-application-job</module>
+        <module>spongzi-club-subject-application/spongzi-club-subject-application-mq</module>
     </modules>
 
     <properties>

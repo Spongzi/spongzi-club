@@ -176,13 +176,26 @@
   <component name="RunManager" selected="Spring Boot.AuthApplication">
     <configuration name="DruidEncryptUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.spongzi.subject.infra.basic.utils.DruidEncryptUtil" />
-      <module name="spongzi-club-infra" />
+      <module name="spongzi-club-subject-infra" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.spongzi.subject.infra.basic.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="spongzi-club-subject-application-controller" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="spongzi-club-subject-application-controller" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -227,7 +240,7 @@
       </method>
     </configuration>
     <configuration name="SubjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="spongzi-club-starter" />
+      <module name="spongzi-club-subject-starter" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.spongzi.subject.SubjectApplication" />
       <extension name="coverage">
         <pattern>
