@@ -1,5 +1,6 @@
 package com.spongzi.auth.domain.service.impl;
 
+import cn.dev33.satoken.secure.SaSecureUtil;
 import com.spongzi.auth.common.enums.AuthUserStatusEnum;
 import com.spongzi.auth.domain.convert.AuthUserConvert;
 import com.spongzi.auth.domain.entity.AuthUserBO;
@@ -23,9 +24,12 @@ public class AuthUserDomainServiceImpl implements AuthUserDomainService {
     @Resource
     private AuthUserService authUserService;
 
+    private final String salt = "spongzi";
+
     @Override
     public Boolean register(AuthUserBO authUserBO) {
         AuthUser authUser = AuthUserConvert.INSTANCE.convertBoToEntity(authUserBO);
+        authUser.setPassword(SaSecureUtil.md5BySalt(authUser.getPassword(), salt));
         authUser.setStatus(AuthUserStatusEnum.OPEN.getCode());
         authUser.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
         Integer count = authUserService.insert(authUser);
