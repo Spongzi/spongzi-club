@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="添加权限与角色的关联，并且添加权限常量">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/PermissionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/convert/AuthPermissionConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/dto/AuthPermissionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/convert/AuthPermissionConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/entity/AuthPermissionBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/AuthPermissionDomainService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthPermissionDomainServiceImpl.java" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="权限模块的开发">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/target/generated-sources/annotations/com/spongzi/auth/application/convert/AuthUserConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthRolePermissionDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthRolePermissionDomainServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/target/generated-sources/annotations/com/spongzi/auth/domain/convert/AuthUserConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/target/classes/mapper/AuthPermissionDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/target/classes/mapper/AuthPermissionDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/adapter/AliStorageAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/adapter/AliStorageAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/target/generated-sources/annotations/com/spongzi/subject/application/convert/SubjectAnswerConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/target/generated-sources/annotations/com/spongzi/subject/application/convert/SubjectCategoryConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/target/generated-sources/annotations/com/spongzi/subject/application/convert/SubjectInfoConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/target/generated-sources/annotations/com/spongzi/subject/application/convert/SubjectLabelConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/target/generated-sources/annotations/com/spongzi/subject/domain/convert/SubjectBriefConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/target/generated-sources/annotations/com/spongzi/subject/domain/convert/SubjectCategoryConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/target/generated-sources/annotations/com/spongzi/subject/domain/convert/SubjectInfoConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/target/generated-sources/annotations/com/spongzi/subject/domain/convert/SubjectJudgeConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/target/generated-sources/annotations/com/spongzi/subject/domain/convert/SubjectLabelConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/target/generated-sources/annotations/com/spongzi/subject/domain/convert/SubjectMultipleConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/target/generated-sources/annotations/com/spongzi/subject/domain/convert/SubjectRadioConvertImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +66,7 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
+  &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2WHYgQvnRlVVsxu9Pj7rj4EVIE6" />
   <component name="ProjectLevelVcsManager">
@@ -82,7 +91,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Code/Project/spongzi-club/spongzi-club-subject/spongzi-club-subject-common&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/spong/Downloads/fast-request-999999.999.zip&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -91,7 +100,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.26551723&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;通义灵码&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -119,11 +128,11 @@
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-infra\src\main\resources\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.spongzi.auth.domain.convert" />
-      <recent name="com.spongzi.auth.domain.service.impl" />
       <recent name="com.spongzi.auth.domain.service" />
+      <recent name="com.spongzi.auth.domain.convert" />
       <recent name="com.spongzi.auth.domain.entity" />
       <recent name="com.spongzi.auth.application.convert" />
+      <recent name="com.spongzi.auth.application.dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -201,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.AuthApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="应用程序.DruidEncryptUtil" />
         <item itemvalue="Spring Boot.SubjectApplication" />
         <item itemvalue="Spring Boot.OssApplication" />
-        <item itemvalue="Spring Boot.GatewayApplication" />
-        <item itemvalue="Spring Boot.AuthApplication" />
-        <item itemvalue="Application.DruidEncryptUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -267,23 +276,15 @@
       <workItem from="1698974246086" duration="1368000" />
       <workItem from="1698975628323" duration="271000" />
       <workItem from="1698975908942" duration="6769000" />
-      <workItem from="1698990319254" duration="758000" />
-    </task>
-    <task id="LOCAL-00039" summary="修改无法导入List&lt;SubjectTypeHandler&gt; subjectTypeHandlerList;的bug">
-      <option name="closed" value="true" />
-      <created>1696771118957</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1696771118957</updated>
-    </task>
-    <task id="LOCAL-00040" summary="修改Convert的函数名为统一函数名">
-      <option name="closed" value="true" />
-      <created>1696771551314</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1696771551314</updated>
+      <workItem from="1698990319254" duration="1620000" />
+      <workItem from="1699064771791" duration="870000" />
+      <workItem from="1699170156597" duration="450000" />
+      <workItem from="1699170617854" duration="2305000" />
+      <workItem from="1699173458282" duration="445000" />
+      <workItem from="1699173912158" duration="51000" />
+      <workItem from="1699173978635" duration="1494000" />
+      <workItem from="1699186878888" duration="1140000" />
+      <workItem from="1699188032333" duration="1432000" />
     </task>
     <task id="LOCAL-00041" summary="封装分页">
       <option name="closed" value="true" />
@@ -661,7 +662,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698990754928</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="权限模块的开发">
+      <option name="closed" value="true" />
+      <created>1698991234888</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1698991234888</updated>
+    </task>
+    <task id="LOCAL-00089" summary="权限模块的开发">
+      <option name="closed" value="true" />
+      <created>1698991606633</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1698991606633</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="搭建基础的oss服务模块" />
     <MESSAGE value="实现一些基础功能" />
     <MESSAGE value="完成简单的测试连接" />
     <MESSAGE value="使用适配器模式实现不同的oss的操作实现" />
@@ -702,9 +718,10 @@
     <MESSAGE value="完成用户的更新，删除，修改等操作" />
     <MESSAGE value="添加minio获取文件地址的方法" />
     <MESSAGE value="对密码进行加密" />
-    <MESSAGE value="角色权限管理的开发" />
-    <MESSAGE value="添加权限与角色的关联，并且添加权限常量" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加权限与角色的关联，并且添加权限常量" />
+    <MESSAGE value="角色基础模块的开发" />
+    <MESSAGE value="添加角色与用户的关联，并且添加角色常量" />
+    <MESSAGE value="权限模块的开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限模块的开发" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
