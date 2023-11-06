@@ -1,8 +1,6 @@
 package com.spongzi.auth.infra.basic.service;
 
 import com.spongzi.auth.infra.basic.entity.AuthRole;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 
 /**
  * (AuthRole)表服务接口

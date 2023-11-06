@@ -1,22 +1,23 @@
 package com.spongzi.auth.domain.service.impl;
 
 import cn.dev33.satoken.secure.SaSecureUtil;
+import com.google.gson.Gson;
 import com.spongzi.auth.common.enums.AuthUserStatusEnum;
 import com.spongzi.auth.domain.constants.AuthConstant;
 import com.spongzi.auth.domain.convert.AuthUserConvert;
 import com.spongzi.auth.domain.entity.AuthUserBO;
 import com.spongzi.auth.domain.service.AuthUserDomainService;
-import com.spongzi.auth.infra.basic.entity.AuthRole;
-import com.spongzi.auth.infra.basic.entity.AuthUser;
-import com.spongzi.auth.infra.basic.entity.AuthUserRole;
-import com.spongzi.auth.infra.basic.service.AuthRoleService;
-import com.spongzi.auth.infra.basic.service.AuthUserRoleService;
-import com.spongzi.auth.infra.basic.service.AuthUserService;
+import com.spongzi.auth.infra.basic.entity.*;
+import com.spongzi.auth.infra.basic.service.*;
 import com.spongzi.club.common.enums.IsDeletedEnum;
+import com.spongzi.club.common.redis.RedisUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 身份验证用户域服务实施
@@ -28,15 +29,28 @@ import javax.annotation.Resource;
 public class AuthUserDomainServiceImpl implements AuthUserDomainService {
 
     @Resource
+    private RedisUtil redisUtil;
+
+    @Resource
     private AuthUserService authUserService;
 
     @Resource
     private AuthUserRoleService authUserRoleService;
 
     @Resource
+    private AuthPermissionService authPermissionService;
+
+    @Resource
     private AuthRoleService authRoleService;
 
+    @Resource
+    private AuthRolePermissionService authRolePermissionService;
+
     private final String salt = "spongzi";
+
+    private final String AUTH_PERMISSION_PREFIX = "auth.permission";
+
+    private final String AUTH_ROLE_PREFIX = "auth.role";
 
     @Override
     @Transactional(rollbackFor = Exception.class)
@@ -57,6 +71,23 @@ public class AuthUserDomainServiceImpl implements AuthUserDomainService {
         authUserRole.setRoleId(roleId);
         authUserRole.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
         authUserRoleService.insert(authUserRole);
+
+        // 添加缓存
+        String roleKey = redisUtil.buildKey(AUTH_ROLE_PREFIX, authUser.getUserName());
+        List<AuthRole> roleList = new LinkedList<>();
+        roleList.add(authRole);
+        redisUtil.set(roleKey, new Gson().toJson(roleList));
+
+        AuthRolePermission authRolePermission = new AuthRolePermission();
+        authRolePermission.setRoleId(roleId);
+        List<AuthRolePermission> rolePermissionList = authRolePermissionService.queryByCondition(authRolePermission);
+
+        List<Long> permissionIdList = rolePermissionList.stream().map(AuthRolePermission::getPermissionId).collect(Collectors.toList());
+
+        // 根据RoleId查权限
+        List<AuthPermission> permissionList = authPermissionService.queryByRoleList(permissionIdList);
+        String permissionKey = redisUtil.buildKey(AUTH_PERMISSION_PREFIX, authUser.getUserName());
+        redisUtil.set(permissionKey, new Gson().toJson(permissionList));
         return count > 0;
     }
 

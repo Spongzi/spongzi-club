@@ -2,6 +2,8 @@ package com.spongzi.auth.infra.basic.service;
 
 import com.spongzi.auth.infra.basic.entity.AuthPermission;
 
+import java.util.List;
+
 /**
  * (AuthPermission)表服务接口
  *
@@ -43,4 +45,11 @@ public interface AuthPermissionService {
      */
     boolean deleteById(Long id);
 
+    /**
+     * 按角色列表查询
+     *
+     * @param permissionIdList 权限ID列表
+     * @return {@link List}<{@link AuthPermission}>
+     */
+    List<AuthPermission> queryByRoleList(List<Long> permissionIdList);
 }

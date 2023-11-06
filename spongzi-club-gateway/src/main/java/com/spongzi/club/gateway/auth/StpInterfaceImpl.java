@@ -4,13 +4,16 @@ import cn.dev33.satoken.stp.StpInterface;
 import com.alibaba.cloud.commons.lang.StringUtils;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
+import com.spongzi.club.gateway.entity.AuthPermission;
+import com.spongzi.club.gateway.entity.AuthRole;
 import com.spongzi.club.gateway.redis.RedisUtil;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 自定义权限验证接口扩展
@@ -46,17 +49,25 @@ public class StpInterfaceImpl implements StpInterface {
     /**
      * 根据身份得到角色权限列表
      *
-     * @param authRolePrefix 身份验证角色前缀
+     * @param prefix 身份验证角色前缀
      * @param loginId        登录ID
      * @return {@link List}<{@link String}>
      */
-    private List<String> getStrings(String authRolePrefix, Object loginId) {
-        String authKey = redisUtil.buildKey(authRolePrefix, loginId.toString());
+    private List<String> getStrings(String prefix, Object loginId) {
+        String authKey = redisUtil.buildKey(prefix, loginId.toString());
         String authValue = redisUtil.get(authKey);
         if (StringUtils.isNotBlank(authValue)) {
             return Collections.emptyList();
         }
-        return new Gson().fromJson(authValue, new TypeToken<ArrayList<String>>(){}.getType());
+        List<String> authList = new LinkedList<>();
+        if (AUTH_ROLE_PREFIX.equals(prefix)) {
+            List<AuthRole> roleList = new Gson().fromJson(authValue, new TypeToken<List<AuthRole>>() {}.getType());
+            authList = roleList.stream().map(AuthRole::getRoleKey).collect(Collectors.toList());
+        } else if (AUTH_PERMISSION_PREFIX.equals(prefix)) {
+            List<AuthPermission> permissionList = new Gson().fromJson(authValue, new TypeToken<List<AuthPermission>>() {}.getType());
+            authList = permissionList.stream().map(AuthPermission::getPermissionKey).collect(Collectors.toList());
+        }
+        return authList;
     }
 
 }

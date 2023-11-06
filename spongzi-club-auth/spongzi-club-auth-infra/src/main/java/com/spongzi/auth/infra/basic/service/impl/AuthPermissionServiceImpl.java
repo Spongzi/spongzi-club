@@ -4,11 +4,9 @@ import com.spongzi.auth.infra.basic.entity.AuthPermission;
 import com.spongzi.auth.infra.basic.mapper.AuthPermissionDao;
 import com.spongzi.auth.infra.basic.service.AuthPermissionService;
 import org.springframework.stereotype.Service;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (AuthPermission)表服务实现类
@@ -63,5 +61,10 @@ public class AuthPermissionServiceImpl implements AuthPermissionService {
     @Override
     public boolean deleteById(Long id) {
         return this.authPermissionDao.deleteById(id) > 0;
+    }
+
+    @Override
+    public List<AuthPermission> queryByRoleList(List<Long> permissionIdList) {
+        return this.authPermissionDao.queryByRoleList(permissionIdList);
     }
 }

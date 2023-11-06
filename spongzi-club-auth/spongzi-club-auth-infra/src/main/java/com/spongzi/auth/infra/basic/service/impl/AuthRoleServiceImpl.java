@@ -4,9 +4,6 @@ import com.spongzi.auth.infra.basic.entity.AuthRole;
 import com.spongzi.auth.infra.basic.mapper.AuthRoleDao;
 import com.spongzi.auth.infra.basic.service.AuthRoleService;
 import org.springframework.stereotype.Service;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
 
