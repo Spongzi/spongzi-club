@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="搭建wx服务">
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/pom.xml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="对项目进行重构">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/ReceiveTextMsgHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/SubscribeMsgHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/WxChatMsgFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/WxChatMsgHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/WxChatMsgTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/redis/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/redis/RedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/utils/MessageUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/utils/SHA1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/target/classes/mapper/AuthPermissionDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/target/classes/mapper/AuthPermissionDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-wx/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-wx/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/controller/CallBackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/controller/CallBackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-wx/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +88,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Code/Project/spongzi-club/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/entity",
+    "last_opened_file_path": "D:/Code/Project/spongzi-club/spongzi-club-wx/src/main/java/com/spongzi/wx",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -104,11 +115,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Project\spongzi-club\spongzi-club-wx\src\main\java\com\spongzi\wx" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-gateway\src\main\java\com\spongzi\club\gateway\entity" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-common\src\main\java\com\spongzi\club\common" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-auth\spongzi-club-auth-common\src\main\java\com\spongzi\auth\common" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-auth\spongzi-club-auth-infra\src\main\resources" />
-      <recent name="D:\Code\Project\spongzi-club\spongzi-club-auth\spongzi-club-auth-infra\src\main\java\com\spongzi\club\auth\infra\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-infra\src\main\resources\mapper" />
@@ -271,15 +282,7 @@
       <workItem from="1699173978635" duration="1494000" />
       <workItem from="1699186878888" duration="1140000" />
       <workItem from="1699188032333" duration="1432000" />
-      <workItem from="1699230274613" duration="5143000" />
-    </task>
-    <task id="LOCAL-00043" summary="完成题目列表的查询接口">
-      <option name="closed" value="true" />
-      <created>1696835480760</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1696835480760</updated>
+      <workItem from="1699230274613" duration="9255000" />
     </task>
     <task id="LOCAL-00044" summary="查询题目信息接口开发，并且使用工厂模式">
       <option name="closed" value="true" />
@@ -665,7 +668,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699235322808</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="对项目进行重构">
+      <option name="closed" value="true" />
+      <created>1699235472363</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1699235472363</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="使用nacos成为配置中心，并且实现文件bean动态切换" />
     <MESSAGE value="标签增加分类概念" />
     <MESSAGE value="创建网关模块和鉴权模块" />
     <MESSAGE value="搭建空白框架" />
@@ -708,7 +718,8 @@
     <MESSAGE value="修改一些小错误" />
     <MESSAGE value="把用户权限数据存入到Redis中用于权限校验" />
     <MESSAGE value="搭建wx服务" />
-    <option name="LAST_COMMIT_MESSAGE" value="搭建wx服务" />
+    <MESSAGE value="对项目进行重构" />
+    <option name="LAST_COMMIT_MESSAGE" value="对项目进行重构" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
