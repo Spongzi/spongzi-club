@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="把用户权限数据存入到Redis中用于权限校验">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/WxApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/controller/CallBackController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="搭建wx服务">
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/controller/CallBackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/controller/CallBackController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,15 +271,7 @@
       <workItem from="1699173978635" duration="1494000" />
       <workItem from="1699186878888" duration="1140000" />
       <workItem from="1699188032333" duration="1432000" />
-      <workItem from="1699230274613" duration="4865000" />
-    </task>
-    <task id="LOCAL-00042" summary="封装分页">
-      <option name="closed" value="true" />
-      <created>1696835200787</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1696835200787</updated>
+      <workItem from="1699230274613" duration="5143000" />
     </task>
     <task id="LOCAL-00043" summary="完成题目列表的查询接口">
       <option name="closed" value="true" />
@@ -669,7 +657,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699233867040</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="搭建wx服务">
+      <option name="closed" value="true" />
+      <created>1699235322808</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1699235322808</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,7 +683,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="使用适配器模式实现不同的oss的操作实现" />
     <MESSAGE value="使用nacos成为配置中心，并且实现文件bean动态切换" />
     <MESSAGE value="标签增加分类概念" />
     <MESSAGE value="创建网关模块和鉴权模块" />
@@ -712,7 +707,8 @@
     <MESSAGE value="权限模块的开发" />
     <MESSAGE value="修改一些小错误" />
     <MESSAGE value="把用户权限数据存入到Redis中用于权限校验" />
-    <option name="LAST_COMMIT_MESSAGE" value="把用户权限数据存入到Redis中用于权限校验" />
+    <MESSAGE value="搭建wx服务" />
+    <option name="LAST_COMMIT_MESSAGE" value="搭建wx服务" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

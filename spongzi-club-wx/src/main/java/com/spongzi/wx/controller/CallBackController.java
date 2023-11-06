@@ -16,4 +16,6 @@ public class CallBackController {
     public String test() {
         return "hello wx";
     }
+
+    
 }
