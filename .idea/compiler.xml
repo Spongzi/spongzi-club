@@ -27,6 +27,7 @@
         <module name="spongzi-club-oss" />
         <module name="spongzi-club-subject-starter" />
         <module name="spongzi-club-gateway" />
+        <module name="spongzi-club-wx" />
       </profile>
     </annotationProcessing>
   </component>

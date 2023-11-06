@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/spongzi-club-auth/pom.xml" />
         <option value="$PROJECT_DIR$/spongzi-club-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/spongzi-club-common/pom.xml" />
+        <option value="$PROJECT_DIR$/spongzi-club-wx/pom.xml" />
       </list>
     </option>
   </component>

@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="权限模块的开发">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/redis/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/redis/RedisUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/entity/AuthPermission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/entity/AuthRole.java" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="把用户权限数据存入到Redis中用于权限校验">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/WxApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/controller/CallBackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/mapper/AuthPermissionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/mapper/AuthPermissionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/AuthPermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/AuthPermissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/AuthRolePermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/AuthRolePermissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/AuthRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/AuthRoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/impl/AuthPermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/impl/AuthPermissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/impl/AuthRolePermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/impl/AuthRolePermissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/impl/AuthRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/impl/AuthRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/resources/mapper/AuthPermissionDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/resources/mapper/AuthPermissionDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/auth/StpInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/auth/StpInterfaceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,20 +132,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthApplication">
-    <configuration name="DruidEncryptUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.spongzi.subject.infra.basic.utils.DruidEncryptUtil" />
-      <module name="spongzi-club-subject-infra" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.spongzi.subject.infra.basic.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.WxApplication">
     <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="spongzi-club-auth-starter" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.spongzi.auth.AuthApplication" />
@@ -207,13 +185,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WxApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spongzi-club-wx" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.spongzi.wx.WxApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spongzi.wx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.WxApplication" />
         <item itemvalue="Spring Boot.SubjectApplication" />
         <item itemvalue="Spring Boot.OssApplication" />
         <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.AuthApplication" />
-        <item itemvalue="应用程序.DruidEncryptUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -284,15 +275,7 @@
       <workItem from="1699173978635" duration="1494000" />
       <workItem from="1699186878888" duration="1140000" />
       <workItem from="1699188032333" duration="1432000" />
-      <workItem from="1699230274613" duration="3562000" />
-    </task>
-    <task id="LOCAL-00041" summary="封装分页">
-      <option name="closed" value="true" />
-      <created>1696833530490</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1696833530490</updated>
+      <workItem from="1699230274613" duration="4865000" />
     </task>
     <task id="LOCAL-00042" summary="封装分页">
       <option name="closed" value="true" />
@@ -678,7 +661,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698991606633</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="把用户权限数据存入到Redis中用于权限校验">
+      <option name="closed" value="true" />
+      <created>1699233867040</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1699233867040</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,7 +687,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成简单的测试连接" />
     <MESSAGE value="使用适配器模式实现不同的oss的操作实现" />
     <MESSAGE value="使用nacos成为配置中心，并且实现文件bean动态切换" />
     <MESSAGE value="标签增加分类概念" />
@@ -721,7 +711,8 @@
     <MESSAGE value="添加角色与用户的关联，并且添加角色常量" />
     <MESSAGE value="权限模块的开发" />
     <MESSAGE value="修改一些小错误" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改一些小错误" />
+    <MESSAGE value="把用户权限数据存入到Redis中用于权限校验" />
+    <option name="LAST_COMMIT_MESSAGE" value="把用户权限数据存入到Redis中用于权限校验" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
