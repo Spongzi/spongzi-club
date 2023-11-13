@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="对项目进行重构">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/ReceiveTextMsgHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/SubscribeMsgHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/WxChatMsgFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/WxChatMsgHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/WxChatMsgTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/redis/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/redis/RedisUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/utils/MessageUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/utils/SHA1.java" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="微信消息处理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/target/classes/mapper/AuthPermissionDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/target/classes/mapper/AuthPermissionDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-wx/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-wx/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/controller/CallBackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/controller/CallBackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-wx/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/handler/subject/SubjectHandlerTypeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/handler/subject/SubjectHandlerTypeFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +85,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.26551723",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -282,15 +270,19 @@
       <workItem from="1699173978635" duration="1494000" />
       <workItem from="1699186878888" duration="1140000" />
       <workItem from="1699188032333" duration="1432000" />
-      <workItem from="1699230274613" duration="9255000" />
-    </task>
-    <task id="LOCAL-00044" summary="查询题目信息接口开发，并且使用工厂模式">
-      <option name="closed" value="true" />
-      <created>1696920910061</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1696920910061</updated>
+      <workItem from="1699230274613" duration="9393000" />
+      <workItem from="1699260567473" duration="11000" />
+      <workItem from="1699276736869" duration="99000" />
+      <workItem from="1699277442677" duration="620000" />
+      <workItem from="1699320170294" duration="16000" />
+      <workItem from="1699320274518" duration="34000" />
+      <workItem from="1699368721642" duration="38000" />
+      <workItem from="1699404211011" duration="23000" />
+      <workItem from="1699409982306" duration="35000" />
+      <workItem from="1699410028972" duration="18000" />
+      <workItem from="1699776143407" duration="1589000" />
+      <workItem from="1699884054125" duration="69000" />
+      <workItem from="1699884142955" duration="81000" />
     </task>
     <task id="LOCAL-00045" summary="查询题目信息接口开发，并且使用工厂模式">
       <option name="closed" value="true" />
@@ -676,7 +668,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699235472363</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="微信消息处理">
+      <option name="closed" value="true" />
+      <created>1699239662064</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1699239662064</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -694,7 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="标签增加分类概念" />
     <MESSAGE value="创建网关模块和鉴权模块" />
     <MESSAGE value="搭建空白框架" />
     <MESSAGE value="鉴权基础骨架" />
@@ -719,7 +718,8 @@
     <MESSAGE value="把用户权限数据存入到Redis中用于权限校验" />
     <MESSAGE value="搭建wx服务" />
     <MESSAGE value="对项目进行重构" />
-    <option name="LAST_COMMIT_MESSAGE" value="对项目进行重构" />
+    <MESSAGE value="微信消息处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="微信消息处理" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
