@@ -43,7 +43,7 @@ public class ReceiveTextMsgHandler implements WxChatMsgHandler {
         int num = random.nextInt(1000);
         String numKey = redisUtil.buildKey(fromUserName, String.valueOf(num));
         redisUtil.setNx(numKey, "1", 5L, TimeUnit.MINUTES);
-        String numContent = "您当前的验证码是：" + num + "5分钟内有效";
+        String numContent = "您当前的验证码是：" + num + "，该验证码在5分钟内有效";
 
         return "<xml>\n" +
                 "  <ToUserName><![CDATA[" + fromUserName + "]]></ToUserName>\n" +
