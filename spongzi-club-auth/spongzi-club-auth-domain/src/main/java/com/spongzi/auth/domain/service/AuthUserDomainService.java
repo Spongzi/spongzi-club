@@ -1,5 +1,6 @@
 package com.spongzi.auth.domain.service;
 
+import cn.dev33.satoken.stp.SaTokenInfo;
 import com.spongzi.auth.domain.entity.AuthUserBO;
 
 /**
@@ -32,4 +33,12 @@ public interface AuthUserDomainService {
      * @return {@link Boolean}
      */
     Boolean delete(AuthUserBO authUserBO);
+
+    /**
+     * 是否登录
+     *
+     * @param validCode 有效代码
+     * @return {@link SaTokenInfo}
+     */
+    SaTokenInfo doLogin(String validCode);
 }

@@ -1,6 +1,8 @@
 package com.spongzi.auth.domain.service.impl;
 
 import cn.dev33.satoken.secure.SaSecureUtil;
+import cn.dev33.satoken.stp.SaTokenInfo;
+import cn.dev33.satoken.stp.StpUtil;
 import com.google.gson.Gson;
 import com.spongzi.auth.common.enums.AuthUserStatusEnum;
 import com.spongzi.auth.domain.constants.AuthConstant;
@@ -11,6 +13,8 @@ import com.spongzi.auth.infra.basic.entity.*;
 import com.spongzi.auth.infra.basic.service.*;
 import com.spongzi.club.common.enums.IsDeletedEnum;
 import com.spongzi.club.common.redis.RedisUtil;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -46,11 +50,16 @@ public class AuthUserDomainServiceImpl implements AuthUserDomainService {
     @Resource
     private AuthRolePermissionService authRolePermissionService;
 
+    @Resource
+    private ApplicationContext applicationContext;
+
     private final String salt = "spongzi";
 
     private final String AUTH_PERMISSION_PREFIX = "auth.permission";
 
     private final String AUTH_ROLE_PREFIX = "auth.role";
+
+    private static final String LOGIN_PREFIX = "spongziLoginCode";
 
     @Override
     @Transactional(rollbackFor = Exception.class)
@@ -107,5 +116,20 @@ public class AuthUserDomainServiceImpl implements AuthUserDomainService {
         Integer count = authUserService.update(authUser);
         //有任何的更新，都要与缓存进行同步的修改
         return count > 0;
+    }
+
+    @Override
+    public SaTokenInfo doLogin(String validCode) {
+        String loginKey = redisUtil.buildKey(LOGIN_PREFIX, validCode);
+        String openId = redisUtil.get(loginKey);
+        if (StringUtils.isBlank(openId)) {
+            return null;
+        }
+        AuthUserBO authUserBO = new AuthUserBO();
+        authUserBO.setUserName(openId);
+        AuthUserDomainService bean = applicationContext.getBean(AuthUserDomainService.class);
+        bean.register(authUserBO);
+        StpUtil.login(openId);
+        return StpUtil.getTokenInfo();
     }
 }

@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="fix：添加maven打包插件">
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="fix：修改验证码回复">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/AuthUserDomainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/AuthUserDomainService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/ReceiveTextMsgHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/java/com/spongzi/wx/handler/ReceiveTextMsgHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-wx/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-wx/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,15 +290,10 @@
       <workItem from="1699948181711" duration="1792000" />
       <workItem from="1699966833767" duration="1145000" />
       <workItem from="1699969714747" duration="297000" />
-      <workItem from="1700011322721" duration="3798000" />
-    </task>
-    <task id="LOCAL-00047" summary="处理一些数据加载失败的bug">
-      <option name="closed" value="true" />
-      <created>1696922804001</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1696922804001</updated>
+      <workItem from="1700011322721" duration="4861000" />
+      <workItem from="1700030617790" duration="2425000" />
+      <workItem from="1700034317948" duration="358000" />
+      <workItem from="1700052226582" duration="848000" />
     </task>
     <task id="LOCAL-00048" summary="处理一些数据加载失败的bug">
       <option name="closed" value="true" />
@@ -682,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700013300798</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="fix：修改验证码回复">
+      <option name="closed" value="true" />
+      <created>1700015483183</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1700015483184</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -700,7 +705,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="鉴权基础骨架" />
     <MESSAGE value="简单的集成sa-token测试demo" />
     <MESSAGE value="将服务注册到nacos中" />
     <MESSAGE value="进行网关集成，路由转发的设置" />
@@ -725,7 +729,8 @@
     <MESSAGE value="微信消息处理" />
     <MESSAGE value="failed：修改handler的map定义" />
     <MESSAGE value="fix：添加maven打包插件" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix：添加maven打包插件" />
+    <MESSAGE value="fix：修改验证码回复" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix：修改验证码回复" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

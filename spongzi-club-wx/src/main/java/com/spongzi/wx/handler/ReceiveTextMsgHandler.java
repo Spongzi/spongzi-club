@@ -29,6 +29,8 @@ public class ReceiveTextMsgHandler implements WxChatMsgHandler {
         return WxChatMsgTypeEnum.TEXT_MSG;
     }
 
+    private static final String LOGIN_PREFIX = "spongziLoginCode";
+
     @Override
     public String dealMsg(Map<String, String> messageMap) {
         log.info("接收到文本消息事件");
@@ -41,8 +43,8 @@ public class ReceiveTextMsgHandler implements WxChatMsgHandler {
 
         Random random = new Random();
         int num = random.nextInt(1000);
-        String numKey = redisUtil.buildKey(fromUserName, String.valueOf(num));
-        redisUtil.setNx(numKey, "1", 5L, TimeUnit.MINUTES);
+        String numKey = redisUtil.buildKey(LOGIN_PREFIX, String.valueOf(num));
+        redisUtil.setNx(numKey, fromUserName, 5L, TimeUnit.MINUTES);
         String numContent = "您当前的验证码是：" + num + "，该验证码在5分钟内有效";
 
         return "<xml>\n" +
