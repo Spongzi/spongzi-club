@@ -19,7 +19,7 @@
         select
             id, subject_id, category_id, label_id, created_by, created_time, update_by, update_time, is_deleted
         from subject_mapping
-        where  = #{id}
+        where id = #{id}
     </select>
 
     <!--查询指定行数据-->
@@ -56,7 +56,6 @@
                 and is_deleted = #{isDeleted}
             </if>
         </where>
-        limit #{pageable.offset}, #{pageable.pageSize}
     </select>
 
     <!--统计总行数-->

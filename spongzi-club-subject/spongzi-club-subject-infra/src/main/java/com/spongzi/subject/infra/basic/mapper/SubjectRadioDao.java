@@ -24,7 +24,6 @@ public interface SubjectRadioDao {
      * 查询指定行数据
      *
      * @param subjectRadio 查询条件
-     * @param pageable         分页对象
      * @return 对象列表
      */
     List<SubjectRadio> queryAllByLimit(SubjectRadio subjectRadio);

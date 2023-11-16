@@ -2,6 +2,8 @@ package com.spongzi.auth.infra.basic.service;
 
 import com.spongzi.auth.infra.basic.entity.AuthUser;
 
+import java.util.List;
+
 /**
  * (AuthUser)表服务接口
  *
@@ -42,4 +44,11 @@ public interface AuthUserService {
      */
     boolean deleteById(Long id);
 
+    /**
+     * 按条件查询
+     *
+     * @param authUser 身份验证用户
+     * @return {@link List}<{@link AuthUser}>
+     */
+    List<AuthUser> queryByCondition(AuthUser authUser);
 }

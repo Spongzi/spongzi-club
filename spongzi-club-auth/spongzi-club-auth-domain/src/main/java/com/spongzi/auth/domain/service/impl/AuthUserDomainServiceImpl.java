@@ -19,8 +19,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -65,38 +67,28 @@ public class AuthUserDomainServiceImpl implements AuthUserDomainService {
     @Transactional(rollbackFor = Exception.class)
     public Boolean register(AuthUserBO authUserBO) {
         AuthUser authUser = AuthUserConvert.INSTANCE.convertBoToEntity(authUserBO);
-        authUser.setPassword(SaSecureUtil.md5BySalt(authUser.getPassword(), salt));
-        authUser.setStatus(AuthUserStatusEnum.OPEN.getCode());
-        authUser.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
-        Integer count = authUserService.insert(authUser);
-        // 建立一个初步的角色关联，要把当前用户的角色和权限都刷到redis中
-        AuthRole authRole = new AuthRole();
-        authRole.setRoleKey(AuthConstant.NORMAL_USER);
-        AuthRole roleResult = authRoleService.queryByCondition(authRole);
-        Long roleId = roleResult.getId();
-        Long userId = authUser.getId();
-        AuthUserRole authUserRole = new AuthUserRole();
-        authUserRole.setUserId(userId);
-        authUserRole.setRoleId(roleId);
-        authUserRole.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
-        authUserRoleService.insert(authUserRole);
+        List<AuthUser> authUserList = authUserService.queryByCondition(authUser);
+        Integer count = 0;
+        boolean firstRegister = true;
+        if (authUserList != null && authUser.getUserName().equals(authUserList.get(0).getUserName())) {
+            firstRegister = false;
+            authUser = authUserList.get(0);
+        } else {
+            authUser.setPassword(SaSecureUtil.md5BySalt(authUser.getPassword(), salt));
+            authUser.setStatus(AuthUserStatusEnum.OPEN.getCode());
+            authUser.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
+            count = authUserService.insert(authUser);
+        }
 
-        // 添加缓存
-        String roleKey = redisUtil.buildKey(AUTH_ROLE_PREFIX, authUser.getUserName());
-        List<AuthRole> roleList = new LinkedList<>();
-        roleList.add(authRole);
-        redisUtil.set(roleKey, new Gson().toJson(roleList));
+        Map<String, Object> map = getAuthUserRole(authUser);
+        AuthUserRole authUserRole = (AuthUserRole) map.get("authUserRole");
+        AuthRole authRole = (AuthRole) map.get("authRole");
 
-        AuthRolePermission authRolePermission = new AuthRolePermission();
-        authRolePermission.setRoleId(roleId);
-        List<AuthRolePermission> rolePermissionList = authRolePermissionService.queryByCondition(authRolePermission);
+        if (firstRegister) {
+            authUserRoleService.insert(authUserRole);
+        }
 
-        List<Long> permissionIdList = rolePermissionList.stream().map(AuthRolePermission::getPermissionId).collect(Collectors.toList());
-
-        // 根据RoleId查权限
-        List<AuthPermission> permissionList = authPermissionService.queryByRoleList(permissionIdList);
-        String permissionKey = redisUtil.buildKey(AUTH_PERMISSION_PREFIX, authUser.getUserName());
-        redisUtil.set(permissionKey, new Gson().toJson(permissionList));
+        addPermissionInfoRedisCache(authUser, authRole, authRole.getId());
         return count > 0;
     }
 
@@ -127,9 +119,56 @@ public class AuthUserDomainServiceImpl implements AuthUserDomainService {
         }
         AuthUserBO authUserBO = new AuthUserBO();
         authUserBO.setUserName(openId);
+        // 如果用户存在则直接登录，否则注册
         AuthUserDomainService bean = applicationContext.getBean(AuthUserDomainService.class);
         bean.register(authUserBO);
         StpUtil.login(openId);
         return StpUtil.getTokenInfo();
+    }
+
+    private Map<String, Object> getAuthUserRole(AuthUser authUser) {
+        // 建立一个初步的角色关联，要把当前用户的角色和权限都刷到redis中
+        AuthRole authRole = new AuthRole();
+        authRole.setRoleKey(AuthConstant.NORMAL_USER);
+        AuthRole roleResult = authRoleService.queryByCondition(authRole);
+        Long roleId = roleResult.getId();
+        Long userId = authUser.getId();
+        AuthUserRole authUserRole = new AuthUserRole();
+        authUserRole.setUserId(userId);
+        authUserRole.setRoleId(roleId);
+        authUserRole.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
+        Map<String, Object> map = new HashMap<>();
+        map.put("authRole", authRole);
+        map.put("authUserRole", authUserRole);
+        return map;
+    }
+
+    /**
+     * 添加权限信息Redis缓存
+     *
+     * @param authUser 身份验证用户
+     * @param authRole 身份验证角色
+     * @param roleId   角色ID
+     */
+    private void addPermissionInfoRedisCache(AuthUser authUser, AuthRole authRole, Long roleId) {
+        // 添加缓存
+        String roleKey = redisUtil.buildKey(AUTH_ROLE_PREFIX, authUser.getUserName());
+        List<AuthRole> roleList = new LinkedList<>();
+        roleList.add(authRole);
+        redisUtil.set(roleKey, new Gson().toJson(roleList));
+
+        AuthRolePermission authRolePermission = new AuthRolePermission();
+        authRolePermission.setRoleId(roleId);
+        List<AuthRolePermission> rolePermissionList = authRolePermissionService
+                .queryByCondition(authRolePermission);
+
+        List<Long> permissionIdList = rolePermissionList.stream()
+                .map(AuthRolePermission::getPermissionId)
+                .collect(Collectors.toList());
+
+        // 根据RoleId查权限
+        List<AuthPermission> permissionList = authPermissionService.queryByRoleList(permissionIdList);
+        String permissionKey = redisUtil.buildKey(AUTH_PERMISSION_PREFIX, authUser.getUserName());
+        redisUtil.set(permissionKey, new Gson().toJson(permissionList));
     }
 }
