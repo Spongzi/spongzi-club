@@ -150,6 +150,27 @@ public class UserController {
     }
 
     /**
+     * 登出
+     *
+     * @param username 用户名
+     * @return {@link Result}<{@link Object}>
+     */
+    @PostMapping("logOut")
+    public Result<Object> logout(@RequestParam("userName") String username) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("UserController.logout.username:{}", username);
+            }
+            Preconditions.checkArgument(!StringUtils.isBlank(username), "用户名不能为空");
+            StpUtil.logout(username);
+            return Result.ok();
+        } catch (Exception e) {
+            log.error("UserController.doLogin.error:{}", e.getMessage(), e);
+            return Result.fail("用户登出失败");
+        }
+    }
+
+    /**
      * 检查用户信息
      *
      * @param authUserDTO 身份验证用户数据到
