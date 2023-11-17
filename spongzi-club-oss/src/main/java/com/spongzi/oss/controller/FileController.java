@@ -3,8 +3,9 @@ package com.spongzi.oss.controller;
 import com.spongzi.oss.service.FileService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 
@@ -32,9 +33,22 @@ public class FileController {
         }
     }
 
+    /**
+     * 获取URL
+     *
+     * @param bucketName 存储桶名称
+     * @param objectName 对象名称
+     * @return {@link String}
+     * @throws Exception 例外情况
+     */
     @GetMapping("/getUrl")
-    public String getUrl(String bucketName,String objectName) throws Exception {
-        return fileService.getUrl(bucketName,objectName);
+    public String getUrl(String bucketName, String objectName) throws Exception {
+        return fileService.getUrl(bucketName, objectName);
+    }
+
+    @PostMapping("/upload")
+    public String upload(MultipartFile uploadFile, String bucket, String objectName) throws Exception {
+        return fileService.uploadFile(uploadFile, bucket, objectName);
     }
 
     @GetMapping("/test-nacos")

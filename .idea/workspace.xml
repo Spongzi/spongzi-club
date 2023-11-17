@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：用户登出">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/service/FileService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,15 +303,7 @@
       <workItem from="1700118959384" duration="7087000" />
       <workItem from="1700134040652" duration="714000" />
       <workItem from="1700135115087" duration="1206000" />
-      <workItem from="1700184714712" duration="2458000" />
-    </task>
-    <task id="LOCAL-00052" summary="添加todo">
-      <option name="closed" value="true" />
-      <created>1696943340666</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1696943340666</updated>
+      <workItem from="1700184714712" duration="3056000" />
     </task>
     <task id="LOCAL-00053" summary="修改sql语句和参数判断">
       <option name="closed" value="true" />
@@ -696,7 +689,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700187203465</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="feat：用户登出">
+      <option name="closed" value="true" />
+      <created>1700187281954</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1700187281954</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
