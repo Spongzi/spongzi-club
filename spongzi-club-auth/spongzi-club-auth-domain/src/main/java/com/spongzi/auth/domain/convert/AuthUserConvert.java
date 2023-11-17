@@ -22,4 +22,6 @@ public interface AuthUserConvert {
      * @return {@link AuthUser}
      */
     AuthUser convertBoToEntity(AuthUserBO authUserBO);
+
+    AuthUserBO convertEntityToBO(AuthUser user);
 }

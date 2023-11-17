@@ -46,6 +46,29 @@ public class UserController {
         }
     }
 
+    /**
+     * 获取用户信息
+     *
+     * @param authUserDTO 身份验证用户数据到
+     * @return {@link Result}<{@link Boolean}>
+     */
+    @PostMapping("getUserInfo")
+    public Result<AuthUserDTO> getUserInfo(@RequestBody AuthUserDTO authUserDTO) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("UserController.getUserInfo.dto:{}", JSON.toJSONString(authUserDTO));
+            }
+            Preconditions.checkArgument(!StringUtils.isBlank(authUserDTO.getUserName()), "用户名不能为空");
+            AuthUserBO authUserBO = AuthUserConvert.INSTANCE.convertDtoToBo(authUserDTO);
+            AuthUserBO userInfo = authUserDomainService.getUserInfo(authUserBO);
+            AuthUserDTO userInfoDTO = AuthUserConvert.INSTANCE.convertBoToDto(userInfo);
+            return Result.ok(userInfoDTO);
+        } catch (Exception e) {
+            log.error("UserController.update.error:{}", e.getMessage(), e);
+            return Result.fail("获取用户信息失败");
+        }
+    }
+
 
     /**
      * 修改用户信息

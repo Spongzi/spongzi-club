@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="fix: 修改登录，和修改redis地址">
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="fix: 修改登录操作">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/convert/AuthUserConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/convert/AuthUserConvert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/convert/AuthUserConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/convert/AuthUserConvert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/AuthUserDomainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/AuthUserDomainService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -302,15 +306,7 @@
       <workItem from="1700118959384" duration="7087000" />
       <workItem from="1700134040652" duration="714000" />
       <workItem from="1700135115087" duration="1206000" />
-      <workItem from="1700184714712" duration="502000" />
-    </task>
-    <task id="LOCAL-00049" summary="解决jackson2序列化空值的问题">
-      <option name="closed" value="true" />
-      <created>1696942717580</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1696942717580</updated>
+      <workItem from="1700184714712" duration="1992000" />
     </task>
     <task id="LOCAL-00050" summary="解决jackson2序列化空值的问题">
       <option name="closed" value="true" />
@@ -696,7 +692,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700135148237</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="fix: 修改登录操作">
+      <option name="closed" value="true" />
+      <created>1700185290765</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1700185290766</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +718,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="将服务注册到nacos中" />
     <MESSAGE value="进行网关集成，路由转发的设置" />
     <MESSAGE value="添加网关权限校验" />
     <MESSAGE value="设置网关全局异常处理" />
@@ -739,7 +742,8 @@
     <MESSAGE value="fix：添加maven打包插件" />
     <MESSAGE value="fix：修改验证码回复" />
     <MESSAGE value="fix: 修改登录，和修改redis地址" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 修改登录，和修改redis地址" />
+    <MESSAGE value="fix: 修改登录操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 修改登录操作" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

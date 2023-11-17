@@ -22,4 +22,12 @@ public interface AuthUserConvert {
      * @return {@link AuthUserBO}
      */
     AuthUserBO convertDtoToBo(AuthUserDTO authUserDTO);
+
+    /**
+     * 将bo转换为dto
+     *
+     * @param authUserBO 身份验证用户bo
+     * @return {@link AuthUserDTO}
+     */
+    AuthUserDTO convertBoToDto(AuthUserBO authUserBO);
 }
