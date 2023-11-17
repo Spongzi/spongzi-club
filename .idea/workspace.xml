@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：登录打通">
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="fix: 修改登录，和修改redis地址">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthUserDomainServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/AuthUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/AuthUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/impl/AuthUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/java/com/spongzi/auth/infra/basic/service/impl/AuthUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/resources/mapper/AuthRolePremissionDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/resources/mapper/AuthRolePremissionDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/resources/mapper/AuthUserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/src/main/resources/mapper/AuthUserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/target/classes/mapper/AuthRolePremissionDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/target/classes/mapper/AuthRolePremissionDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/target/classes/mapper/AuthUserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-infra/target/classes/mapper/AuthUserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-gateway/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectMultipleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectMultipleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectRadioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/mapper/SubjectRadioDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/resources/mapper/SubjectInfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/resources/mapper/SubjectInfoDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/resources/mapper/SubjectMappingDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/resources/mapper/SubjectMappingDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/target/classes/mapper/SubjectInfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/target/classes/mapper/SubjectInfoDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/target/classes/mapper/SubjectMappingDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/target/classes/mapper/SubjectMappingDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,11 +203,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.WxApplication" />
         <item itemvalue="Spring Boot.SubjectApplication" />
         <item itemvalue="Spring Boot.OssApplication" />
         <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.AuthApplication" />
-        <item itemvalue="Spring Boot.WxApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -318,14 +301,8 @@
       <workItem from="1700052226582" duration="848000" />
       <workItem from="1700118959384" duration="7087000" />
       <workItem from="1700134040652" duration="714000" />
-    </task>
-    <task id="LOCAL-00048" summary="处理一些数据加载失败的bug">
-      <option name="closed" value="true" />
-      <created>1696923029702</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1696923029702</updated>
+      <workItem from="1700135115087" duration="1206000" />
+      <workItem from="1700184714712" duration="502000" />
     </task>
     <task id="LOCAL-00049" summary="解决jackson2序列化空值的问题">
       <option name="closed" value="true" />
@@ -711,7 +688,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700015483184</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="fix: 修改登录，和修改redis地址">
+      <option name="closed" value="true" />
+      <created>1700135148236</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1700135148237</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -729,7 +714,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="简单的集成sa-token测试demo" />
     <MESSAGE value="将服务注册到nacos中" />
     <MESSAGE value="进行网关集成，路由转发的设置" />
     <MESSAGE value="添加网关权限校验" />
@@ -754,7 +738,8 @@
     <MESSAGE value="failed：修改handler的map定义" />
     <MESSAGE value="fix：添加maven打包插件" />
     <MESSAGE value="fix：修改验证码回复" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix：修改验证码回复" />
+    <MESSAGE value="fix: 修改登录，和修改redis地址" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 修改登录，和修改redis地址" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

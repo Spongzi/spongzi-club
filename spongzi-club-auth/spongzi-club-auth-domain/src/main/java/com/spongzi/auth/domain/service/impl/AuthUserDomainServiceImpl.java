@@ -66,27 +66,28 @@ public class AuthUserDomainServiceImpl implements AuthUserDomainService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public Boolean register(AuthUserBO authUserBO) {
-        AuthUser authUser = AuthUserConvert.INSTANCE.convertBoToEntity(authUserBO);
-        List<AuthUser> authUserList = authUserService.queryByCondition(authUser);
-        Integer count = 0;
-        boolean firstRegister = true;
-        if (authUserList != null && authUser.getUserName().equals(authUserList.get(0).getUserName())) {
-            firstRegister = false;
-            authUser = authUserList.get(0);
-        } else {
-            authUser.setPassword(SaSecureUtil.md5BySalt(authUser.getPassword(), salt));
-            authUser.setStatus(AuthUserStatusEnum.OPEN.getCode());
-            authUser.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
-            count = authUserService.insert(authUser);
+
+        AuthUser existAuthUser = new AuthUser();
+        existAuthUser.setUserName(authUserBO.getUserName());
+        // 校验用户是否存在
+        List<AuthUser> authUserList = authUserService.queryByCondition(existAuthUser);
+        if (authUserList != null && !authUserList.isEmpty()) {
+            return true;
         }
+
+        AuthUser authUser = AuthUserConvert.INSTANCE.convertBoToEntity(authUserBO);
+        if (StringUtils.isBlank(authUser.getPassword())) {
+            authUser.setPassword(SaSecureUtil.md5BySalt(authUser.getPassword(), salt));
+        }
+        authUser.setStatus(AuthUserStatusEnum.OPEN.getCode());
+        authUser.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
+        Integer count = authUserService.insert(authUser);
 
         Map<String, Object> map = getAuthUserRole(authUser);
         AuthUserRole authUserRole = (AuthUserRole) map.get("authUserRole");
         AuthRole authRole = (AuthRole) map.get("authRole");
 
-        if (firstRegister) {
-            authUserRoleService.insert(authUserRole);
-        }
+        authUserRoleService.insert(authUserRole);
 
         addPermissionInfoRedisCache(authUser, authRole, authRole.getId());
         return count > 0;
