@@ -46,6 +46,15 @@ public class FileController {
         return fileService.getUrl(bucketName, objectName);
     }
 
+    /**
+     * 上传文件
+     *
+     * @param uploadFile 将文件上载到文件
+     * @param bucket     水桶
+     * @param objectName 对象名称
+     * @return {@link String}
+     * @throws Exception 例外情况
+     */
     @PostMapping("/upload")
     public String upload(MultipartFile uploadFile, String bucket, String objectName) throws Exception {
         return fileService.uploadFile(uploadFile, bucket, objectName);

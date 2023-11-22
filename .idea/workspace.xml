@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：文件上传">
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="doc：添加方法注解">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/target/generated-sources/annotations/com/spongzi/auth/application/convert/AuthUserConvertImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/target/generated-sources/annotations/com/spongzi/auth/application/convert/AuthUserConvertImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/AuthUserDomainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/AuthUserDomainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/target/generated-sources/annotations/com/spongzi/auth/domain/convert/AuthUserConvertImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/target/generated-sources/annotations/com/spongzi/auth/domain/convert/AuthUserConvertImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/java/com/spongzi/oss/controller/FileController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,15 +310,10 @@
       <workItem from="1700313623961" duration="894000" />
       <workItem from="1700314694933" duration="6000" />
       <workItem from="1700529768295" duration="33000" />
-      <workItem from="1700529810661" duration="131000" />
-    </task>
-    <task id="LOCAL-00054" summary="修改sql语句和参数判断">
-      <option name="closed" value="true" />
-      <created>1696944055376</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1696944055376</updated>
+      <workItem from="1700529810661" duration="3632000" />
+      <workItem from="1700548917869" duration="1195000" />
+      <workItem from="1700573587691" duration="1766000" />
+      <workItem from="1700614436442" duration="636000" />
     </task>
     <task id="LOCAL-00055" summary="sql拦截器自动翻译">
       <option name="closed" value="true" />
@@ -706,7 +699,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700187943667</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="doc：添加方法注解">
+      <option name="closed" value="true" />
+      <created>1700530008664</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1700530008664</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -724,7 +725,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="实现缓存读写权限" />
     <MESSAGE value="实现用户注册操作" />
     <MESSAGE value="抽取出独立的common模块" />
     <MESSAGE value="更改Subject模块的命名规则" />
@@ -749,7 +749,8 @@
     <MESSAGE value="feat：获取用户信息" />
     <MESSAGE value="feat：用户登出" />
     <MESSAGE value="feat：文件上传" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat：文件上传" />
+    <MESSAGE value="doc：添加方法注解" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc：添加方法注解" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
