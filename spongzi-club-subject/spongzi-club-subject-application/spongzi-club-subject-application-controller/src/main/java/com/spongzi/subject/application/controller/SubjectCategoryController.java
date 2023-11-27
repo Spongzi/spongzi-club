@@ -52,7 +52,7 @@ public class SubjectCategoryController {
         }
     }
 
-    @PostMapping("/query-primary-category")
+    @PostMapping("/queryPrimaryCategory")
     public Result<List<SubjectCategoryDTO>> queryPrimaryCategory(@RequestBody SubjectCategoryDTO subjectCategoryDTO) {
         try {
             if (log.isInfoEnabled()) {
@@ -70,7 +70,7 @@ public class SubjectCategoryController {
         }
     }
 
-    @PostMapping("/query-category-by-primary")
+    @PostMapping("/queryCategoryPrimary")
     public Result<List<SubjectCategoryDTO>> queryCategoryByPrimary(@RequestBody SubjectCategoryDTO subjectCategoryDTO) {
         try {
             if (log.isInfoEnabled()) {

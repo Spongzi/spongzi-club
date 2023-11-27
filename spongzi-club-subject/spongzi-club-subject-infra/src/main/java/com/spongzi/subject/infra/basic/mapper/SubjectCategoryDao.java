@@ -76,5 +76,13 @@ public interface SubjectCategoryDao {
      * @return {@link List}<{@link SubjectCategory}>
      */
     List<SubjectCategory> queryCategory(SubjectCategory subjectCategory);
+
+    /**
+     * 查询子连接计数
+     *
+     * @param id ID
+     * @return {@link Integer}
+     */
+    Integer querySubejctCount(Long id);
 }
 

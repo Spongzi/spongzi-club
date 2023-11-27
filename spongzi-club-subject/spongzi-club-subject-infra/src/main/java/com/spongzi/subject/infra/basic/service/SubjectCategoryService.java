@@ -50,4 +50,12 @@ public interface SubjectCategoryService {
      * @return {@link List}<{@link SubjectCategory}>
      */
     List<SubjectCategory> queryCategory(SubjectCategory subjectCategory);
+
+    /**
+     * 查询主题计数
+     *
+     * @param id ID
+     * @return {@link Integer}
+     */
+    Integer querySubjectCount(Long id);
 }

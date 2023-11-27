@@ -39,5 +39,10 @@ public class SubjectCategoryDTO implements Serializable {
      * 父级id
      */
     private Long parentId;
+
+    /**
+     * 计数
+     */
+    private Integer count;
 }
 
