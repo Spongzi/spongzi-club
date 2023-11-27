@@ -9,11 +9,13 @@ import com.spongzi.auth.domain.service.AuthPermissionDomainService;
 import com.spongzi.club.common.entity.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 权限controller
@@ -80,6 +82,21 @@ public class PermissionController {
             return Result.ok(authPermissionDomainService.delete(permissionBO));
         } catch (Exception e) {
             log.error("PermissionController.delete.error:{}", e.getMessage(), e);
+            return Result.fail("删除权限信息失败");
+        }
+    }
+
+    @GetMapping("getPermission")
+    public Result<List<String>> getPermission(String username) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("PermissionController.getPermission.username:{}", username);
+            }
+
+            Preconditions.checkArgument(!StringUtils.isBlank(username), "用户名不能为空");
+            return Result.ok(authPermissionDomainService.getPermission(username));
+        } catch (Exception e) {
+            log.error("PermissionController.getPermission.error:{}", e.getMessage(), e);
             return Result.fail("删除权限信息失败");
         }
     }

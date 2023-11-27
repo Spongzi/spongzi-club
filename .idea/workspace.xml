@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：分类题目数量">
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：分类标签优化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/controller/SubjectCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/convert/SubjectCategoryConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/convert/SubjectCategoryConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/dto/SubjectCategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/dto/SubjectCategoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/convert/SubjectLabelConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/convert/SubjectLabelConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/entity/SubjectCategoryBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/entity/SubjectCategoryBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/SubjectCategoryDomainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/SubjectCategoryDomainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/PermissionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/AuthPermissionDomainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/AuthPermissionDomainService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthPermissionDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-domain/src/main/java/com/spongzi/auth/domain/service/impl/AuthPermissionDomainServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,15 +317,7 @@
       <workItem from="1700573587691" duration="1766000" />
       <workItem from="1700614436442" duration="636000" />
       <workItem from="1700723987856" duration="1254000" />
-      <workItem from="1701068351221" duration="1927000" />
-    </task>
-    <task id="LOCAL-00056" summary="添加java打包版本">
-      <option name="closed" value="true" />
-      <created>1697079580672</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1697079580673</updated>
+      <workItem from="1701068351221" duration="2627000" />
     </task>
     <task id="LOCAL-00057" summary="修改bug">
       <option name="closed" value="true" />
@@ -715,7 +703,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701069008441</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="feat：分类标签优化">
+      <option name="closed" value="true" />
+      <created>1701070509672</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1701070509672</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -733,7 +729,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="抽取出独立的common模块" />
     <MESSAGE value="更改Subject模块的命名规则" />
     <MESSAGE value="完善用户注册操作，添加一些用户枚举类" />
     <MESSAGE value="完善用户注册操作，添加一些用户枚举类，添加一些TODO" />
@@ -758,7 +753,8 @@
     <MESSAGE value="feat：文件上传" />
     <MESSAGE value="doc：添加方法注解" />
     <MESSAGE value="feat：分类题目数量" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat：分类题目数量" />
+    <MESSAGE value="feat：分类标签优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat：分类标签优化" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
