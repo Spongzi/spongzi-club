@@ -3,6 +3,7 @@ package com.spongzi.subject.domain.entity;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 题目分类(SubjectCategory)实体类
@@ -44,5 +45,10 @@ public class SubjectCategoryBO implements Serializable {
      * 计数
      */
     private Integer count;
+
+    /**
+     * 标记推杆
+     */
+    private List<SubjectLabelBO> labelBOList;
 }
 

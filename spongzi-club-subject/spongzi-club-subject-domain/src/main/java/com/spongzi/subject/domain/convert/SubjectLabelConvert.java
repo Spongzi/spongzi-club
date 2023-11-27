@@ -20,4 +20,6 @@ public interface SubjectLabelConvert {
     SubjectLabel convertBoToEntity(SubjectLabelBO subjectLabelBO);
 
     List<SubjectLabelBO> convertEntityListToBoList(List<SubjectLabel> subjectLabelList);
+
+    SubjectLabelBO convertEntityToBo(SubjectLabel label);
 }

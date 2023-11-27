@@ -1,7 +1,6 @@
 package com.spongzi.subject.domain.service;
 
 import com.spongzi.subject.domain.entity.SubjectCategoryBO;
-import com.spongzi.subject.infra.basic.entity.SubjectCategory;
 
 import java.util.List;
 
@@ -44,4 +43,12 @@ public interface SubjectCategoryDomainService {
      * @return {@link Boolean}
      */
     Boolean delete(SubjectCategoryBO subjectCategoryBO);
+
+    /**
+     * 查询类别和标签
+     *
+     * @param subjectCategoryBO 主题类别bo
+     * @return {@link List}<{@link SubjectCategoryBO}>
+     */
+    List<SubjectCategoryBO> queryCategoryAndLabel(SubjectCategoryBO subjectCategoryBO);
 }

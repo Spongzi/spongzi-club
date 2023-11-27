@@ -4,7 +4,9 @@ import com.alibaba.fastjson.JSON;
 import com.google.common.base.Preconditions;
 import com.spongzi.club.common.entity.Result;
 import com.spongzi.subject.application.convert.SubjectCategoryConvert;
+import com.spongzi.subject.application.convert.SubjectLabelConvert;
 import com.spongzi.subject.application.dto.SubjectCategoryDTO;
+import com.spongzi.subject.application.dto.SubjectLabelDTO;
 import com.spongzi.subject.domain.entity.SubjectCategoryBO;
 import com.spongzi.subject.domain.service.SubjectCategoryDomainService;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -70,7 +73,7 @@ public class SubjectCategoryController {
         }
     }
 
-    @PostMapping("/queryCategoryPrimary")
+    @PostMapping("/queryCategoryByPrimary")
     public Result<List<SubjectCategoryDTO>> queryCategoryByPrimary(@RequestBody SubjectCategoryDTO subjectCategoryDTO) {
         try {
             if (log.isInfoEnabled()) {
@@ -118,6 +121,44 @@ public class SubjectCategoryController {
         } catch (Exception e) {
             log.error("SubjectCategoryController.update.error: {}", e.getMessage(), e);
             return Result.fail("删除分类失败");
+        }
+    }
+
+    /**
+     * 查询分类及标签，并且封装成为树形结构
+     *
+     * @param subjectCategoryDTO 主题类别dto
+     * @return {@link Result}<{@link List}<{@link SubjectCategoryDTO}>>
+     */
+    @PostMapping("/queryCategoryAndLabel")
+    public Result<List<SubjectCategoryDTO>> queryCategoryAndLabel(@RequestBody SubjectCategoryDTO subjectCategoryDTO) {
+        try {
+            if (log.isInfoEnabled()) {
+                log.info("SubjectCategoryController.queryCategoryAndLabel.dto: {}", JSON.toJSONString(subjectCategoryDTO));
+            }
+
+            Preconditions.checkNotNull(subjectCategoryDTO.getId(), "分类id不能为空");
+
+            SubjectCategoryBO subjectCategoryBO = SubjectCategoryConvert.INSTANCE
+                    .convertDtoToBo(subjectCategoryDTO);
+
+            List<SubjectCategoryBO> subjectCategoryBOList = subjectCategoryDomainService.queryCategoryAndLabel(subjectCategoryBO);
+            List<SubjectCategoryDTO> dtoList = new LinkedList<>();
+            subjectCategoryBOList.forEach(bo -> {
+                SubjectCategoryDTO dto = SubjectCategoryConvert
+                        .INSTANCE
+                        .convertBoToDto(bo);
+                List<SubjectLabelDTO> labelDTOList = SubjectLabelConvert
+                        .INSTANCE
+                        .convertBoListToDtoList(bo.getLabelBOList());
+                dto.setLabelDTOList(labelDTOList);
+                dtoList.add(dto);
+            });
+            
+            return Result.ok(dtoList);
+        } catch (Exception e) {
+            log.error("SubjectCategoryController.queryPrimaryCategory.error: {}", e.getMessage(), e);
+            return Result.fail();
         }
     }
 }
