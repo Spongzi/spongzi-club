@@ -3,6 +3,7 @@ package com.spongzi.oss.adapter;
 import com.spongzi.oss.entity.FileInfo;
 import com.spongzi.oss.utils.MinioUtil;
 import lombok.SneakyThrows;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -18,6 +19,12 @@ import java.util.List;
  */
 @Service(value = "minioStorageAdapter")
 public class MinioStorageAdapter implements StorageAdapter {
+
+    /**
+     * MinIoUrl
+     */
+    @Value("${minio.url}")
+    private String url;
 
     @Resource
     private MinioUtil minioUtil;
@@ -64,7 +71,8 @@ public class MinioStorageAdapter implements StorageAdapter {
     }
 
     @Override
-    public String getUrl(String bucketName, String objectName) throws Exception {
-        return minioUtil.getPreviewFileUrl(bucketName, objectName);
+    @SneakyThrows
+    public String getUrl(String bucketName, String objectName) {
+        return url + "/" + bucketName + "/" + objectName;
     }
 }
