@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：多线程常用的第二种方式，使用CompletableFuture，优化查询类别和标签">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/config/CustomNameThreadFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/config/ThreadPoolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/config/ThreadPoolConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -315,15 +318,7 @@
       <workItem from="1700614436442" duration="636000" />
       <workItem from="1700723987856" duration="1254000" />
       <workItem from="1701068351221" duration="4216000" />
-      <workItem from="1701590053648" duration="2153000" />
-    </task>
-    <task id="LOCAL-00061" summary="使用适配器模式实现不同的oss的操作实现">
-      <option name="closed" value="true" />
-      <created>1697437141031</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1697437141031</updated>
+      <workItem from="1701590053648" duration="2647000" />
     </task>
     <task id="LOCAL-00062" summary="使用nacos成为配置中心，并且实现文件bean动态切换">
       <option name="closed" value="true" />
@@ -709,7 +704,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701592194141</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="feat：多线程常用的第二种方式，使用CompletableFuture，优化查询类别和标签">
+      <option name="closed" value="true" />
+      <created>1701592213347</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1701592213347</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
