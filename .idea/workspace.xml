@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：利用minio的mc突破图片权限">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/config/ThreadPoolConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：多线程常用的第二种方式，使用CompletableFuture，优化查询类别和标签">
       <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -317,23 +315,7 @@
       <workItem from="1700614436442" duration="636000" />
       <workItem from="1700723987856" duration="1254000" />
       <workItem from="1701068351221" duration="4216000" />
-      <workItem from="1701590053648" duration="1465000" />
-    </task>
-    <task id="LOCAL-00059" summary="实现一些基础功能">
-      <option name="closed" value="true" />
-      <created>1697267870495</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1697267870495</updated>
-    </task>
-    <task id="LOCAL-00060" summary="完成简单的测试连接">
-      <option name="closed" value="true" />
-      <created>1697269782274</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1697269782275</updated>
+      <workItem from="1701590053648" duration="2153000" />
     </task>
     <task id="LOCAL-00061" summary="使用适配器模式实现不同的oss的操作实现">
       <option name="closed" value="true" />
@@ -711,7 +693,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701072301693</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="feat：多线程常用的第一种方式，优化查询类别和标签">
+      <option name="closed" value="true" />
+      <created>1701591692833</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1701591692834</updated>
+    </task>
+    <task id="LOCAL-00109" summary="feat：多线程常用的第二种方式，使用CompletableFuture，优化查询类别和标签">
+      <option name="closed" value="true" />
+      <created>1701592194141</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1701592194141</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -729,8 +727,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完善用户注册操作，添加一些用户枚举类，添加一些TODO" />
-    <MESSAGE value="完成用户的更新，删除，修改等操作" />
     <MESSAGE value="添加minio获取文件地址的方法" />
     <MESSAGE value="对密码进行加密" />
     <MESSAGE value="角色基础模块的开发" />
@@ -754,7 +750,9 @@
     <MESSAGE value="feat：分类标签优化" />
     <MESSAGE value="feat：用户权限获取" />
     <MESSAGE value="feat：利用minio的mc突破图片权限" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat：利用minio的mc突破图片权限" />
+    <MESSAGE value="feat：多线程常用的第一种方式，优化查询类别和标签" />
+    <MESSAGE value="feat：多线程常用的第二种方式，使用CompletableFuture，优化查询类别和标签" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat：多线程常用的第二种方式，使用CompletableFuture，优化查询类别和标签" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

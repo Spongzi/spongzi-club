@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.stream.Collectors;
 
@@ -106,25 +106,23 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
         List<SubjectCategoryBO> categoryBOList = SubjectCategoryConvert
                 .INSTANCE
                 .convertEntityListToBoList(subjectCategoryList);
-        // 2. 依次获取标签信息
-        List<FutureTask<Map<Long, List<SubjectLabelBO>>>> futureTaskList = new LinkedList<>();
-        // 线程池并发调用
-        Map<Long, List<SubjectLabelBO>> map = new HashMap<>();
-        categoryBOList.forEach(categoryBO -> {
-            // 想线程池中提交任务
-            FutureTask<Map<Long, List<SubjectLabelBO>>> futureTask = new FutureTask<>(() -> getLabelBOList(categoryBO));
-            futureTaskList.add(futureTask);
-            labelThreadPool.submit(futureTask);
-        });
 
-        // 把结果放进map中
-        for (FutureTask<Map<Long, List<SubjectLabelBO>>> futureTask : futureTaskList) {
-            Map<Long, List<SubjectLabelBO>> resultMap = futureTask.get();
-            if (CollectionUtils.isEmpty(resultMap)) {
-                continue;
+        Map<Long, List<SubjectLabelBO>> map = new HashMap<>();
+
+        List<CompletableFuture<Map<Long, List<SubjectLabelBO>>>> completableFutureList = categoryBOList.stream().map(category ->
+                CompletableFuture.supplyAsync(() -> getLabelBOList(category), labelThreadPool)
+        ).collect(Collectors.toList());
+
+        completableFutureList.forEach(future -> {
+            Map<Long, List<SubjectLabelBO>> resultMap = null;
+            try {
+                resultMap = future.get();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
             }
             map.putAll(resultMap);
-        }
+        });
+
         // 组装数据
         categoryBOList.forEach(categoryBO -> {
             List<SubjectLabelBO> labelBOList = map.get(categoryBO.getId());
