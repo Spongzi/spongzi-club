@@ -1,7 +1,7 @@
 package com.spongzi.auth.application.convert;
 
-import com.spongzi.auth.application.dto.AuthUserDTO;
 import com.spongzi.auth.domain.entity.AuthUserBO;
+import com.spongzi.auth.entity.AuthUserDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

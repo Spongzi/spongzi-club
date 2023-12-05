@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="log：添加日志">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/java/com/spongzi/club/gateway/filter/LoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/context/LoginContextHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/util/LoginUtil.java" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：打通用户上下文">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-api/src/main/java/com/spongzi/auth/api/UserFeignService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-api/src/main/java/com/spongzi/auth/entity/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-api/src/main/java/com/spongzi/auth/entity/ResultCodeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/controller/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/entity/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/rpc/UserRpc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/config/GlobalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/config/GlobalConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/convert/AuthUserConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/convert/AuthUserConvert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/dto/AuthUserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-api/src/main/java/com/spongzi/auth/entity/AuthUserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/java/com/spongzi/auth/AuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/java/com/spongzi/auth/AuthApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-starter/src/main/java/com/spongzi/subject/SubjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-starter/src/main/java/com/spongzi/subject/SubjectApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +79,7 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ApiPost:METDOD_SEND_RECORD:spongzi-club-auth-application-controller": "{\"/user/doLogin\":[{\"url\":\"http://localhost:8080/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"123\"}],\"requestBody\":\"\",\"responseBody\":\"There was an error accessing to URL: http://localhost:8080/user/doLogin?validCode\\u003d123\\n\\nConnectException: Connection refused: connect\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":15.0,\"minute\":46.0,\"second\":38.0,\"nano\":2.74019E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"123\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 200,\\n  \\\"success\\\": true,\\n  \\\"message\\\": \\\"成功\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":15.0,\"minute\":46.0,\"second\":53.0,\"nano\":2.283894E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"123\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 200,\\n  \\\"success\\\": true,\\n  \\\"message\\\": \\\"成功\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":15.0,\"minute\":47.0,\"second\":13.0,\"nano\":3.497332E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"415\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":15.0,\"minute\":48.0,\"second\":30.0,\"nano\":7.243199E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"415\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":15.0,\"minute\":50.0,\"second\":46.0,\"nano\":1.094074E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"415\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":15.0,\"minute\":50.0,\"second\":53.0,\"nano\":3.289418E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"415\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":15.0,\"minute\":52.0,\"second\":35.0,\"nano\":4.653208E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"415\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":15.0,\"minute\":56.0,\"second\":46.0,\"nano\":3.307624E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"415\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":15.0,\"minute\":57.0,\"second\":1.0,\"nano\":3.439826E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"415\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":16.0,\"minute\":5.0,\"second\":24.0,\"nano\":6.608134E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"581\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":16.0,\"minute\":5.0,\"second\":53.0,\"nano\":1.250667E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"581\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":16.0,\"minute\":9.0,\"second\":24.0,\"nano\":1.45719E7}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"724\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":16.0,\"minute\":9.0,\"second\":59.0,\"nano\":1.734925E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"724\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":16.0,\"minute\":12.0,\"second\":16.0,\"nano\":1.033259E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"724\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":16.0,\"minute\":14.0,\"second\":36.0,\"nano\":1.644436E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"724\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 200,\\n  \\\"success\\\": true,\\n  \\\"message\\\": \\\"成功\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":16.0,\"minute\":19.0,\"second\":4.0,\"nano\":3.08394E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"670\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 200,\\n  \\\"success\\\": true,\\n  \\\"message\\\": \\\"成功\\\",\\n  \\\"data\\\": {\\n    \\\"tokenName\\\": \\\"satoken\\\",\\n    \\\"tokenValue\\\": \\\"27a53221-3c84-4ab7-9479-474c2d5247a7\\\",\\n    \\\"isLogin\\\": true,\\n    \\\"loginId\\\": \\\"oeshy6VyZGmFHdXBQfxVYTaUrYSU\\\",\\n    \\\"loginType\\\": \\\"login\\\",\\n    \\\"tokenTimeout\\\": 2592000,\\n    \\\"sessionTimeout\\\": 2592000,\\n    \\\"tokenSessionTimeout\\\": -2,\\n    \\\"tokenActiveTimeout\\\": -1,\\n    \\\"loginDevice\\\": \\\"default-device\\\"\\n  }\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":16.0,\"minute\":19.0,\"second\":40.0,\"nano\":1.26525E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"670\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 500,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户登录失败\\\"\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":16.0,\"minute\":24.0,\"second\":44.0,\"nano\":6.346806E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1.0,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"813\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 200,\\n  \\\"success\\\": true,\\n  \\\"message\\\": \\\"成功\\\",\\n  \\\"data\\\": {\\n    \\\"tokenName\\\": \\\"satoken\\\",\\n    \\\"tokenValue\\\": \\\"27a53221-3c84-4ab7-9479-474c2d5247a7\\\",\\n    \\\"isLogin\\\": true,\\n    \\\"loginId\\\": \\\"oeshy6VyZGmFHdXBQfxVYTaUrYSU\\\",\\n    \\\"loginType\\\": \\\"login\\\",\\n    \\\"tokenTimeout\\\": 2592000,\\n    \\\"sessionTimeout\\\": 2592000,\\n    \\\"tokenSessionTimeout\\\": -2,\\n    \\\"tokenActiveTimeout\\\": -1,\\n    \\\"loginDevice\\\": \\\"default-device\\\"\\n  }\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023.0,\"month\":11.0,\"day\":16.0},\"time\":{\"hour\":16.0,\"minute\":24.0,\"second\":44.0,\"nano\":7.979708E8}}},{\"url\":\"http://localhost:5000/auth/user/doLogin\",\"header\":[],\"query\":[{\"is_checked\":1,\"key\":\"validCode\",\"type\":\"Text\",\"not_null\":\"1\",\"field_type\":\"String\",\"value\":\"813\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 200,\\n  \\\"success\\\": true,\\n  \\\"message\\\": \\\"成功\\\",\\n  \\\"data\\\": {\\n    \\\"tokenName\\\": \\\"satoken\\\",\\n    \\\"tokenValue\\\": \\\"27a53221-3c84-4ab7-9479-474c2d5247a7\\\",\\n    \\\"isLogin\\\": true,\\n    \\\"loginId\\\": \\\"oeshy6VyZGmFHdXBQfxVYTaUrYSU\\\",\\n    \\\"loginType\\\": \\\"login\\\",\\n    \\\"tokenTimeout\\\": 2592000,\\n    \\\"sessionTimeout\\\": 2592000,\\n    \\\"tokenSessionTimeout\\\": -2,\\n    \\\"tokenActiveTimeout\\\": -1,\\n    \\\"loginDevice\\\": \\\"default-device\\\"\\n  }\\n}\",\"selectedItem\":\"POST\",\"time\":{\"date\":{\"year\":2023,\"month\":11,\"day\":16},\"time\":{\"hour\":16,\"minute\":27,\"second\":50,\"nano\":34100000}}}]}",
+    "ApiPost:METDOD_SEND_RECORD:spongzi-club-subject-application-controller": "{\"/subject/test/testFeign\":[{\"url\":\"http://localhost:5000/subject/subject/test/testFeign\",\"header\":[{\"is_checked\":1,\"type\":\"Text\",\"value\":\"\"}],\"query\":[{\"is_checked\":1,\"type\":\"Text\",\"value\":\"\"}],\"requestBody\":\"\",\"responseBody\":\"{\\n  \\\"code\\\": 401.0,\\n  \\\"success\\\": false,\\n  \\\"message\\\": \\\"用户无权限\\\",\\n  \\\"data\\\": null\\n}\",\"selectedItem\":\"GET\",\"time\":{\"date\":{\"year\":2023,\"month\":12,\"day\":5},\"time\":{\"hour\":14,\"minute\":52,\"second\":21,\"nano\":190900200}}}]}",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -81,7 +92,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Code/Project/spongzi-club/spongzi-club-wx/src/main/java/com/spongzi/wx",
+    "last_opened_file_path": "D:/Code/Project/spongzi-club/spongzi-club-auth/spongzi-club-auth-api/src/main/java/com/spongzi/auth/entity",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,11 +119,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Project\spongzi-club\spongzi-club-auth\spongzi-club-auth-api\src\main\java\com\spongzi\auth\entity" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-wx\src\main\java\com\spongzi\wx" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-gateway\src\main\java\com\spongzi\club\gateway\entity" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-common\src\main\java\com\spongzi\club\common" />
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-auth\spongzi-club-auth-common\src\main\java\com\spongzi\auth\common" />
-      <recent name="D:\Code\Project\spongzi-club\spongzi-club-auth\spongzi-club-auth-infra\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\Project\spongzi-club\spongzi-club-subject\spongzi-club-infra\src\main\resources\mapper" />
@@ -208,10 +219,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.SubjectApplication" />
+        <item itemvalue="Spring Boot.AuthApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.WxApplication" />
         <item itemvalue="Spring Boot.OssApplication" />
-        <item itemvalue="Spring Boot.GatewayApplication" />
-        <item itemvalue="Spring Boot.AuthApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -321,15 +332,8 @@
       <workItem from="1700723987856" duration="1254000" />
       <workItem from="1701068351221" duration="4216000" />
       <workItem from="1701590053648" duration="3522000" />
-      <workItem from="1701593679142" duration="1886000" />
-    </task>
-    <task id="LOCAL-00064" summary="标签增加分类概念">
-      <option name="closed" value="true" />
-      <created>1697531413917</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1697531413917</updated>
+      <workItem from="1701593679142" duration="2281000" />
+      <workItem from="1701756552820" duration="2650000" />
     </task>
     <task id="LOCAL-00065" summary="创建网关模块和鉴权模块">
       <option name="closed" value="true" />
@@ -715,7 +719,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701592779807</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="feat：打通用户上下文">
+      <option name="closed" value="true" />
+      <created>1701595788171</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1701595788172</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -733,7 +745,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="角色基础模块的开发" />
     <MESSAGE value="添加角色与用户的关联，并且添加角色常量" />
     <MESSAGE value="权限模块的开发" />
     <MESSAGE value="修改一些小错误" />
@@ -758,7 +769,8 @@
     <MESSAGE value="feat：多线程常用的第二种方式，使用CompletableFuture，优化查询类别和标签" />
     <MESSAGE value="feat：自定义名称线程工厂" />
     <MESSAGE value="log：添加日志" />
-    <option name="LAST_COMMIT_MESSAGE" value="log：添加日志" />
+    <MESSAGE value="feat：打通用户上下文" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat：打通用户上下文" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

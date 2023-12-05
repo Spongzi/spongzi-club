@@ -37,6 +37,11 @@
             <artifactId>spongzi-club-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-club-auth-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 

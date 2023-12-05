@@ -1,4 +1,4 @@
-package com.spongzi.auth.application.dto;
+package com.spongzi.auth.entity;
 
 import lombok.Data;
 
