@@ -1,14 +1,13 @@
 package com.spongzi.subject.domain.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.google.common.cache.Cache;
-import com.google.common.cache.CacheBuilder;
 import com.spongzi.club.common.enums.IsDeletedEnum;
 import com.spongzi.subject.domain.convert.SubjectCategoryConvert;
 import com.spongzi.subject.domain.convert.SubjectLabelConvert;
 import com.spongzi.subject.domain.entity.SubjectCategoryBO;
 import com.spongzi.subject.domain.entity.SubjectLabelBO;
 import com.spongzi.subject.domain.service.SubjectCategoryDomainService;
+import com.spongzi.subject.domain.util.CacheUtil;
 import com.spongzi.subject.infra.basic.entity.SubjectCategory;
 import com.spongzi.subject.infra.basic.entity.SubjectLabel;
 import com.spongzi.subject.infra.basic.entity.SubjectMapping;
@@ -17,7 +16,6 @@ import com.spongzi.subject.infra.basic.service.SubjectLabelService;
 import com.spongzi.subject.infra.basic.service.SubjectMappingService;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -28,7 +26,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -53,11 +50,8 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
     @Resource
     private ThreadPoolExecutor labelThreadPool;
 
-    private Cache<String, String> localCache = CacheBuilder.newBuilder()
-            .maximumSize(5000)
-            .expireAfterWrite(10, TimeUnit.SECONDS)
-            .build();
-
+    @Resource
+    private CacheUtil<SubjectCategoryBO> cacheUtil;
 
     @Override
     public void add(SubjectCategoryBO subjectCategoryBO) {
@@ -103,17 +97,9 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
     @SneakyThrows
     @Override
     public List<SubjectCategoryBO> queryCategoryAndLabel(SubjectCategoryBO subjectCategoryBO) {
+        Long id = subjectCategoryBO.getId();
         String cacheKey = "categoryAndLabel." + subjectCategoryBO.getId();
-        String content = localCache.getIfPresent(cacheKey);
-        List<SubjectCategoryBO> subjectCategoryBOS;
-        if (StringUtils.isBlank(content)) {
-            subjectCategoryBOS = getSubjectCategoryBOS(subjectCategoryBO.getId());
-            // 缓存为空查完数据之后，需要把数据放入本地缓存中
-            localCache.put(cacheKey, JSON.toJSONString(subjectCategoryBOS));
-            return subjectCategoryBOS;
-        }
-        subjectCategoryBOS = JSON.parseArray(content, SubjectCategoryBO.class);
-        return subjectCategoryBOS;
+        return cacheUtil.getArrayResult(cacheKey, SubjectCategoryBO.class, (key) -> getSubjectCategoryBOS(id));
     }
 
     /**

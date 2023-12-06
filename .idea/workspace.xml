@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：openfeign拦截器实现微服务上下文打通">
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：简单的本地缓存使用">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/util/CacheUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" afterDir="false" />
     </list>
@@ -78,7 +80,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Code/Project/spongzi-club/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application",
+    "last_opened_file_path": "C:/Users/spong/Downloads/12330.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -204,11 +206,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.SubjectApplication" />
-        <item itemvalue="Spring Boot.AuthApplication" />
-        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.WxApplication" />
+        <item itemvalue="Spring Boot.SubjectApplication" />
         <item itemvalue="Spring Boot.OssApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.AuthApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -320,15 +322,8 @@
       <workItem from="1701590053648" duration="3522000" />
       <workItem from="1701593679142" duration="2281000" />
       <workItem from="1701756552820" duration="3914000" />
-      <workItem from="1701845634278" duration="775000" />
-    </task>
-    <task id="LOCAL-00067" summary="鉴权基础骨架">
-      <option name="closed" value="true" />
-      <created>1698715999985</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1698715999985</updated>
+      <workItem from="1701845634278" duration="1976000" />
+      <workItem from="1701847794399" duration="584000" />
     </task>
     <task id="LOCAL-00068" summary="简单的集成sa-token测试demo">
       <option name="closed" value="true" />
@@ -714,7 +709,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701760124961</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="feat：简单的本地缓存使用">
+      <option name="closed" value="true" />
+      <created>1701846463215</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1701846463216</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -732,7 +735,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改一些小错误" />
     <MESSAGE value="把用户权限数据存入到Redis中用于权限校验" />
     <MESSAGE value="搭建wx服务" />
     <MESSAGE value="对项目进行重构" />
@@ -757,7 +759,8 @@
     <MESSAGE value="feat：打通用户上下文" />
     <MESSAGE value="feat：使用openfeign打通微服务之间的通信" />
     <MESSAGE value="feat：openfeign拦截器实现微服务上下文打通" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat：openfeign拦截器实现微服务上下文打通" />
+    <MESSAGE value="feat：简单的本地缓存使用" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat：简单的本地缓存使用" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
