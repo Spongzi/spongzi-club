@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：使用openfeign打通微服务之间的通信">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/context/LoginContextHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/interceptor/FeignConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/interceptor/FeignRequestInterceptor.java" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：openfeign拦截器实现微服务上下文打通">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/config/GlobalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-application/spongzi-club-auth-application-controller/src/main/java/com/spongzi/auth/application/config/GlobalConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,15 +319,8 @@
       <workItem from="1701068351221" duration="4216000" />
       <workItem from="1701590053648" duration="3522000" />
       <workItem from="1701593679142" duration="2281000" />
-      <workItem from="1701756552820" duration="3485000" />
-    </task>
-    <task id="LOCAL-00066" summary="搭建空白框架">
-      <option name="closed" value="true" />
-      <created>1698715436324</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1698715436324</updated>
+      <workItem from="1701756552820" duration="3914000" />
+      <workItem from="1701845634278" duration="775000" />
     </task>
     <task id="LOCAL-00067" summary="鉴权基础骨架">
       <option name="closed" value="true" />
@@ -717,7 +706,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701759347847</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="feat：openfeign拦截器实现微服务上下文打通">
+      <option name="closed" value="true" />
+      <created>1701760124961</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1701760124961</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -735,7 +732,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="权限模块的开发" />
     <MESSAGE value="修改一些小错误" />
     <MESSAGE value="把用户权限数据存入到Redis中用于权限校验" />
     <MESSAGE value="搭建wx服务" />
@@ -760,7 +756,8 @@
     <MESSAGE value="log：添加日志" />
     <MESSAGE value="feat：打通用户上下文" />
     <MESSAGE value="feat：使用openfeign打通微服务之间的通信" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat：使用openfeign打通微服务之间的通信" />
+    <MESSAGE value="feat：openfeign拦截器实现微服务上下文打通" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat：openfeign拦截器实现微服务上下文打通" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

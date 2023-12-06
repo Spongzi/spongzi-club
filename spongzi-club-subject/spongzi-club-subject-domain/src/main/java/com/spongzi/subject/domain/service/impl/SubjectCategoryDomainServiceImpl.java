@@ -1,6 +1,8 @@
 package com.spongzi.subject.domain.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
 import com.spongzi.club.common.enums.IsDeletedEnum;
 import com.spongzi.subject.domain.convert.SubjectCategoryConvert;
 import com.spongzi.subject.domain.convert.SubjectLabelConvert;
@@ -15,6 +17,7 @@ import com.spongzi.subject.infra.basic.service.SubjectLabelService;
 import com.spongzi.subject.infra.basic.service.SubjectMappingService;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -25,6 +28,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -48,6 +52,11 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
 
     @Resource
     private ThreadPoolExecutor labelThreadPool;
+
+    private Cache<String, String> localCache = CacheBuilder.newBuilder()
+            .maximumSize(5000)
+            .expireAfterWrite(10, TimeUnit.SECONDS)
+            .build();
 
 
     @Override
@@ -94,9 +103,29 @@ public class SubjectCategoryDomainServiceImpl implements SubjectCategoryDomainSe
     @SneakyThrows
     @Override
     public List<SubjectCategoryBO> queryCategoryAndLabel(SubjectCategoryBO subjectCategoryBO) {
+        String cacheKey = "categoryAndLabel." + subjectCategoryBO.getId();
+        String content = localCache.getIfPresent(cacheKey);
+        List<SubjectCategoryBO> subjectCategoryBOS;
+        if (StringUtils.isBlank(content)) {
+            subjectCategoryBOS = getSubjectCategoryBOS(subjectCategoryBO.getId());
+            // 缓存为空查完数据之后，需要把数据放入本地缓存中
+            localCache.put(cacheKey, JSON.toJSONString(subjectCategoryBOS));
+            return subjectCategoryBOS;
+        }
+        subjectCategoryBOS = JSON.parseArray(content, SubjectCategoryBO.class);
+        return subjectCategoryBOS;
+    }
+
+    /**
+     * 获取主题类别Bos
+     *
+     * @param categoryId 类别ID
+     * @return {@link List}<{@link SubjectCategoryBO}>
+     */
+    private List<SubjectCategoryBO> getSubjectCategoryBOS(Long categoryId) {
         // 1. 查出大类下所有分类
         SubjectCategory subjectCategory = new SubjectCategory();
-        subjectCategory.setParentId(subjectCategoryBO.getId());
+        subjectCategory.setParentId(categoryId);
         subjectCategory.setIsDeleted(IsDeletedEnum.UN_DELETED.getCode());
         List<SubjectCategory> subjectCategoryList = subjectCategoryService.queryCategory(subjectCategory);
         if (log.isInfoEnabled()) {
