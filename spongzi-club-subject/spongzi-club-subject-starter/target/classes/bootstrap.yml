@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: spongzi-club-subject
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.150.128:8848
+        prefix: ${spring.application.name}
+        group: DEFAULT_GROUP
+        file-extension: yaml
+      discovery:
+        enabled: true
+        server-addr: 192.168.150.128:8848
+#spring:
+#  application:
+#    name: jc-club-oss
+#  profiles:
+#    active: dev
+#  cloud:
+#    nacos:
+#      config:
+#        server-addr: 117.72.14.166:8848
+#        prefix: ${spring.application.name}
+#        group: DEFAULT_GROUP
+#        namespace:
+#        file-extension: yaml
