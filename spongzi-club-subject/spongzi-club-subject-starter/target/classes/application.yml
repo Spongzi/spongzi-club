@@ -29,9 +29,11 @@ spring:
       connect-properties:
         config.decrypt: true
         config.decrypt.key: ${publicKey}
-  elasticsearch:
-    rest:
-      uris: http://192.168.150.128:9200
 publicKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANk+lsAXNwXTeFry2Y+ONFk9dYgQp7+k9mL80m3aYBtGnQP5aEs8sKNwAVfIauTjICSpJ3TVHyF4BDnfpDvSmkECAwEAAQ==
 logging:
   config: classpath:log4j2-spring.xml
+es:
+  cluster:
+    es-configs[0]:
+      name: 7ba353225102
+      nodes: 192.168.150.128:9200
