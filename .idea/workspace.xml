@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：简单的本地缓存使用">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/util/CacheUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：函数式编程+泛型实现本地缓存工具">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-domain/src/main/java/com/spongzi/subject/domain/service/impl/SubjectCategoryDomainServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-auth/spongzi-club-auth-starter/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-oss/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-starter/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-starter/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-starter/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-starter/src/main/resources/bootstrap.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,15 +328,11 @@
       <workItem from="1701593679142" duration="2281000" />
       <workItem from="1701756552820" duration="3914000" />
       <workItem from="1701845634278" duration="1976000" />
-      <workItem from="1701847794399" duration="584000" />
-    </task>
-    <task id="LOCAL-00068" summary="简单的集成sa-token测试demo">
-      <option name="closed" value="true" />
-      <created>1698717578270</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1698717578270</updated>
+      <workItem from="1701847794399" duration="703000" />
+      <workItem from="1701848509248" duration="1000" />
+      <workItem from="1702278271076" duration="98000" />
+      <workItem from="1702278435824" duration="710000" />
+      <workItem from="1703310009923" duration="739000" />
     </task>
     <task id="LOCAL-00069" summary="将服务注册到nacos中">
       <option name="closed" value="true" />
@@ -717,7 +718,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701846463216</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="feat：函数式编程+泛型实现本地缓存工具">
+      <option name="closed" value="true" />
+      <created>1701848438913</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1701848438913</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -735,7 +744,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="把用户权限数据存入到Redis中用于权限校验" />
     <MESSAGE value="搭建wx服务" />
     <MESSAGE value="对项目进行重构" />
     <MESSAGE value="微信消息处理" />
@@ -760,7 +768,8 @@
     <MESSAGE value="feat：使用openfeign打通微服务之间的通信" />
     <MESSAGE value="feat：openfeign拦截器实现微服务上下文打通" />
     <MESSAGE value="feat：简单的本地缓存使用" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat：简单的本地缓存使用" />
+    <MESSAGE value="feat：函数式编程+泛型实现本地缓存工具" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat：函数式编程+泛型实现本地缓存工具" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -6,13 +6,13 @@ spring:
   cloud:
     nacos:
       config:
-        server-addr: 192.168.128.128:8848
+        server-addr: 192.168.150.128:8848
         prefix: ${spring.application.name}
         group: DEFAULT_GROUP
         file-extension: yaml
       discovery:
         enabled: true
-        server-addr: 192.168.128.128:8848
+        server-addr: 192.168.150.128:8848
 #spring:
 #  application:
 #    name: jc-club-oss
