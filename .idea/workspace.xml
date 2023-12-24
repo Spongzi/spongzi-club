@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：spring-data-es来简单操作es存储数据">
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/es/EsClusterConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/es/EsConfigProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/es/EsIndexInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/es/EsRestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/es/EsSearchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/es/EsSourceData.java" afterDir="false" />
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：自定义封装集群es连接统一">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-starter/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-starter/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectInfoEs.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/entity/SubjectInfoEs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/es/EsRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/basic/es/EsRestClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +88,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.26551723",
-    "settings.editor.selected.configurable": "通义灵码",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -338,15 +332,8 @@
       <workItem from="1703311169824" duration="1508000" />
       <workItem from="1703315363977" duration="433000" />
       <workItem from="1703315807263" duration="103000" />
-      <workItem from="1703315919053" duration="5181000" />
-    </task>
-    <task id="LOCAL-00073" summary="实现缓存读写权限">
-      <option name="closed" value="true" />
-      <created>1698740026381</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1698740026381</updated>
+      <workItem from="1703315919053" duration="5592000" />
+      <workItem from="1703396415683" duration="3196000" />
     </task>
     <task id="LOCAL-00074" summary="实现用户注册操作">
       <option name="closed" value="true" />
@@ -732,7 +719,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703319826078</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="feat：自定义封装集群es连接统一">
+      <option name="closed" value="true" />
+      <created>1703322172639</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1703322172639</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -750,7 +745,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="微信消息处理" />
     <MESSAGE value="failed：修改handler的map定义" />
     <MESSAGE value="fix：添加maven打包插件" />
     <MESSAGE value="fix：修改验证码回复" />
@@ -775,7 +769,8 @@
     <MESSAGE value="feat：函数式编程+泛型实现本地缓存工具" />
     <MESSAGE value="feat：修改数据库地址" />
     <MESSAGE value="feat：spring-data-es来简单操作es存储数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat：spring-data-es来简单操作es存储数据" />
+    <MESSAGE value="feat：自定义封装集群es连接统一" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat：自定义封装集群es连接统一" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
