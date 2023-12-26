@@ -1,24 +1,17 @@
 package com.spongzi.subject.infra.basic.service.impl;
 
-import com.alibaba.fastjson.JSON;
+import com.spongzi.club.common.entity.PageResult;
+import com.spongzi.subject.infra.basic.entity.EsSubjectFields;
 import com.spongzi.subject.infra.basic.entity.SubjectInfoEs;
-import com.spongzi.subject.infra.basic.esRepo.SubjectEsRepository;
+import com.spongzi.subject.infra.basic.es.EsIndexInfo;
+import com.spongzi.subject.infra.basic.es.EsRestClient;
+import com.spongzi.subject.infra.basic.es.EsSourceData;
 import com.spongzi.subject.infra.basic.service.SubjectEsService;
 import lombok.extern.slf4j.Slf4j;
-import org.elasticsearch.index.query.QueryBuilders;
-import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
-import org.springframework.data.elasticsearch.core.IndexOperations;
-import org.springframework.data.elasticsearch.core.SearchHit;
-import org.springframework.data.elasticsearch.core.SearchHits;
-import org.springframework.data.elasticsearch.core.document.Document;
-import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
-import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Subject Es 服务 实现类
@@ -30,43 +23,36 @@ import java.util.List;
 @Slf4j
 public class SubjectEsServiceImpl implements SubjectEsService {
 
-    @Resource
-    private ElasticsearchRestTemplate elasticsearchRestTemplate;
-
-    @Resource
-    private SubjectEsRepository subjectEsRepository;
-
     @Override
-    public void createIndex() {
-        IndexOperations indexOperations = elasticsearchRestTemplate.indexOps(SubjectInfoEs.class);
-        indexOperations.create();
-        Document mapping = indexOperations.createMapping(SubjectInfoEs.class);
-        indexOperations.putMapping(mapping);
+    public boolean insert(SubjectInfoEs subjectInfoEs) {
+        EsSourceData esSourceData = new EsSourceData();
+        Map<String, Object> data = convertToEsSourceData(subjectInfoEs);
+        esSourceData.setDocId(subjectInfoEs.getDocId().toString());
+        esSourceData.setData(data);
+        return EsRestClient.insertDoc(getEsIndexInfo(), esSourceData);
+    }
+
+    private Map<String, Object> convertToEsSourceData(SubjectInfoEs subjectInfoEs) {
+        Map<String, Object> data = new HashMap<>();
+        data.put(EsSubjectFields.SUBJECT_ID, subjectInfoEs.getSubjectId());
+        data.put(EsSubjectFields.DOC_ID, subjectInfoEs.getDocId());
+        data.put(EsSubjectFields.SUBJECT_NAME, subjectInfoEs.getSubjectName());
+        data.put(EsSubjectFields.SUBJECT_ANSWER, subjectInfoEs.getSubjectAnswer());
+        data.put(EsSubjectFields.SUBJECT_TYPE, subjectInfoEs.getSubjectType());
+        data.put(EsSubjectFields.CREATE_USER, subjectInfoEs.getCreateUser());
+        data.put(EsSubjectFields.CREATE_TIME, subjectInfoEs.getCreateTime());
+        return data;
     }
 
     @Override
-    public void addDoc() {
-        LinkedList<SubjectInfoEs> list = new LinkedList<>();
-        list.add(new SubjectInfoEs(1L, "Redis是什么", "Redis是一个缓存", "spongzi", new Date()));
-        list.add(new SubjectInfoEs(2L, "MySql是什么", "MySql是一个数据库", "spongzi", new Date()));
-        subjectEsRepository.saveAll(list);
+    public PageResult<SubjectInfoEs> querySubjectList(SubjectInfoEs subjectInfoEs) {
+        return null;
     }
 
-    @Override
-    public void find() {
-        Iterable<SubjectInfoEs> all = subjectEsRepository.findAll();
-        for (SubjectInfoEs subjectInfoEs : all) {
-            log.info("subjectInfoEs: {}", JSON.toJSONString(subjectInfoEs));
-        }
-    }
-
-    @Override
-    public void search() {
-        NativeSearchQuery nativeSearchQuery = new NativeSearchQueryBuilder()
-                .withQuery(QueryBuilders.matchQuery("subjectName", "redis"))
-                .build();
-        SearchHits<SubjectInfoEs> search = elasticsearchRestTemplate.search(nativeSearchQuery, SubjectInfoEs.class);
-        List<SearchHit<SubjectInfoEs>> searchHits = search.getSearchHits();
-        log.info("searchHits: {}", JSON.toJSONString(searchHits));
+    private EsIndexInfo getEsIndexInfo() {
+        EsIndexInfo esIndexInfo = new EsIndexInfo();
+        esIndexInfo.setClusterName("7ba353225102");
+        esIndexInfo.setIndexName("subject_index");
+        return esIndexInfo;
     }
 }

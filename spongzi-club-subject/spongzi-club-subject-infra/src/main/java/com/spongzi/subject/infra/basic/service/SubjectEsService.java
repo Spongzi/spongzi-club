@@ -1,5 +1,8 @@
 package com.spongzi.subject.infra.basic.service;
 
+import com.spongzi.club.common.entity.PageResult;
+import com.spongzi.subject.infra.basic.entity.SubjectInfoEs;
+
 /**
  * Subject Es 服务
  *
@@ -9,22 +12,18 @@ package com.spongzi.subject.infra.basic.service;
 public interface SubjectEsService {
 
     /**
-     * 创建索引
+     * 插入
+     *
+     * @param subjectInfoEs 主题信息ES
+     * @return boolean
      */
-    void createIndex();
+    boolean insert(SubjectInfoEs subjectInfoEs);
 
     /**
-     * 添加文档
+     * 查询主题列表
+     *
+     * @param subjectInfoEs 主题信息ES
+     * @return {@link PageResult}<{@link SubjectInfoEs}>
      */
-    void addDoc();
-
-    /**
-     * 发现
-     */
-    void find();
-
-    /**
-     * 搜索
-     */
-    void search();
+    PageResult<SubjectInfoEs> querySubjectList(SubjectInfoEs subjectInfoEs);
 }

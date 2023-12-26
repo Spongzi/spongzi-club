@@ -33,24 +33,4 @@ public class TestController {
         log.info("testFeign.userInfo: {}", userInfo);
     }
 
-    @GetMapping("/testCreateIndex")
-    public void testCreateIndex() {
-        subjectEsService.createIndex();
-    }
-
-    @GetMapping("/testAddDoc")
-    public void testAddDoc() {
-        subjectEsService.addDoc();
-    }
-
-    @GetMapping("/testSearchDoc")
-    public void testSearchDoc() {
-        subjectEsService.search();
-    }
-
-    @GetMapping("/testFindDoc")
-    public void testFindDoc() {
-        subjectEsService.find();
-    }
-
 }
