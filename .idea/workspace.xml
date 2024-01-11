@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：使用自己封装的es进行操作，并且对添加题目进行缓存">
+    <list default="true" id="f0a43819-90b0-4af1-86e2-feffc36a952f" name="Changes" comment="feat：提取出LoginUtil">
+      <change afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-infra/src/main/java/com/spongzi/subject/infra/config/MybatisInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/context/LoginContextHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/context/LoginContextHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spongzi-club-subject/spongzi-club-subject-application/spongzi-club-subject-application-controller/src/main/java/com/spongzi/subject/application/util/LoginUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/spongzi-club-common/src/main/java/com/spongzi/club/common/util/LoginUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,15 +340,8 @@
       <workItem from="1704853099135" duration="147000" />
       <workItem from="1704853330473" duration="148000" />
       <workItem from="1704853565546" duration="22000" />
-      <workItem from="1704938178361" duration="388000" />
-    </task>
-    <task id="LOCAL-00076" summary="更改Subject模块的命名规则">
-      <option name="closed" value="true" />
-      <created>1698976470647</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1698976470647</updated>
+      <workItem from="1704938178361" duration="842000" />
+      <workItem from="1704939072978" duration="1461000" />
     </task>
     <task id="LOCAL-00077" summary="更改Subject模块的命名规则">
       <option name="closed" value="true" />
@@ -737,7 +727,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703616099168</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="feat：提取出LoginUtil">
+      <option name="closed" value="true" />
+      <created>1704938724621</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1704938724621</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -755,7 +753,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix：修改验证码回复" />
     <MESSAGE value="fix: 修改登录，和修改redis地址" />
     <MESSAGE value="fix: 修改登录操作" />
     <MESSAGE value="feat：获取用户信息" />
@@ -780,7 +777,8 @@
     <MESSAGE value="feat：自定义封装集群es连接统一" />
     <MESSAGE value="feat：封装es常用操作" />
     <MESSAGE value="feat：使用自己封装的es进行操作，并且将添加的题目同步到es当中去" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat：使用自己封装的es进行操作，并且将添加的题目同步到es当中去" />
+    <MESSAGE value="feat：提取出LoginUtil" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat：提取出LoginUtil" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
