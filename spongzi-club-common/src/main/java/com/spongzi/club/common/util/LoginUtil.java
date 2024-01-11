@@ -1,6 +1,7 @@
-package com.spongzi.subject.application.util;
+package com.spongzi.club.common.util;
 
-import com.spongzi.subject.application.context.LoginContextHolder;
+
+import com.spongzi.club.common.context.LoginContextHolder;
 
 /**
  * 登录Util

@@ -1,4 +1,4 @@
-package com.spongzi.subject.application.context;
+package com.spongzi.club.common.context;
 
 import java.util.Map;
 import java.util.Objects;
